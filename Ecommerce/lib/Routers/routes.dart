@@ -21,6 +21,7 @@ import 'package:spicy/Pages/offers_page.dart';
 import 'package:spicy/Pages/order_placed.dart';
 import 'package:spicy/Pages/payment_method_page.dart';
 import 'package:spicy/Pages/reviews_page.dart';
+import 'package:spicy/Pages/verified_buyNow.dart';
 import 'package:spicy/Pages/view_cart_page.dart';
 
 class PageRoutes {
@@ -47,6 +48,7 @@ class PageRoutes {
   static const String addingWallet = 'addingWallet';
   static const String addFavourite = 'addFavourite';
   static const String addOffers = 'offers';
+  static const String buyNow = 'buyNow';
 
   Map<String, WidgetBuilder> routes() {
     return {
@@ -72,6 +74,7 @@ class PageRoutes {
       rateNowSite: (context) => RatingNow(),
       addingWallet: (context) => AddToWallet(),
       addFavourite: (context) => Favourite(),
+      buyNow: (context) => Bottom(),
     };
   }
 }

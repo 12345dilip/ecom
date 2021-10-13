@@ -7,7 +7,6 @@ import 'package:spicy/Components/textfield.dart';
 import 'package:spicy/Locale/locales.dart';
 import 'package:spicy/Themes/colors.dart';
 
-//Verification page that sends otp to the phone number entered on phone number page
 class Verification extends StatelessWidget {
   final VoidCallback verification;
 
@@ -15,8 +14,10 @@ class Verification extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(backgroundColor: Theme.of(context).cardColor,
-      appBar: AppBar(backgroundColor: Theme.of(context).cardColor,
+    return Scaffold(
+      backgroundColor: Theme.of(context).cardColor,
+      appBar: AppBar(
+        backgroundColor: Theme.of(context).cardColor,
         titleSpacing: 0,
         leading: IconButton(
           icon: Icon(
@@ -44,7 +45,6 @@ class Verification extends StatelessWidget {
   }
 }
 
-//otp verification class
 class OtpVerification extends StatefulWidget {
   final VoidCallback verification;
 
@@ -55,7 +55,6 @@ class OtpVerification extends StatefulWidget {
 }
 
 class _OtpVerificationState extends State<OtpVerification> {
-  // VerificationBloc _verificationBloc;
   bool showingDialogue = false;
   int _counting = 20;
   late Timer _setTimer;

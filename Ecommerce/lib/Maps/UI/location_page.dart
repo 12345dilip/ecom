@@ -52,11 +52,9 @@ class _SetLocationState extends State<SetLocation> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Theme.of(context).cardColor,
-// extendBodyBehindAppBar: true,
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(126.0),
         child: CustomAppBar(
-          // titleSpacing: 0,
           leading: IconButton(
             icon: Icon(
               Icons.chevron_left,
@@ -97,10 +95,8 @@ class _SetLocationState extends State<SetLocation> {
                           builder: (context, state) {
                         print('polyyyy' + state.polylineCode.toString());
                         return GoogleMap(
-                          // polylines: state.polylines,
                           mapType: MapType.normal,
                           initialCameraPosition: kGooglePlex,
-                          // markers: _markers,
                           onMapCreated: (GoogleMapController controller) async {
                             _googleMapController.complete(controller);
                             googleMapStyleController = controller;
@@ -231,7 +227,7 @@ class _SaveAddressCardState extends State<SaveAddressCard> {
                 children: <Widget>[
                   AddressTypeButton(
                     picture: SpicyLocalizations.of(context)!.homeText,
-                    photo: 'images/address/ic_homeblk.png',
+                    photo: 'images/address/home (1) 2.png',
                     onClick: () {
                       setState(() {
                         setAddress = AddressType.House;
@@ -241,7 +237,7 @@ class _SaveAddressCardState extends State<SaveAddressCard> {
                   ),
                   AddressTypeButton(
                     picture: SpicyLocalizations.of(context)!.office,
-                    photo: 'images/address/ic_officeblk.png',
+                    photo: 'images/address/building 2.png',
                     onClick: () {
                       setState(() {
                         setAddress = AddressType.Company;
@@ -251,7 +247,7 @@ class _SaveAddressCardState extends State<SaveAddressCard> {
                   ),
                   AddressTypeButton(
                     picture: SpicyLocalizations.of(context)!.other,
-                    photo: 'images/address/ic_otherblk.png',
+                    photo: 'images/address/flat 2 (1).png',
                     onClick: () {
                       setState(() {
                         setAddress = AddressType.Other;

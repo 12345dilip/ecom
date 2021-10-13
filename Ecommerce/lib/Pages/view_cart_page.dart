@@ -37,7 +37,6 @@ class _ViewCartPageState extends State<ViewCartPage> {
   Widget build(BuildContext context) {
     loadData();
     return Scaffold(
-      backgroundColor: Theme.of(context).cardColor,
       appBar: AppBar(
         backgroundColor: Theme.of(context).cardColor,
         titleSpacing: 0,
@@ -237,6 +236,10 @@ class _ViewCartPageState extends State<ViewCartPage> {
                         ),
                       ]),
                 ),
+                Divider(
+                  color: Theme.of(context).cardColor,
+                  thickness: 5.0,
+                ),
                 SizedBox(
                   height: 10.0,
                 ),
@@ -352,12 +355,9 @@ class _ViewCartPageState extends State<ViewCartPage> {
                       overflow: TextOverflow.ellipsis,
                     ),
                   ),
-                  Spacer(
-                      // flex: 2,
-                      ),
+                  Spacer(),
                   Container(
                     height: 33.0,
-                    //width: 76.7,
                     padding: EdgeInsets.symmetric(horizontal: 12.0),
                     decoration: BoxDecoration(
                       border: Border.all(color: mainColor),
@@ -373,7 +373,6 @@ class _ViewCartPageState extends State<ViewCartPage> {
                             Icons.remove,
                             color: mainColor,
                             size: 20.0,
-                            //size: 23.3,
                           ),
                         ),
                         SizedBox(width: 8.0),

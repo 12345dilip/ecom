@@ -18,7 +18,6 @@ class _MobileNumberState extends State<MobileNumber> {
       backgroundColor: Theme.of(context).cardColor,
       body: FadedSlideAnimation(
         SingleChildScrollView(
-          //used for scrolling when keyboard pops up
           child: Container(
             color: Theme.of(context).cardColor,
             height: MediaQuery.of(context).size.height,
@@ -28,18 +27,29 @@ class _MobileNumberState extends State<MobileNumber> {
                 children: <Widget>[
                   Spacer(),
                   Expanded(
-                    flex: 3,
                     child: FadedScaleAnimation(
                       Image.asset(
-                        "images/registerLogo.png",
+                        "images/GROCART.png",
+                        scale: 2.0,
                       ),
                       durationInMilliseconds: 300,
                     ),
                   ),
-                  Spacer(),
+                  SizedBox(
+                    height: 20.0,
+                  ),
+                  Expanded(
+                    flex: 3,
+                    child: FadedScaleAnimation(
+                      Image.asset(
+                        "images/SIGNIN.png",
+                      ),
+                      durationInMilliseconds: 300,
+                    ),
+                  ),
                   MobileInputPage(),
                   SizedBox(
-                    height: 15.0,
+                    height: 20.0,
                   ),
                   Padding(
                     padding: EdgeInsets.symmetric(vertical: 4.0),

@@ -88,7 +88,6 @@ class _OrderMapState extends State<OrderMap> {
                         'Order ID - 0D222874085214758000',
                         style: Theme.of(context).textTheme.headline6!.copyWith(
                             fontSize: 15.0,
-                            // fontWeight: FontWeight.bold,
                             letterSpacing: 0.06,
                             color: Colors.grey),
                       ),
@@ -239,7 +238,6 @@ class _OrderMapState extends State<OrderMap> {
                                             .headline6!
                                             .copyWith(
                                                 fontSize: 10.0,
-                                                //  fontWeight: FontWeight.bold,
                                                 color: mainTextColor),
                                       ),
                                       Text(
@@ -364,50 +362,6 @@ class _OrderMapState extends State<OrderMap> {
                           ),
                         ]),
                       ),
-
-                      // ListTile(
-                      //   tileColor: whiteColor,
-                      //   leading: FadedScaleAnimation(
-                      //     CircleAvatar(
-                      //       radius: 22.0,
-                      //       backgroundImage: AssetImage('images/profile.jpg'),
-                      //     ),
-                      //     durationInMilliseconds: 800,
-                      //   ),
-                      //   title: Text(
-                      //     'George Anderson',
-                      //     style: Theme.of(context).textTheme.headline4,
-                      //   ),
-                      //   subtitle: Text(
-                      //     'Delivery Partner',
-                      //     style: Theme.of(context)
-                      //         .textTheme
-                      //         .headline6!
-                      //         .copyWith(
-                      //             fontSize: 11.7,
-                      //             fontWeight: FontWeight.w500,
-                      //             color: Color(0xffc2c2c2)),
-                      //   ),
-                      //   trailing: FittedBox(
-                      //     fit: BoxFit.fill,
-                      //     child: Row(
-                      //       children: <Widget>[
-                      //         IconButton(
-                      //           icon: Icon(Icons.message, color: mainColor),
-                      //           onPressed: () {
-                      //             // Navigator.pushNamed(context, PageRoutes.chatSite);
-                      //           },
-                      //         ),
-                      //         IconButton(
-                      //           icon: Icon(Icons.phone, color: mainColor),
-                      //           onPressed: () {
-                      //             /*.......*/
-                      //           },
-                      //         ),
-                      //       ],
-                      //     ),
-                      //   ),
-                      // ),
                     ),
                   ),
                 Container(

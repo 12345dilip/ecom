@@ -255,6 +255,7 @@ class _ItemsListPageState extends State<ItemsListPage> {
                         ),
                         child: Icon(
                           Icons.favorite_outline,
+                          color: mainTextColor,
                           size: 15.0,
                         ),
                       )
@@ -263,7 +264,6 @@ class _ItemsListPageState extends State<ItemsListPage> {
                 ),
               ],
             ),
-            //SizedBox(width: 13.3),
             Padding(
               padding: const EdgeInsets.only(left: 15.0, right: 15.0, top: 8.0),
               child: Text(productTitle,

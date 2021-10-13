@@ -5,6 +5,7 @@ import 'package:spicy/LandingOrderAccountPage/HomePage/Models/category.dart';
 import 'package:spicy/Pages/items_edit.dart';
 import 'package:spicy/Pages/items_list.dart';
 import 'package:spicy/Locale/locales.dart';
+import 'package:spicy/Routers/routes.dart';
 import 'package:spicy/Themes/colors.dart';
 
 class HomePage extends StatelessWidget {
@@ -82,7 +83,7 @@ class _HomeState extends State<Home> {
                   color: mainColor,
                 ),
                 onPressed: () {
-                  /*.......*/
+                  Navigator.pushNamed(context, PageRoutes.viewCartPageSite);
                 },
               ),
               durationInMilliseconds: 200,
@@ -130,8 +131,6 @@ class _HomeState extends State<Home> {
                           offerBanner[index],
                           scale: 3,
                         ),
-                        // durationInMilliseconds: 200,
-                        // ),
                       ),
                     ),
                   );
@@ -201,6 +200,7 @@ class _HomeState extends State<Home> {
                                         .caption!
                                         .copyWith(
                                             fontWeight: FontWeight.bold,
+                                            color: mainTextColor,
                                             fontSize: 8.0),
                                   )
                                 ],
@@ -582,6 +582,7 @@ class _HomeState extends State<Home> {
                       ),
                       child: Icon(
                         Icons.favorite_outline,
+                        color: mainTextColor,
                         size: 15.0,
                       ),
                     )
@@ -590,7 +591,6 @@ class _HomeState extends State<Home> {
               ),
             ],
           ),
-          //SizedBox(width: 13.3),
           Padding(
             padding: const EdgeInsets.only(left: 10.0, right: 15.0, top: 5.0),
             child: Text(productTitle,

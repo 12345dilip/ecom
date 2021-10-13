@@ -94,7 +94,6 @@ class _SettingsState extends State<Settings> {
                 Container(
                   height: 57.7,
                   padding: EdgeInsets.symmetric(horizontal: 20.0),
-                  //color: cardBackgroundColor,
                   child: Align(
                     alignment: Alignment.centerLeft,
                     child: Text(

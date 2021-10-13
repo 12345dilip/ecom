@@ -22,13 +22,8 @@ final CameraPosition kGooglePlex = CameraPosition(
 
 class MapUtils {
   static getMarkerPic() async {
-    // var desc = await BitmapDescriptor.fromAssetImage(
-    //         ImageConfiguration(devicePixelRatio: 5), Assets.icPin)
-    //     .then((value) => icon = value);
     markerss
         .add(await createBitmapDescriptorFromImage('images/map_pin.png', ''));
-    // markerss.add(await createBitmapDescriptorFromImage('assets/Pickup.png',''));
-    // markerss.add(await createBitmapDescriptorFromImage('assets/drop.png',''));
   }
 
   static Future<BitmapDescriptor> createBitmapDescriptorFromImage(
@@ -38,13 +33,9 @@ class MapUtils {
 
     double imageWidth = 70;
     double imageHeight = 70;
-
-    // AssetBundle bundle = DefaultAssetBundle.of(context);
     ui.Image myImage = await load(imagee);
-    /*await Util.getUiImage(bundle, "assets/images/image.png", imageWidth, imageHeight)*/
-
     paintImage(
-        canvas: c, // c is the Canvas object in above code examples.
+        canvas: c,
         image: myImage,
         rect: Rect.fromLTWH(0, 0, imageWidth, imageHeight * 1.1));
 

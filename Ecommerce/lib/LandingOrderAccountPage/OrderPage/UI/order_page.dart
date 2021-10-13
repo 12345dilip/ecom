@@ -56,7 +56,6 @@ class _OrderPageState extends State<OrderPage> {
                       child: ListTile(
                         title: Text(
                           'Delivered on Sep 23',
-                          // SpicyLocalizations.of(context)!.store!,
                           style: Theme.of(context)
                               .textTheme
                               .caption!
@@ -66,7 +65,6 @@ class _OrderPageState extends State<OrderPage> {
                           padding: const EdgeInsets.only(top: 10.0),
                           child: Text(
                             SpicyLocalizations.of(context)!.ironBox!,
-                            //'Delivery | 20 Jun, 11:35',
                             style: Theme.of(context)
                                 .textTheme
                                 .caption!
@@ -131,7 +129,6 @@ class _OrderPageState extends State<OrderPage> {
                       child: ListTile(
                         title: Text(
                           'Delivered on Sep 23',
-                          // SpicyLocalizations.of(context)!.store!,
                           style: Theme.of(context)
                               .textTheme
                               .caption!
@@ -141,7 +138,6 @@ class _OrderPageState extends State<OrderPage> {
                           padding: const EdgeInsets.only(top: 10.0),
                           child: Text(
                             SpicyLocalizations.of(context)!.lens!,
-                            //'Delivery | 20 Jun, 11:35',
                             style: Theme.of(context)
                                 .textTheme
                                 .caption!
@@ -215,7 +211,6 @@ class _OrderPageState extends State<OrderPage> {
                           padding: const EdgeInsets.only(top: 10.0),
                           child: Text(
                             SpicyLocalizations.of(context)!.mobile!,
-                            //'Delivery | 20 Jun, 11:35',
                             style: Theme.of(context)
                                 .textTheme
                                 .caption!
@@ -280,7 +275,6 @@ class _OrderPageState extends State<OrderPage> {
                       child: ListTile(
                         title: Text(
                           'Delivered on Sep 23',
-                          // SpicyLocalizations.of(context)!.store!,
                           style: Theme.of(context)
                               .textTheme
                               .caption!
@@ -290,7 +284,6 @@ class _OrderPageState extends State<OrderPage> {
                           padding: const EdgeInsets.only(top: 10.0),
                           child: Text(
                             SpicyLocalizations.of(context)!.laptop!,
-                            //'Delivery | 20 Jun, 11:35',
                             style: Theme.of(context)
                                 .textTheme
                                 .caption!

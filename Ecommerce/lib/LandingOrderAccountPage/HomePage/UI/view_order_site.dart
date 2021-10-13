@@ -266,7 +266,6 @@ class _ViewOrderSiteState extends State<ViewOrderSite> {
                     padding: EdgeInsets.only(
                         left: 18.0, right: 18.0, top: 18.0, bottom: 18.0),
                     child: Row(
-                      //mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         ClipRRect(
                           borderRadius: BorderRadius.all(Radius.circular(10)),

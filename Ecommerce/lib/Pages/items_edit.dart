@@ -2,6 +2,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:spicy/Locale/locales.dart';
+import 'package:spicy/Pages/verified_buyNow.dart';
 import 'package:spicy/Routers/routes.dart';
 import 'package:spicy/Themes/colors.dart';
 
@@ -26,12 +27,21 @@ class _ItemsEditState extends State<ItemsEdit> {
   ];
   var rating = 3.0;
   int _current = 0;
+
+  bool selectRed = false;
+  bool selectGreen = false;
+  bool selectPink = false;
+  bool selectBlue = false;
+
+  bool selectS = false;
+  bool selectM = false;
+  bool selectL = false;
+  bool selectXL = false;
   final CarouselController _controller = CarouselController();
   @override
   Widget build(BuildContext context) {
-    final height = MediaQuery.of(context).size.height;
     return Scaffold(
-      backgroundColor: whiteColor,
+      backgroundColor: Theme.of(context).cardColor,
       body: Stack(
         children: [
           Container(
@@ -46,10 +56,10 @@ class _ItemsEditState extends State<ItemsEdit> {
                       ClipRRect(
                         borderRadius: BorderRadius.all(Radius.circular(10)),
                         child: Container(
-                          height: 380,
                           child: CarouselSlider(
                             carouselController: _controller,
                             options: CarouselOptions(
+                                height: 400,
                                 autoPlay: true,
                                 onPageChanged: (index, reason) {
                                   setState(() {
@@ -61,7 +71,6 @@ class _ItemsEditState extends State<ItemsEdit> {
                                   (item) => Image.asset(
                                     item,
                                     fit: BoxFit.cover,
-                                    height: height,
                                   ),
                                 )
                                 .toList(),
@@ -81,6 +90,7 @@ class _ItemsEditState extends State<ItemsEdit> {
                                 },
                                 icon: Icon(
                                   Icons.arrow_back_ios_outlined,
+                                  color: mainTextColor,
                                 )),
                             IconButton(
                               onPressed: () {
@@ -88,6 +98,7 @@ class _ItemsEditState extends State<ItemsEdit> {
                               },
                               icon: Icon(
                                 Icons.favorite_outline_outlined,
+                                color: mainTextColor,
                               ),
                             )
                           ],
@@ -169,7 +180,6 @@ class _ItemsEditState extends State<ItemsEdit> {
                                 direction: Axis.horizontal,
                                 allowHalfRating: true,
                                 itemCount: 5,
-                                // itemPadding: EdgeInsets.symmetric(horizontal: 4.0),
                                 itemBuilder: (context, _) => Icon(
                                   Icons.star,
                                   color: mainColor,
@@ -222,10 +232,24 @@ class _ItemsEditState extends State<ItemsEdit> {
                   SizedBox(
                     width: 200,
                     height: 50,
-                    // ignore: deprecated_member_use
                     child: RaisedButton(
                       onPressed: () {
-                        Navigator.pushNamed(context, PageRoutes.paymentType);
+                        showModalBottomSheet(
+                          backgroundColor: Colors.transparent,
+                          isScrollControlled: true,
+                          context: context,
+                          builder: (context) {
+                            return ClipRRect(
+                              borderRadius: BorderRadius.only(
+                                topLeft: Radius.circular(20),
+                                topRight: Radius.circular(20),
+                              ),
+                              child: Container(
+                                  color: Theme.of(context).cardColor,
+                                  child: Bottom()),
+                            );
+                          },
+                        );
                       },
                       child: Text(SpicyLocalizations.of(context)!.buyNow!,
                           style: Theme.of(context)

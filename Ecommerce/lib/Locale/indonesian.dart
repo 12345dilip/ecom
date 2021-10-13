@@ -1,37 +1,14 @@
 Map<String, String> indonesian() {
   return {
-    'veg': 'sayuran',
-    'nonVeg': 'Non-Veg',
-    'customize': 'Customize',
     'itemPrice': '\$ 300',
-    'stater': 'Formal Shoes',
-    'mainCourse': 'Sports Shoes',
-    'burger': 'sayuran Burger',
-    'pizza': 'sayuran Pizza',
-    'frankie': 'sayuran Frankie',
-    'csandwich': 'Sayuran Diet Sandwich',
     'addOffers': 'Penawaran',
     'buy': 'Beli 2 Dapatkan 1 Gratis',
     'buy1': 'Membeli 2 item makanan dan mendapatkan 1 gratis.',
     'best': 'terbaik Rated',
-    'sea': 'MAKANAN LAUT',
-    'chinese': 'CINA',
-    'desert': 'Sandals & Floaters',
     'instruction': 'Masukkan kode promo',
     'apply': 'MENERAPKAN',
-    'sandwich': 'sayuran Sandwich',
-    'chicken': 'Ayam goreng',
-    'juice': 'Jus semangka',
-    'cheese': 'ekstra Keju',
-    'storeAddress': 'City Food Taman',
     'addVia': 'menambahkan Via',
     'enterAmountToAdd': 'Masukkan Jumlah Tambah',
-    'store': 'food Junction',
-    'storee': 'kelaparan Spot',
-    'jesica': 'Makanan oleh Jesica',
-    'fish': 'Fishchef',
-    'seven': 'Seven Star Restro',
-    'operum': 'Operum Food Plaza',
     'fav': 'Favorit',
     'storeFound': 'restoran Ditemukan',
     'lightMode': 'cahaya Modus',
@@ -139,11 +116,6 @@ Map<String, String> indonesian() {
     'yourWords': 'Akan kembali kepada Anda segera',
     'online': 'On line',
     'recent': 'Baru',
-    'vegetable': 'Sayuran & Buah',
-    'vegetableText': 'Sayuran\n& Buah',
-    'foodText': 'MAKANAN\n& MAKANAN',
-    'meatText': 'DAGING\n& IKAN',
-    'medicineText': 'PHARMA\nOBAT',
     'petText': 'SUPPLIES\nPET',
     'customText': 'CUSTOM\nPENGIRIMAN',
     'profileInfo': 'Info Profil',
@@ -217,17 +189,8 @@ Map<String, String> indonesian() {
     'pickupAddress': 'ALAMAT PICKUP',
     'pickupText': 'Masukkan Pickup Lokasi',
     'send': 'Kirim Paket',
-    'vegetables': 'SAYURAN',
-    'fruits': 'BUAH-BUAHAN',
-    'herbs': 'REMPAH',
-    'dairy': 'BUKU HARIAN',
-    'paperDocuments': 'Kertas & Dokumen',
-    'flowersChocolates': 'Bunga & Cokelat',
-    'sports': 'Olahraga & Mainan barang',
-    'clothes': 'Pakaian & Aksesoris',
     'electronic': 'barang elektronik',
     'household': 'barang rumah tangga',
-    'glass': 'Item kaca',
     'englishh': 'Inggris',
     'arabicc': 'Arab',
     'frenchh': 'Perancis',
@@ -274,29 +237,33 @@ Map<String, String> indonesian() {
     'buyNow': 'Beli sekarang',
     'youreAlmostin':
         'Anda hampir masuk. \nMohon berikan nomor telepon Anda \nuntuk verifikasi.',
-        'desCoffee':
+    'desCoffee':
         'Morphy Richards Fresco 800-Watt 4-Cups Espresso Coffee Maker (Black)4 cup cofee maker with milk frothing Removable drip tray for easy cleaning',
     'desTV':
-        'Sony Bravia 138.8 cm (55 inches) 4K Ultra HD Smart LED TV KD-55X7002G (Black) (2019 Model)',
+        'Sony Bravia 138,8 cm (55 inci) 4K Ultra HD Smart LED TV KD-55X7002G (Hitam) (Model 2019)',
     'desMobile':
-        'OnePlus 9 5G (Winter Mist, 12GB RAM, 256GB Storage) Qualcomm Snapdragon 888 Processor with Adreno 660 GPU6.55.',
+        'OnePlus 9 5G (Winter Mist, 12GB RAM, 256GB Storage) Prosesor Qualcomm Snapdragon 888 dengan Adreno 660 GPU6.55.',
     'desLap':
-        'HP 14s-DQ2101TU Laptop (11th Gen Intel Core i3-1115G4/8GB/256GB PCIe-SSD/Intel UHD Graphics/Windows 10/MSO/HD), 35.6 cm (14 inch)',
+        'Laptop HP 14s-DQ2101TU (Intel Core i3-1115G4 Generasi ke-11/8GB/256GB PCIe-SSD/Intel UHD Graphics/Windows 10/MSO/HD), 35,6 cm (14 inci)',
     'desPlay':
-        'Redgear Pro Wireless Gamepad (Compatible with Windows 7/8/8.1/10 only)',
+        'Redgear Pro Wireless Gamepad (Kompatibel dengan Windows 7/8/8.1/10 saja)',
     'desHeadset':
-        'Sony WH-1000XM3 Industry Leading Wireless Noise Cancellation Headphones, Bluetooth Headset with Mic for Phone Calls, Work from Home.',
+        'Sony WH-1000XM3 Headphone Peredam Kebisingan Nirkabel Terkemuka di Industri, Headset Bluetooth dengan Mikrofon untuk Panggilan Telepon, Bekerja dari Rumah.',
     'desFan':
-        'A Brand new collection from Wrold of Vintage Handmade by Skilled proffessionalA great collection and for Gifting to Your Relatives',
+        'Koleksi baru dari Wrold of Vintage Handmade by Skilled proffessionalKoleksi yang bagus dan untuk Hadiah untuk Kerabat Anda',
     'desAC':
-        'With sincerity and hard work of our professionals, we have carved a niche for ourselves in this domain by providing a premium quality gamut of 1.5 Ton Air Conditioner. ',
+        'Dengan ketulusan dan kerja keras para profesional kami, kami telah mengukir ceruk untuk diri kami sendiri dalam domain ini dengan menyediakan gamut kualitas premium dari 1.5 Ton Air Conditioner. ',
     'desMic':
-        'FIFINE K678 USB Podcast Microphone for Recording Streaming on PC and Mac, Condenser Computer Gaming Mic for PS4 with Headphone Output & Volume Control, Mic Gain Control, Mute Button for Vocal, YouTube',
+        'FIFINE K678 Mikrofon Podcast USB untuk Merekam Streaming di PC dan Mac, Mikrofon Gaming Komputer Kondensor untuk PS4 dengan Output Headphone & Kontrol Volume, Kontrol Penguatan Mikrofon, Tombol Bisu untuk Vokal, YouTube',
     'desIron':
-        'The Reconnect RG6201 steam iron comes with a sole plate with non-stick.It has a water tank capacity od 220 ml. It also features steam, spray, burst and self clean functions. ',
+        'Setrika uap Reconnect RG6201 dilengkapi dengan pelat sol anti lengket yang memiliki kapasitas tangki air 220 ml. Ini juga dilengkapi dengan fungsi uap, semprotan, semburan dan pembersihan diri. ',
     'desDrone':
-        'DJI Phantom 3 Standard Quadcopter Drone with 2.7K HD Video Camera.View a live image streamed from the drone up to a half mile away on the DJI Go app using your mobile phone or tablet',
+        'DJI Phantom 3 Standard Quadcopter Drone dengan Kamera Video HD 2,7K. Lihat gambar langsung yang dialirkan dari drone hingga setengah mil jauhnya di aplikasi DJI Go menggunakan ponsel atau tablet Anda',
     'desCam':
-        'Capture Every Detail with 24.1 Megapixel CMOS Sensor Image Enlargement: After shooting, you can enlarge photographs of the objects for clear zoomed view. ',
+        'Tangkap Setiap Detail dengan Sensor CMOS 24,1 Megapiksel Pembesaran Gambar: Setelah memotret, Anda dapat memperbesar foto objek untuk tampilan yang diperbesar dengan jelas. ',
+    'brandInTv': 'ony Bravia',
+    'brandInLap': 'HP',
+    'headBluetooth': 'Headset Bluetooth',
+    'droneCam': 'Kamera Drone',
   };
 }

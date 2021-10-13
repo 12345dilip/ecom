@@ -49,7 +49,12 @@ class _RegisterFormState extends State<RegisterForm> {
                   color: Theme.of(context).cardColor,
                   thickness: 8.0,
                 ),
-                //Image.asset('images/registerLogo.png'),
+                Center(
+                  child: Image.asset(
+                    'images/registerLogo.png',
+                    scale: 2.0,
+                  ),
+                ),
                 Text(SpicyLocalizations.of(context)!.register!,
                     style: Theme.of(context).textTheme.bodyText1!.copyWith(
                           fontSize: 25,
@@ -169,7 +174,6 @@ class _RegisterFormState extends State<RegisterForm> {
             ),
           ),
         ),
-        //continue button bar
         Align(
           alignment: Alignment.bottomCenter,
           child: BottomBar(

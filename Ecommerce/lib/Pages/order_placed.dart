@@ -8,7 +8,8 @@ import 'package:spicy/Themes/colors.dart';
 class OrderPlaced extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(backgroundColor: Theme.of(context).cardColor,
+    return Scaffold(
+      backgroundColor: Theme.of(context).cardColor,
       body: FadedSlideAnimation(
         Column(
           children: <Widget>[
@@ -38,9 +39,7 @@ class OrderPlaced extends StatelessWidget {
                   .subtitle2!
                   .copyWith(color: disabledColor, fontSize: 18),
             ),
-            Spacer(
-                // flex: 2,
-                ),
+            Spacer(),
             BottomBar(
               typeOftext: SpicyLocalizations.of(context)!.orderText,
               onClick: () => Navigator.pushNamed(context, PageRoutes.orderSite),

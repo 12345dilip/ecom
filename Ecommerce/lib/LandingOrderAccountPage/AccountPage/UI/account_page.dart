@@ -55,8 +55,8 @@ class _AccountState extends State<Account> {
           smaller: true,
           photo: 'images/account/heart (3) 1.png',
           textType: SpicyLocalizations.of(context)!.fav,
-          onPressed: () => Navigator.pushNamed(
-              context, PageRoutes.addFavourite), // addFavourite
+          onPressed: () =>
+              Navigator.pushNamed(context, PageRoutes.addFavourite),
         ),
         BuildItemsListTile(
             smaller: true,

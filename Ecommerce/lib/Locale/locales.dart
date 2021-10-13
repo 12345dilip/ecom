@@ -32,28 +32,8 @@ class SpicyLocalizations {
     'sw': swahili(),
   };
 
-  String? get vegetableText {
-    return _spicyLocalizedValues[locale.languageCode]!['vegetableText'];
-  }
-
-  String? get foodText {
-    return _spicyLocalizedValues[locale.languageCode]!['foodText'];
-  }
-
   String? get youreAlmostin {
     return _spicyLocalizedValues[locale.languageCode]!['youreAlmostin'];
-  }
-
-  String? get meatText {
-    return _spicyLocalizedValues[locale.languageCode]!['meatText'];
-  }
-
-  String? get medicineText {
-    return _spicyLocalizedValues[locale.languageCode]!['medicineText'];
-  }
-
-  String? get petText {
-    return _spicyLocalizedValues[locale.languageCode]!['petText'];
   }
 
   String? get customText {
@@ -376,10 +356,6 @@ class SpicyLocalizations {
     return _spicyLocalizedValues[locale.languageCode]!['recent'];
   }
 
-  String? get vegetable {
-    return _spicyLocalizedValues[locale.languageCode]!['vegetable'];
-  }
-
   String? get upload {
     return _spicyLocalizedValues[locale.languageCode]!['upload'];
   }
@@ -536,32 +512,8 @@ class SpicyLocalizations {
     return _spicyLocalizedValues[locale.languageCode]!['dresses'];
   }
 
-  String? get shoes {
-    return _spicyLocalizedValues[locale.languageCode]!['shoes'];
-  }
-
-  String? get pants {
-    return _spicyLocalizedValues[locale.languageCode]!['pants'];
-  }
-
-  String? get perfume {
-    return _spicyLocalizedValues[locale.languageCode]!['perfume'];
-  }
-
   String? get electronics {
     return _spicyLocalizedValues[locale.languageCode]!['electronics'];
-  }
-
-  String? get shirts {
-    return _spicyLocalizedValues[locale.languageCode]!['shirts'];
-  }
-
-  String? get toys {
-    return _spicyLocalizedValues[locale.languageCode]!['toys'];
-  }
-
-  String? get jwellery {
-    return _spicyLocalizedValues[locale.languageCode]!['jwellery'];
   }
 
   String? get headItems {
@@ -590,22 +542,6 @@ class SpicyLocalizations {
 
   String? get search {
     return _spicyLocalizedValues[locale.languageCode]!['search'];
-  }
-
-  String? get sandwich {
-    return _spicyLocalizedValues[locale.languageCode]!['sandwich'];
-  }
-
-  String? get chicken {
-    return _spicyLocalizedValues[locale.languageCode]!['chicken'];
-  }
-
-  String? get juice {
-    return _spicyLocalizedValues[locale.languageCode]!['juice'];
-  }
-
-  String? get cheese {
-    return _spicyLocalizedValues[locale.languageCode]!['cheese'];
   }
 
   String? get apply {
@@ -780,48 +716,12 @@ class SpicyLocalizations {
     return _spicyLocalizedValues[locale.languageCode]!['done'];
   }
 
-  String? get vegetables {
-    return _spicyLocalizedValues[locale.languageCode]!['vegetables'];
-  }
-
-  String? get fruits {
-    return _spicyLocalizedValues[locale.languageCode]!['fruits'];
-  }
-
-  String? get herbs {
-    return _spicyLocalizedValues[locale.languageCode]!['herbs'];
-  }
-
-  String? get dairy {
-    return _spicyLocalizedValues[locale.languageCode]!['dairy'];
-  }
-
-  String? get paperDocuments {
-    return _spicyLocalizedValues[locale.languageCode]!['paperDocuments'];
-  }
-
-  String? get flowersChocolates {
-    return _spicyLocalizedValues[locale.languageCode]!['flowersChocolates'];
-  }
-
-  String? get sports {
-    return _spicyLocalizedValues[locale.languageCode]!['sports'];
-  }
-
-  String? get clothes {
-    return _spicyLocalizedValues[locale.languageCode]!['clothes'];
-  }
-
   String? get electronic {
     return _spicyLocalizedValues[locale.languageCode]!['electronic'];
   }
 
   String? get household {
     return _spicyLocalizedValues[locale.languageCode]!['household'];
-  }
-
-  String? get glass {
-    return _spicyLocalizedValues[locale.languageCode]!['glass'];
   }
 
   String? get or {
@@ -972,7 +872,6 @@ class SpicyLocalizations {
     return _spicyLocalizedValues[locale.languageCode]!['lightMode'];
   }
 
-//
   String? get fav {
     return _spicyLocalizedValues[locale.languageCode]!['fav'];
   }
@@ -1053,22 +952,6 @@ class SpicyLocalizations {
     return _spicyLocalizedValues[locale.languageCode]!['addOffers'];
   }
 
-  String? get burger {
-    return _spicyLocalizedValues[locale.languageCode]!['burger'];
-  }
-
-  String? get pizza {
-    return _spicyLocalizedValues[locale.languageCode]!['pizza'];
-  }
-
-  String? get frankie {
-    return _spicyLocalizedValues[locale.languageCode]!['frankie'];
-  }
-
-  String? get csandwich {
-    return _spicyLocalizedValues[locale.languageCode]!['csandwich'];
-  }
-
   String? get popular {
     return _spicyLocalizedValues[locale.languageCode]!['popular'];
   }
@@ -1077,28 +960,12 @@ class SpicyLocalizations {
     return _spicyLocalizedValues[locale.languageCode]!['mainCourse'];
   }
 
-  String? get fast {
-    return _spicyLocalizedValues[locale.languageCode]!['fast'];
-  }
-
   String? get stater {
     return _spicyLocalizedValues[locale.languageCode]!['stater'];
   }
 
-  String? get customize {
-    return _spicyLocalizedValues[locale.languageCode]!['customize'];
-  }
-
   String? get itemPrice {
     return _spicyLocalizedValues[locale.languageCode]!['itemPrice'];
-  }
-
-  String? get veg {
-    return _spicyLocalizedValues[locale.languageCode]!['veg'];
-  }
-
-  String? get nonVeg {
-    return _spicyLocalizedValues[locale.languageCode]!['nonVeg'];
   }
 
   String? get buy {
@@ -1131,38 +998,6 @@ class SpicyLocalizations {
 
   String? get recoment {
     return _spicyLocalizedValues[locale.languageCode]!['recoment'];
-  }
-
-  String? get sea {
-    return _spicyLocalizedValues[locale.languageCode]!['sea'];
-  }
-
-  String? get chinese {
-    return _spicyLocalizedValues[locale.languageCode]!['chinese'];
-  }
-
-  String? get desert {
-    return _spicyLocalizedValues[locale.languageCode]!['desert'];
-  }
-
-  String? get storee {
-    return _spicyLocalizedValues[locale.languageCode]!['storee'];
-  }
-
-  String? get jesica {
-    return _spicyLocalizedValues[locale.languageCode]!['jesica'];
-  }
-
-  String? get fish {
-    return _spicyLocalizedValues[locale.languageCode]!['fish'];
-  }
-
-  String? get seven {
-    return _spicyLocalizedValues[locale.languageCode]!['seven'];
-  }
-
-  String? get operum {
-    return _spicyLocalizedValues[locale.languageCode]!['operum'];
   }
 
   String? get orderTextt {
@@ -1213,8 +1048,6 @@ class SpicyLocalizationsDelegate
 
   @override
   Future<SpicyLocalizations> load(Locale locale) {
-    // Returning a SynchronousFuture here because an async "load" operation
-    // isn't needed to produce an instance of SpicyLocalizations.
     return SynchronousFuture<SpicyLocalizations>(SpicyLocalizations(locale));
   }
 

@@ -1,38 +1,17 @@
 Map<String, String> italian() {
   return {
-    'veg': 'veg',
-    'nonVeg': 'Non veg',
-    'customize': 'Personalizzare',
     'itemPrice': '\$ 300',
-    'stater': 'Formal Shoes',
-    'mainCourse': 'Sports Shoes',
-    'burger': 'veg Burger',
-    'pizza': 'veg Pizza',
-    'frankie': 'veg Frankie',
-    'csandwich': 'Sandwich Veg Dieta',
     'addOffers': 'offerte',
     'buy': 'Acquista 2 ottenere 1 gratis',
     'buy1':
         'Acquista 2 prodotto alimentare e ottenere uno assolutamente gratuito.',
     'best': 'I più votati',
-    'sea': 'FRUTTI DI MARE',
-    'chinese': 'CINESE',
-    'desert': 'Sandals & Floaters',
     'instruction': 'Inserisci Promocode',
     'apply': 'APPLICARE',
-    'sandwich': 'veg Sandwich',
-    'chicken': 'Pollo fritto',
-    'juice': 'Succo di anguria',
-    'cheese': 'formaggio extra',
-    'storeAddress': 'City Food Parco',
     'addVia': 'Aggiungere Via',
     'enterAmountToAdd': 'Inserisci Importo da Aggiungi',
     'store': 'Il cibo Junction',
     'storee': 'La fame Spot',
-    'jesica': 'Food di Jesica',
-    'fish': 'Fishchef',
-    'seven': 'Seven Star Restro',
-    'operum': 'Operum Food Plaza',
     'fav': 'Preferiti',
     'storeFound': 'Ristoranti Trovato',
     'lightMode': 'Modalità Luce',
@@ -140,12 +119,6 @@ Map<String, String> italian() {
     'yourWords': 'Will tornare al più presto',
     'online': 'in linea',
     'recent': 'Recente',
-    'vegetable': 'Verdure & Frutta',
-    'vegetableText': 'Verdure \n & Fruits',
-    'foodText': 'FOOD \n & PASTI',
-    'meatText': 'CARNE \n & FISH',
-    'medicineText': 'PHARMA \n MEDICINALI',
-    'petText': 'PET \n FORNITURE',
     'customText': 'CUSTOM \n CONSEGNA',
     'profileInfo': 'Informazioni sul profilo',
     'upload': 'Caricare',
@@ -218,17 +191,8 @@ Map<String, String> italian() {
     'pickupAddress': 'indirizzo di ritiro',
     'pickupText': 'Inserisci Pickup Location',
     'send': 'Invia Package',
-    'vegetables': 'VERDURE',
-    'fruits': 'FRUTTA',
-    'herbs': 'ERBE AROMATICHE',
-    'dairy': 'DIARIO',
-    'paperDocuments': 'Carta e documenti',
-    'flowersChocolates': 'Fiori & cioccolato',
-    'sports': 'voce Sport & Giocattoli',
-    'clothes': 'Abbigliamento e Accessori',
     'electronic': 'elemento elettronico',
     'household': 'Oggetto domestico',
-    'glass': 'articolo in vetro',
     'penDrive': 'Chiavetta USB',
     'micro': 'MicroSD',
     'watch': 'Orologio',
@@ -269,29 +233,33 @@ Map<String, String> italian() {
     'buyNow': 'Acquista ora',
     'youreAlmostin':
         'Ci sei quasi. \nFornisci il tuo numero di telefono \nper la verifica.',
-        'desCoffee':
+    'desCoffee':
         'Morphy Richards Fresco 800-Watt 4-Cups Espresso Coffee Maker (Black)4 cup cofee maker with milk frothing Removable drip tray for easy cleaning',
     'desTV':
-        'Sony Bravia 138.8 cm (55 inches) 4K Ultra HD Smart LED TV KD-55X7002G (Black) (2019 Model)',
+        'Sony Bravia 138,8 cm (55 pollici) Smart TV LED 4K Ultra HD KD-55X7002G (nero) (modello 2019)',
     'desMobile':
-        'OnePlus 9 5G (Winter Mist, 12GB RAM, 256GB Storage) Qualcomm Snapdragon 888 Processor with Adreno 660 GPU6.55.',
+        'OnePlus 9 5G (nebbia invernale, 12 GB di RAM, 256 GB di spazio di archiviazione) Processore Qualcomm Snapdragon 888 con GPU Adreno 6606.55.',
     'desLap':
-        'HP 14s-DQ2101TU Laptop (11th Gen Intel Core i3-1115G4/8GB/256GB PCIe-SSD/Intel UHD Graphics/Windows 10/MSO/HD), 35.6 cm (14 inch)',
+        'Laptop HP 14s-DQ2101TU (Intel Core i3-1115G4 di 11a generazione / 8 GB/256 GB PCIe-SSD/Grafica Intel UHD/Windows 10/MSO/HD), 35,6 cm (14 pollici)',
     'desPlay':
         'Redgear Pro Wireless Gamepad (Compatible with Windows 7/8/8.1/10 only)',
     'desHeadset':
-        'Sony WH-1000XM3 Industry Leading Wireless Noise Cancellation Headphones, Bluetooth Headset with Mic for Phone Calls, Work from Home.',
+        'Sony WH-1000XM3 Cuffie wireless a cancellazione di rumore leader del settore, auricolare Bluetooth con microfono per telefonate, lavoro da casa.',
     'desFan':
-        'A Brand new collection from Wrold of Vintage Handmade by Skilled proffessionalA great collection and for Gifting to Your Relatives',
+        'Una nuovissima collezione da Wrold of Vintage fatta a mano da professionisti qualificati Una grande collezione e da regalare ai tuoi parenti',
     'desAC':
-        'With sincerity and hard work of our professionals, we have carved a niche for ourselves in this domain by providing a premium quality gamut of 1.5 Ton Air Conditioner. ',
+        'Con la sincerità e il duro lavoro dei nostri professionisti, ci siamo ritagliati una nicchia in questo settore fornendo una gamma di alta qualità di condizionatori . ',
     'desMic':
-        'FIFINE K678 USB Podcast Microphone for Recording Streaming on PC and Mac, Condenser Computer Gaming Mic for PS4 with Headphone Output & Volume Control, Mic Gain Control, Mute Button for Vocal, YouTube',
+        'FIFINE K678 Microfono USB Podcast per la registrazione in streaming su PC e Mac, microfono da gioco per computer a condensatore per PS4 con uscita cuffie e controllo volume, controllo guadagno microfono, pulsante mute per voce, YouTube',
     'desIron':
-        'The Reconnect RG6201 steam iron comes with a sole plate with non-stick.It has a water tank capacity od 220 ml. It also features steam, spray, burst and self clean functions. ',
+        'Il ferro da stiro Reconnect RG6201 è dotato di una piastra unica con antiaderente. Ha una capacità del serbatoio dell. ',
     'desDrone':
-        'DJI Phantom 3 Standard Quadcopter Drone with 2.7K HD Video Camera.View a live image streamed from the drone up to a half mile away on the DJI Go app using your mobile phone or tablet',
+        'Drone quadricottero standard DJI Phantom 3 con videocamera HD da 2,7 K. Visualizza un immagine dal vivo trasmessa in streaming dal drone fino a mezzo miglio di distanza sull app DJI Go utilizzando il tuo telefono cellulare o tablet',
     'desCam':
-        'Capture Every Detail with 24.1 Megapixel CMOS Sensor Image Enlargement: After shooting, you can enlarge photographs of the objects for clear zoomed view. ',
+        'Cattura ogni dettaglio con il sensore CMOS da 24,1 megapixel Ingrandimento dell. ',
+    'brandInTv': 'Sony Bravia',
+    'brandInLap': 'HP',
+    'headBluetooth': 'Cuffia Bluetooth',
+    'droneCam': 'Drone Cam',
   };
 }
