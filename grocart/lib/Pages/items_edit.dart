@@ -1,7 +1,9 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
+import 'package:grocart/Authentication/login_navigator_page.dart';
 import 'package:grocart/Locale/locales.dart';
+import 'package:grocart/Pages/three_dimention_view.dart';
 import 'package:grocart/Pages/verified_buyNow.dart';
 import 'package:grocart/Routers/routes.dart';
 import 'package:grocart/Themes/colors.dart';
@@ -81,26 +83,50 @@ class _ItemsEditState extends State<ItemsEdit> {
                         padding: const EdgeInsets.only(
                           top: 20.0,
                         ),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.end,
                           children: [
-                            IconButton(
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                IconButton(
+                                    onPressed: () {
+                                      Navigator.pop(context);
+                                    },
+                                    icon: Icon(
+                                      Icons.arrow_back_ios_outlined,
+                                      color: mainTextColor,
+                                    )),
+                                IconButton(
+                                  onPressed: () {
+                                    Navigator.pop(context);
+                                  },
+                                  icon: Icon(
+                                    Icons.favorite_outline_outlined,
+                                    color: mainTextColor,
+                                  ),
+                                )
+                              ],
+                            ),
+                            SizedBox(
+                              height: 250,
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(right: 15.0),
+                              child: RaisedButton(
                                 onPressed: () {
-                                  Navigator.pop(context);
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              ThreeDimentionView()));
                                 },
-                                icon: Icon(
-                                  Icons.arrow_back_ios_outlined,
-                                  color: mainTextColor,
-                                )),
-                            IconButton(
-                              onPressed: () {
-                                Navigator.pop(context);
-                              },
-                              icon: Icon(
-                                Icons.favorite_outline_outlined,
-                                color: mainTextColor,
+                                child: Text(
+                                  '360 View',
+                                  style: TextStyle(color: whiteColor),
+                                ),
                               ),
-                            )
+                            ),
                           ],
                         ),
                       ),
