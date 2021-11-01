@@ -65,30 +65,10 @@ class _ReachedPickupState extends State<ReachedPickup> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Row(
-                    children: [
-                      ButtonTheme(
-                        height: 30,
-                        minWidth: 60,
-                        child: RaisedButton(
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(30)),
-                          onPressed: () {},
-                          child: Text(
-                            'Step1',
-                            style: TextStyle(color: whiteColor),
-                          ),
-                        ),
-                      ),
-                      SizedBox(
-                        width: 15,
-                      ),
-                      Text(
-                        'Pickup 1 Items',
-                        style: TextStyle(
-                            color: iconColor, fontWeight: FontWeight.bold),
-                      )
-                    ],
+                  Text(
+                    'Pickup 1 Items',
+                    style: TextStyle(
+                        color: mainColor, fontWeight: FontWeight.bold),
                   ),
                   Padding(
                     padding:
@@ -120,13 +100,14 @@ class _ReachedPickupState extends State<ReachedPickup> {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(left: 90.0),
+                    padding: const EdgeInsets.only(left: 90.0, bottom: 15.0),
                     child: Text(
                       '-Boiled Egg',
                       style: TextStyle(
                           fontWeight: FontWeight.bold, color: iconColor),
                     ),
                   ),
+                  Divider(),
                 ],
               ),
             ),

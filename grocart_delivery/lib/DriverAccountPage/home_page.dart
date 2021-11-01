@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:grocart_delivery/Map/map_utils.dart';
+import 'package:grocart_delivery/Pages/weekly_earning_details.dart';
 import 'package:grocart_delivery/ThemeColors/colors.dart';
 import 'package:syncfusion_flutter_gauges/gauges.dart';
 
@@ -11,6 +12,8 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  final List<Map> myProducts =
+      List.generate(4, (index) => {"id": index, "name": "Product "}).toList();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -138,60 +141,72 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
               ),
-              SizedBox(
-                height: 30,
+              Padding(
+                padding: const EdgeInsets.only(top: 15.0),
+                child: GridView.builder(
+                    physics: NeverScrollableScrollPhysics(),
+                    shrinkWrap: true,
+                    gridDelegate:
+                        const SliverGridDelegateWithMaxCrossAxisExtent(
+                            maxCrossAxisExtent: 200,
+                            childAspectRatio: 3 / 2,
+                            crossAxisSpacing: 20,
+                            mainAxisSpacing: 20),
+                    itemCount: myProducts.length,
+                    itemBuilder: (BuildContext ctx, index) {
+                      return Container(
+                          padding: const EdgeInsets.only(
+                            left: 15.0,
+                            top: 15.0,
+                          ),
+                          alignment: Alignment.center,
+                          decoration: BoxDecoration(
+                              color: mainColor,
+                              borderRadius: BorderRadius.circular(5)),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Icon(Icons.file_copy),
+                              SizedBox(
+                                height: 10,
+                              ),
+                              Row(
+                                children: [
+                                  Text('₹ '),
+                                  Text(
+                                    '980',
+                                    style: TextStyle(color: whiteColor),
+                                  ),
+                                ],
+                              ),
+                              SizedBox(
+                                height: 5,
+                              ),
+                              GestureDetector(
+                                onTap: () {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              WeeklyEarningDetails()));
+                                },
+                                child: Row(
+                                  children: [
+                                    Text(
+                                      myProducts[index]['name'],
+                                      style: TextStyle(color: whiteColor),
+                                    ),
+                                    Icon(
+                                      Icons.chevron_right,
+                                      color: whiteColor,
+                                    )
+                                  ],
+                                ),
+                              )
+                            ],
+                          ));
+                    }),
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Container(
-                    height: 100,
-                    width: 155,
-                    decoration: BoxDecoration(
-                      shape: BoxShape.rectangle,
-                      color: mainColor,
-                      borderRadius: BorderRadius.circular(12),
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.grey.withOpacity(0.5),
-                          spreadRadius: 5,
-                          blurRadius: 7,
-                          offset: Offset(0, 3), // changes position of shadow
-                        ),
-                      ],
-                    ),
-                    child: Center(
-                      child: Text(
-                        'Upcomming Orders',
-                        style: TextStyle(color: whiteColor),
-                      ),
-                    ),
-                  ),
-                  Container(
-                    height: 100,
-                    width: 155,
-                    decoration: BoxDecoration(
-                      shape: BoxShape.rectangle,
-                      color: mainColor,
-                      borderRadius: BorderRadius.circular(12),
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.grey.withOpacity(0.5),
-                          spreadRadius: 5,
-                          blurRadius: 7,
-                          offset: Offset(0, 3), // changes position of shadow
-                        ),
-                      ],
-                    ),
-                    child: Center(
-                      child: Text(
-                        'Orders Deliverd',
-                        style: TextStyle(color: whiteColor),
-                      ),
-                    ),
-                  ),
-                ],
-              )
             ],
           ),
         ),

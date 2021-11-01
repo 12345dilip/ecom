@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:grocart_delivery/Pages/map_order_placed.dart';
+import 'package:grocart_delivery/Pages/view_order_site.dart';
 import 'package:grocart_delivery/ThemeColors/colors.dart';
 
 class CollectCash extends StatefulWidget {
@@ -10,6 +12,8 @@ class CollectCash extends StatefulWidget {
 }
 
 class _CollectCashState extends State<CollectCash> {
+  bool openSlide = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -54,54 +58,149 @@ class _CollectCashState extends State<CollectCash> {
         ],
         backgroundColor: mainColor,
       ),
-      body: Stack(
-        children: [
-          SingleChildScrollView(
-            child: Padding(
-              padding:
-                  const EdgeInsets.only(left: 15.0, right: 15.0, top: 20.0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    'Collect cash from customer',
-                    style: TextStyle(
-                        color: mainColor, fontWeight: FontWeight.bold),
-                  ),
-                  SizedBox(
-                    height: 20,
-                  ),
-                  Text(
-                    '₹ 150',
-                    style: TextStyle(
-                        color: mainTextColor, fontWeight: FontWeight.bold),
-                  ),
-                  SizedBox(
-                    height: 20,
-                  ),
-                  Text(
-                    'to be collecct from customer',
-                    style: TextStyle(
-                        color: iconColor, fontWeight: FontWeight.bold),
-                  )
-                ],
-              ),
-            ),
-          ),
-          Align(
+      body: openSlide
+          ? Align(
               alignment: Alignment.bottomCenter,
-              child: Container(
-                color: mainColor,
-                width: double.infinity,
-                child: TextButton(
-                    onPressed: () {},
-                    child: Text(
-                      'COLLECT NOW',
-                      style: TextStyle(color: whiteColor),
-                    )),
-              ))
-        ],
-      ),
+              child: ViewOrderSite(),
+            )
+          : Stack(
+              children: [
+                SingleChildScrollView(
+                  child: Padding(
+                    padding: const EdgeInsets.only(
+                        left: 15.0, right: 15.0, top: 20.0),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Collect cash from customer',
+                          style: TextStyle(
+                              color: mainColor, fontWeight: FontWeight.bold),
+                        ),
+                        SizedBox(
+                          height: 20,
+                        ),
+                        Text(
+                          '₹ 150',
+                          style: TextStyle(
+                              color: mainTextColor,
+                              fontWeight: FontWeight.bold),
+                        ),
+                        SizedBox(
+                          height: 20,
+                        ),
+                        Text(
+                          'to be collecct from customer',
+                          style: TextStyle(
+                              color: iconColor, fontWeight: FontWeight.bold),
+                        )
+                      ],
+                    ),
+                  ),
+                ),
+                Align(
+                    alignment: Alignment.bottomCenter,
+                    child: Container(
+                      color: mainColor,
+                      width: double.infinity,
+                      child: TextButton(
+                        onPressed: () {
+                          showModalBottomSheet(
+                            backgroundColor: Colors.transparent,
+                            isScrollControlled: true,
+                            context: context,
+                            builder: (context) {
+                              return Container(
+                                  color: Theme.of(context).cardColor,
+                                  child: SingleChildScrollView(
+                                      child: Padding(
+                                    padding: const EdgeInsets.only(
+                                        left: 15.0,
+                                        right: 15.0,
+                                        top: 20.0,
+                                        bottom: 20.0),
+                                    child: Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        Container(
+                                            child: Text(
+                                                'Collect cash from customer')),
+                                        SizedBox(
+                                          height: 20,
+                                        ),
+                                        Text(
+                                            'ENTER ACTUAL AMOUNT PAID BY CUSTOMER'),
+                                        SizedBox(
+                                          height: 20,
+                                        ),
+                                        TextFormField(
+                                            //controller: firstNameController,
+                                            decoration: InputDecoration(
+                                          labelText: "Enter Amount",
+                                          enabledBorder: OutlineInputBorder(),
+                                        )),
+                                        SizedBox(
+                                          height: 20,
+                                        ),
+                                        Text('RE_ENTER AMOUNT'),
+                                        SizedBox(
+                                          height: 20,
+                                        ),
+                                        TextFormField(
+                                            //controller: firstNameController,
+                                            decoration: InputDecoration(
+                                          labelText: "Re-Enter Amount",
+                                          enabledBorder: OutlineInputBorder(),
+                                        )),
+                                        SizedBox(
+                                          height: 20,
+                                        ),
+                                        Text(
+                                          'Enter numeric amount in both fields',
+                                          style: TextStyle(color: mainColor),
+                                        ),
+                                        Align(
+                                          alignment: Alignment.bottomCenter,
+                                          child: Container(
+                                            width: double.infinity,
+                                            child: RaisedButton(
+                                              color: mainColor,
+                                              onPressed: () {
+                                                setState(() {
+                                                  openSlide = !openSlide;
+                                                });
+                                                Navigator.pop(context);
+                                              },
+                                              child: Text(
+                                                "CASH COLLECTED",
+                                                style: Theme.of(context)
+                                                    .textTheme
+                                                    .bodyText1!
+                                                    .copyWith(
+                                                        color: whiteColor,
+                                                        fontSize: 10),
+                                              ),
+                                            ),
+                                          ),
+                                        )
+                                      ],
+                                    ),
+                                  )));
+                            },
+                          );
+                        },
+                        child: Text(
+                          "COLLECT NOW",
+                          style: Theme.of(context)
+                              .textTheme
+                              .bodyText1!
+                              .copyWith(color: whiteColor, fontSize: 10),
+                        ),
+                      ),
+                    ))
+              ],
+            ),
     );
   }
 }
