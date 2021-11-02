@@ -25,7 +25,7 @@ class _AnimatedBottomBarState extends State<AnimatedBottomBar>
       elevation: 10.0,
       child: Container(
         padding: EdgeInsets.symmetric(vertical: 10.0),
-        color: mainColor,
+        color: whiteColor,
         child: Row(
           mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -59,9 +59,8 @@ class _AnimatedBottomBarState extends State<AnimatedBottomBar>
             children: <Widget>[
               ImageIcon(
                 AssetImage(itemList.photo!),
-                color: selected
-                    ? mainColor
-                    : Theme.of(context).secondaryHeaderColor,
+                color: selected ? mainColor : mainTextColor,
+                //Theme.of(context).secondaryHeaderColor,
               ),
               SizedBox(
                 width: 10.0,

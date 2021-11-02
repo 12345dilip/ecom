@@ -1,8 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/painting.dart';
 import 'package:flutter/widgets.dart';
+import 'package:grocart_delivery/Languages/locals.dart';
+import 'package:grocart_delivery/Map/pickup_location.dart';
 import 'package:grocart_delivery/Pages/delivery_location.dart';
-import 'package:grocart_delivery/Pages/reached_pickup_location.dart';
 import 'package:grocart_delivery/ThemeColors/colors.dart';
 
 var itemCount;
@@ -23,7 +25,40 @@ class _LiveTaskPageState extends State<LiveTaskPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: mainColor,
+        backgroundColor: cardBackgroundColor,
+        leading: IconButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            icon: Icon(
+              Icons.arrow_back,
+              color: mainTextColor,
+            )),
+        title: Text(
+          GrocartLocalizations.of(context)!.live!,
+          style: TextStyle(color: mainColor),
+        ),
+        actions: [
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Container(
+              height: 50,
+              width: 50,
+              decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  border: Border.all(width: 1, color: iconColor)),
+              child: Center(
+                child: Text(
+                  GrocartLocalizations.of(context)!.help!,
+                  style: TextStyle(
+                      color: iconColor,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 11),
+                ),
+              ),
+            ),
+          )
+        ],
       ),
       body: Stack(
         children: [
@@ -35,13 +70,6 @@ class _LiveTaskPageState extends State<LiveTaskPage> {
                       child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text(
-                              'Live Task',
-                              style: TextStyle(
-                                  color: mainColor,
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 20.0),
-                            ),
                             Container(
                                 height: 100,
                                 width: double.infinity,
@@ -57,10 +85,10 @@ class _LiveTaskPageState extends State<LiveTaskPage> {
                                         Container(
                                           height: 100,
                                           width: 50,
-                                          color: Colors.blue,
+                                          color: mainColor,
                                           child: Icon(
                                             Icons.location_pin,
-                                            color: mainColor,
+                                            color: whiteColor,
                                             size: 50,
                                           ),
                                         ),
@@ -75,7 +103,11 @@ class _LiveTaskPageState extends State<LiveTaskPage> {
                                                   CrossAxisAlignment.start,
                                               children: [
                                                 Text(
-                                                  'PICKUP LOCATION - 9500340738',
+                                                  GrocartLocalizations.of(
+                                                              context)!
+                                                          .pickupLocation! +
+                                                      ' - ' +
+                                                      '9500340738',
                                                   style: TextStyle(
                                                       color: iconColor,
                                                       fontWeight:
@@ -86,7 +118,9 @@ class _LiveTaskPageState extends State<LiveTaskPage> {
                                                   height: 5.0,
                                                 ),
                                                 Text(
-                                                  'Yamuna Hotel',
+                                                  GrocartLocalizations.of(
+                                                          context)!
+                                                      .shopName!,
                                                   style: TextStyle(
                                                       color: mainColor,
                                                       fontWeight:
@@ -97,7 +131,9 @@ class _LiveTaskPageState extends State<LiveTaskPage> {
                                                   height: 5.0,
                                                 ),
                                                 Text(
-                                                    '67/A2,Anna Nagar,Mainroad , Thoothukudi -628003',
+                                                    GrocartLocalizations.of(
+                                                            context)!
+                                                        .shopAddress!,
                                                     style: TextStyle(
                                                         color: iconColor,
                                                         fontWeight:
@@ -111,22 +147,32 @@ class _LiveTaskPageState extends State<LiveTaskPage> {
                                     ),
                                     Align(
                                       alignment: Alignment.topRight,
-                                      child: ElevatedButton(
-                                        style: ElevatedButton.styleFrom(
-                                          primary: mainColor,
-                                          minimumSize: Size(90, 10),
-                                          shape: CircleBorder(),
-                                        ),
-                                        child: Icon(
-                                          Icons.chevron_right,
-                                        ),
-                                        onPressed: () {
+                                      child: GestureDetector(
+                                        onTap: () {
                                           Navigator.push(
                                               context,
                                               MaterialPageRoute(
                                                   builder: (context) =>
-                                                      ReachedPickup()));
+                                                      PickupLocationPage()));
                                         },
+                                        child: Padding(
+                                          padding: const EdgeInsets.only(
+                                              top: 5, right: 5),
+                                          child: Container(
+                                            height: 30,
+                                            width: 30,
+                                            decoration: new BoxDecoration(
+                                              color: mainColor,
+                                              shape: BoxShape.circle,
+                                            ),
+                                            child: Center(
+                                              child: Icon(
+                                                Icons.chevron_right,
+                                                color: whiteColor,
+                                              ),
+                                            ),
+                                          ),
+                                        ),
                                       ),
                                     )
                                   ],
@@ -162,7 +208,11 @@ class _LiveTaskPageState extends State<LiveTaskPage> {
                                         crossAxisAlignment:
                                             CrossAxisAlignment.start,
                                         children: [
-                                          Text('DROP LOCATION - 9655551781',
+                                          Text(
+                                              GrocartLocalizations.of(context)!
+                                                      .dropLocation! +
+                                                  ' - ' +
+                                                  '9655551781',
                                               style: TextStyle(
                                                   color: iconColor,
                                                   fontWeight: FontWeight.bold,
@@ -170,7 +220,9 @@ class _LiveTaskPageState extends State<LiveTaskPage> {
                                           SizedBox(
                                             height: 5.0,
                                           ),
-                                          Text('Dilip Watto',
+                                          Text(
+                                              GrocartLocalizations.of(context)!
+                                                  .customerName!,
                                               style: TextStyle(
                                                   color: mainColor,
                                                   fontWeight: FontWeight.bold,
@@ -179,7 +231,8 @@ class _LiveTaskPageState extends State<LiveTaskPage> {
                                             height: 5.0,
                                           ),
                                           Text(
-                                              '77/A2,Spic Nagar,Thoothukudi -628004',
+                                              GrocartLocalizations.of(context)!
+                                                  .deliveryAddress!,
                                               style: TextStyle(
                                                   color: iconColor,
                                                   fontWeight: FontWeight.bold,
@@ -200,13 +253,6 @@ class _LiveTaskPageState extends State<LiveTaskPage> {
                       child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text(
-                              'Live Task',
-                              style: TextStyle(
-                                  color: mainColor,
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 20.0),
-                            ),
                             Container(
                                 height: 100,
                                 width: double.infinity,
@@ -240,7 +286,11 @@ class _LiveTaskPageState extends State<LiveTaskPage> {
                                                   CrossAxisAlignment.start,
                                               children: [
                                                 Text(
-                                                    'DROP LOCATION - 9655551781',
+                                                    GrocartLocalizations.of(
+                                                                context)!
+                                                            .dropLocation! +
+                                                        ' - ' +
+                                                        '9655551781',
                                                     style: TextStyle(
                                                         color: iconColor,
                                                         fontWeight:
@@ -249,7 +299,10 @@ class _LiveTaskPageState extends State<LiveTaskPage> {
                                                 SizedBox(
                                                   height: 5.0,
                                                 ),
-                                                Text('Dilip Watto',
+                                                Text(
+                                                    GrocartLocalizations.of(
+                                                            context)!
+                                                        .customerName!,
                                                     style: TextStyle(
                                                         color: mainColor,
                                                         fontWeight:
@@ -259,7 +312,9 @@ class _LiveTaskPageState extends State<LiveTaskPage> {
                                                   height: 5.0,
                                                 ),
                                                 Text(
-                                                    '77/A2,Spic Nagar,Thoothukudi -628004',
+                                                    GrocartLocalizations.of(
+                                                            context)!
+                                                        .deliveryAddress!,
                                                     style: TextStyle(
                                                         color: iconColor,
                                                         fontWeight:
@@ -273,22 +328,32 @@ class _LiveTaskPageState extends State<LiveTaskPage> {
                                     ),
                                     Align(
                                       alignment: Alignment.topRight,
-                                      child: ElevatedButton(
-                                        style: ElevatedButton.styleFrom(
-                                          primary: mainColor,
-                                          minimumSize: Size(90, 10),
-                                          shape: CircleBorder(),
-                                        ),
-                                        child: Icon(
-                                          Icons.chevron_right,
-                                        ),
-                                        onPressed: () {
+                                      child: GestureDetector(
+                                        onTap: () {
                                           Navigator.push(
                                               context,
                                               MaterialPageRoute(
                                                   builder: (context) =>
                                                       DeliveryLocation()));
                                         },
+                                        child: Padding(
+                                          padding: const EdgeInsets.only(
+                                              top: 5, right: 5),
+                                          child: Container(
+                                            height: 30,
+                                            width: 30,
+                                            decoration: new BoxDecoration(
+                                              color: mainColor,
+                                              shape: BoxShape.circle,
+                                            ),
+                                            child: Center(
+                                              child: Icon(
+                                                Icons.chevron_right,
+                                                color: whiteColor,
+                                              ),
+                                            ),
+                                          ),
+                                        ),
                                       ),
                                     )
                                   ],
@@ -298,17 +363,6 @@ class _LiveTaskPageState extends State<LiveTaskPage> {
                             ),
                           ])),
                 ),
-          Align(
-            alignment: Alignment.bottomRight,
-            child: Padding(
-              padding: const EdgeInsets.only(right: 15.0, bottom: 20.0),
-              child: FloatingActionButton(
-                backgroundColor: mainColor,
-                onPressed: () {},
-                child: Icon(Icons.add),
-              ),
-            ),
-          )
         ],
       ),
     );

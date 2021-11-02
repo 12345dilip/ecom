@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:grocart_delivery/Languages/locals.dart';
 import 'package:grocart_delivery/Pages/live_task_page.dart';
 import 'package:grocart_delivery/ThemeColors/colors.dart';
 import 'package:timelines/timelines.dart';
@@ -55,8 +56,7 @@ class _MapUtilsState extends State<MapUtils> {
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Text(
-                                  'PICKUP LOCATION',
+                                Text(GrocartLocalizations.of(context)!.pickupLocation!,
                                   style: TextStyle(
                                       color: iconColor,
                                       fontWeight: FontWeight.bold,
@@ -66,7 +66,7 @@ class _MapUtilsState extends State<MapUtils> {
                                   height: 5.0,
                                 ),
                                 Text(
-                                  'Yamuna Hotel',
+                                  GrocartLocalizations.of(context)!.shopName!,
                                   style: TextStyle(
                                       color: mainColor,
                                       fontWeight: FontWeight.bold,
@@ -76,7 +76,7 @@ class _MapUtilsState extends State<MapUtils> {
                                   height: 5.0,
                                 ),
                                 Text(
-                                    '67/A2,Anna Nagar,Mainroad , Thoothukudi -628003',
+                                    GrocartLocalizations.of(context)!.shopAddress!,
                                     style: TextStyle(
                                         color: iconColor,
                                         fontWeight: FontWeight.bold,
@@ -93,7 +93,7 @@ class _MapUtilsState extends State<MapUtils> {
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Text('DROP LOCATION',
+                                Text(GrocartLocalizations.of(context)!.dropLocation!,
                                     style: TextStyle(
                                         color: iconColor,
                                         fontWeight: FontWeight.bold,
@@ -101,7 +101,7 @@ class _MapUtilsState extends State<MapUtils> {
                                 SizedBox(
                                   height: 5.0,
                                 ),
-                                Text('Dilip Watto',
+                                Text(GrocartLocalizations.of(context)!.customerName!,
                                     style: TextStyle(
                                         color: mainColor,
                                         fontWeight: FontWeight.bold,
@@ -109,7 +109,7 @@ class _MapUtilsState extends State<MapUtils> {
                                 SizedBox(
                                   height: 5.0,
                                 ),
-                                Text('77/A2,Spic Nagar,Thoothukudi -628004',
+                                Text(GrocartLocalizations.of(context)!.deliveryAddress!,
                                     style: TextStyle(
                                         color: iconColor,
                                         fontWeight: FontWeight.bold,
@@ -128,7 +128,7 @@ class _MapUtilsState extends State<MapUtils> {
                   SizedBox(
                     height: 20,
                   ),
-                  Text('EARNING DETAILS',
+                  Text(GrocartLocalizations.of(context)!.earnDetails!,
                       style: TextStyle(
                         color: iconColor,
                         fontWeight: FontWeight.bold,
@@ -139,7 +139,7 @@ class _MapUtilsState extends State<MapUtils> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text('Loculis lorem sed ornare turpis vitae sodales'),
+                      Text(GrocartLocalizations.of(context)!.earnProduct1!),
                       Text('₹ 5.0')
                     ],
                   ),
@@ -149,7 +149,7 @@ class _MapUtilsState extends State<MapUtils> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text('Duis quis vivamus amet non leo tincidunt sit.'),
+                      Text(GrocartLocalizations.of(context)!.earnProduct2!,),
                       Text('₹ 35.0')
                     ],
                   ),
@@ -163,7 +163,7 @@ class _MapUtilsState extends State<MapUtils> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text("Order Earing",
+                      Text(GrocartLocalizations.of(context)!.earnOrder!,
                           style: TextStyle(
                             color: iconColor,
                             fontWeight: FontWeight.bold,
@@ -174,7 +174,7 @@ class _MapUtilsState extends State<MapUtils> {
                   SizedBox(
                     height: 20,
                   ),
-                  Text('*only order Earning is counted for incentives',
+                  Text(GrocartLocalizations.of(context)!.incentives!,
                       style: TextStyle(
                         color: iconColor,
                       )),
@@ -185,7 +185,7 @@ class _MapUtilsState extends State<MapUtils> {
                   SizedBox(
                     height: 10,
                   ),
-                  Text('DISTANCE DETAILS',
+                  Text(GrocartLocalizations.of(context)!.distance!,
                       style: TextStyle(
                         color: iconColor,
                         fontWeight: FontWeight.bold,
@@ -219,17 +219,17 @@ class _MapUtilsState extends State<MapUtils> {
                   ),
                   Row(
                     children: [
-                      Text('First Miles',
+                      Text(GrocartLocalizations.of(context)!.miles1!,
                           style: TextStyle(
                             color: iconColor,
                           )),
                       Spacer(),
-                      Text('Last Miles',
+                      Text(GrocartLocalizations.of(context)!.miles2!,
                           style: TextStyle(
                             color: iconColor,
                           )),
                       Spacer(),
-                      Text('Totals',
+                      Text(GrocartLocalizations.of(context)!.totals!,
                           style: TextStyle(
                             color: iconColor,
                           ))
@@ -249,11 +249,10 @@ class _MapUtilsState extends State<MapUtils> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => LiveTaskPage(
-                                  )));
+                              builder: (context) => LiveTaskPage()));
                     },
                     child: Text(
-                      'CONFIRM ORDER',
+                      GrocartLocalizations.of(context)!.confirm!,
                       style: TextStyle(color: whiteColor),
                     )),
               ))

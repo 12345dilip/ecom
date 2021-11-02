@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:grocart_delivery/Languages/locals.dart';
 import 'package:grocart_delivery/Pages/live_task_page.dart';
 import 'package:grocart_delivery/ThemeColors/colors.dart';
 
@@ -16,7 +17,6 @@ class _ReachedPickupState extends State<ReachedPickup> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        toolbarHeight: 80,
         leading: IconButton(
             onPressed: () {},
             icon: Icon(
@@ -27,12 +27,12 @@ class _ReachedPickupState extends State<ReachedPickup> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              'PICKUP Yamuna hoel',
-              style: TextStyle(color: mainTextColor, fontSize: 18),
+              GrocartLocalizations.of(context)!.pickupLocation!,
+              style: TextStyle(color: mainTextColor, fontSize: 15),
             ),
             Text(
               '9500340738',
-              style: TextStyle(color: iconColor, fontSize: 18),
+              style: TextStyle(color: iconColor, fontSize: 15),
             )
           ],
         ),
@@ -47,7 +47,7 @@ class _ReachedPickupState extends State<ReachedPickup> {
                   border: Border.all(width: 1, color: iconColor)),
               child: Center(
                 child: Text(
-                  'HELP',
+                  GrocartLocalizations.of(context)!.help!,
                   style: TextStyle(color: mainTextColor),
                 ),
               ),
@@ -66,7 +66,7 @@ class _ReachedPickupState extends State<ReachedPickup> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'Pickup 1 Items',
+                    GrocartLocalizations.of(context)!.pickupItem1!,
                     style: TextStyle(
                         color: mainColor, fontWeight: FontWeight.bold),
                   ),
@@ -93,7 +93,7 @@ class _ReachedPickupState extends State<ReachedPickup> {
                           width: 15,
                         ),
                         Text(
-                          'Mutton Meals',
+                          GrocartLocalizations.of(context)!.camera!,
                           style: TextStyle(fontWeight: FontWeight.bold),
                         )
                       ],
@@ -102,7 +102,7 @@ class _ReachedPickupState extends State<ReachedPickup> {
                   Padding(
                     padding: const EdgeInsets.only(left: 90.0, bottom: 15.0),
                     child: Text(
-                      '-Boiled Egg',
+                      '-' + GrocartLocalizations.of(context)!.drone!,
                       style: TextStyle(
                           fontWeight: FontWeight.bold, color: iconColor),
                     ),
@@ -128,7 +128,7 @@ class _ReachedPickupState extends State<ReachedPickup> {
                               builder: (context) => LiveTaskPage()));
                     },
                     child: Text(
-                      'CONFIRM ITEMS',
+                      GrocartLocalizations.of(context)!.confirmItems!,
                       style: TextStyle(color: whiteColor),
                     )),
               ))

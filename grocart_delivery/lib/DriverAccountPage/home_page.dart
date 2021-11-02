@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:grocart_delivery/Languages/locals.dart';
 import 'package:grocart_delivery/Map/map_utils.dart';
 import 'package:grocart_delivery/Pages/weekly_earning_details.dart';
 import 'package:grocart_delivery/ThemeColors/colors.dart';
@@ -18,14 +19,28 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: mainColor,
-        leading:
-            IconButton(onPressed: () {}, icon: Icon(Icons.grid_4x4_outlined)),
+        backgroundColor: whiteColor,
+        leading: IconButton(
+            onPressed: () {},
+            icon: Icon(
+              Icons.grid_4x4_outlined,
+              color: mainTextColor,
+            )),
         actions: [
           Row(
             children: [
-              IconButton(onPressed: () {}, icon: Icon(Icons.ac_unit_outlined)),
-              IconButton(onPressed: () {}, icon: Icon(Icons.money))
+              IconButton(
+                  onPressed: () {},
+                  icon: Icon(
+                    Icons.ac_unit_outlined,
+                    color: mainTextColor,
+                  )),
+              IconButton(
+                  onPressed: () {},
+                  icon: Icon(
+                    Icons.money,
+                    color: mainTextColor,
+                  ))
             ],
           )
         ],
@@ -50,8 +65,10 @@ class _HomePageState extends State<HomePage> {
                       Icons.watch,
                       color: mainColor,
                     ),
-                    Spacer(),
-                    Text('Shift Details'),
+                    SizedBox(
+                      width: 30,
+                    ),
+                    Text(GrocartLocalizations.of(context)!.shift!),
                     Spacer(),
                     IconButton(
                         onPressed: () {},
@@ -67,7 +84,7 @@ class _HomePageState extends State<HomePage> {
               ),
               Center(
                 child: Container(
-                  height: 200,
+                  height: 180,
                   child: SfRadialGauge(axes: <RadialAxis>[
                     RadialAxis(
                         interval: 10,
@@ -75,7 +92,7 @@ class _HomePageState extends State<HomePage> {
                         endAngle: 360,
                         showTicks: false,
                         showLabels: false,
-                        axisLineStyle: AxisLineStyle(thickness: 20),
+                        axisLineStyle: AxisLineStyle(thickness: 15),
                         pointers: <GaugePointer>[
                           RangePointer(
                               value: 5,
@@ -87,7 +104,7 @@ class _HomePageState extends State<HomePage> {
                         annotations: <GaugeAnnotation>[
                           GaugeAnnotation(
                               widget: Padding(
-                                padding: const EdgeInsets.only(top: 70.0),
+                                padding: const EdgeInsets.only(top: 60.0),
                                 child: Center(
                                   child: Column(
                                     children: [
@@ -96,10 +113,11 @@ class _HomePageState extends State<HomePage> {
                                               fontWeight: FontWeight.bold,
                                               fontSize: 40)),
                                       SizedBox(
-                                        height: 10.0,
+                                        height: 5.0,
                                       ),
                                       Text(
-                                        'So Far ThisWeek',
+                                        GrocartLocalizations.of(context)!
+                                            .farThisWeek!,
                                         style: TextStyle(
                                             fontWeight: FontWeight.bold),
                                       )
@@ -114,18 +132,18 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
               SizedBox(
-                height: 20.0,
+                height: 15.0,
               ),
               Text(
-                'Complete more task & earn more',
+                GrocartLocalizations.of(context)!.taskComplete!,
                 style: TextStyle(fontWeight: FontWeight.bold),
               ),
               SizedBox(
                 height: 20.0,
               ),
               ButtonTheme(
-                height: 50,
-                minWidth: 200,
+                height: 40,
+                minWidth: 180,
                 child: RaisedButton(
                   color: mainColor,
                   shape: RoundedRectangleBorder(
@@ -135,7 +153,7 @@ class _HomePageState extends State<HomePage> {
                         MaterialPageRoute(builder: (context) => MapUtils()));
                   },
                   child: Text(
-                    'START DUTY',
+                    GrocartLocalizations.of(context)!.startDuty!,
                     style: TextStyle(
                         color: whiteColor, fontWeight: FontWeight.bold),
                   ),

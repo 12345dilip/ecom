@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:grocart_delivery/DriverAccountPage/driver_account_page.dart';
 import 'package:grocart_delivery/ThemeColors/colors.dart';
 
 class ViewOrderSite extends StatefulWidget {
@@ -149,7 +150,12 @@ class _ViewOrderSiteState extends State<ViewOrderSite> {
                 color: mainColor,
                 width: double.infinity,
                 child: TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => DriverAccountPage()));
+                  },
                   child: Text(
                     "DELIVERY COMPLETE",
                     style: Theme.of(context)

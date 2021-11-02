@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:grocart_delivery/Pages/map_order_placed.dart';
+import 'package:grocart_delivery/Languages/locals.dart';
 import 'package:grocart_delivery/Pages/view_order_site.dart';
 import 'package:grocart_delivery/ThemeColors/colors.dart';
 
@@ -18,7 +18,6 @@ class _CollectCashState extends State<CollectCash> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        toolbarHeight: 80,
         leading: IconButton(
             onPressed: () {},
             icon: Icon(
@@ -29,12 +28,12 @@ class _CollectCashState extends State<CollectCash> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              'DELIVERY',
-              style: TextStyle(color: whiteColor, fontSize: 18),
+              GrocartLocalizations.of(context)!.delivery!,
+              style: TextStyle(color: whiteColor, fontSize: 15),
             ),
             Text(
               '9500340738',
-              style: TextStyle(color: iconColor, fontSize: 18),
+              style: TextStyle(color: iconColor, fontSize: 15),
             )
           ],
         ),
@@ -49,7 +48,7 @@ class _CollectCashState extends State<CollectCash> {
                   border: Border.all(width: 1, color: whiteColor)),
               child: Center(
                 child: Text(
-                  'HELP',
+                  GrocartLocalizations.of(context)!.help!,
                   style: TextStyle(color: whiteColor),
                 ),
               ),
@@ -73,7 +72,7 @@ class _CollectCashState extends State<CollectCash> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          'Collect cash from customer',
+                          GrocartLocalizations.of(context)!.collectCash!,
                           style: TextStyle(
                               color: mainColor, fontWeight: FontWeight.bold),
                         ),
@@ -90,7 +89,7 @@ class _CollectCashState extends State<CollectCash> {
                           height: 20,
                         ),
                         Text(
-                          'to be collecct from customer',
+                          GrocartLocalizations.of(context)!.toBeCollect!,
                           style: TextStyle(
                               color: iconColor, fontWeight: FontWeight.bold),
                         )
@@ -125,7 +124,7 @@ class _CollectCashState extends State<CollectCash> {
                                       children: [
                                         Container(
                                             child: Text(
-                                                'Collect cash from customer')),
+                                                  GrocartLocalizations.of(context)!.collectCash!,)),
                                         SizedBox(
                                           height: 20,
                                         ),
