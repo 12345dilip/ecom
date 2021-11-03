@@ -29,17 +29,19 @@ class _DeliveryLocationState extends State<DeliveryLocation> {
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pop(context);
+            },
             icon: Icon(
               Icons.arrow_back,
-              color: whiteColor,
+              color: mainTextColor,
             )),
         title: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
               GrocartLocalizations.of(context)!.delivery!,
-              style: TextStyle(color: whiteColor, fontSize: 15),
+              style: TextStyle(color: mainColor, fontSize: 15),
             ),
             Text(
               '9500340738',
@@ -55,19 +57,19 @@ class _DeliveryLocationState extends State<DeliveryLocation> {
               width: 50,
               decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  border: Border.all(width: 1, color: whiteColor)),
+                  border: Border.all(width: 1, color: iconColor)),
               child: Center(
                 child: Text(
                   GrocartLocalizations.of(context)!.help!,
                   style: TextStyle(
-                    color: whiteColor,
+                    color: iconColor,
                   ),
                 ),
               ),
             ),
           )
         ],
-        backgroundColor: mainColor,
+        backgroundColor: whiteColor,
       ),
       body: Stack(
         children: [

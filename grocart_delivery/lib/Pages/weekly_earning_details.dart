@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
+import 'package:grocart_delivery/Languages/locals.dart';
 import 'package:grocart_delivery/ThemeColors/colors.dart';
 
 class WeeklyEarningDetails extends StatefulWidget {
@@ -34,14 +35,14 @@ class _WeeklyEarningDetailsState extends State<WeeklyEarningDetails> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                'WEEKLY EARNING DETAILS',
+                GrocartLocalizations.of(context)!.earnWeeklyDetails!,
                 style: TextStyle(
                     color: mainTextColor,
                     fontSize: 15.0,
                     fontWeight: FontWeight.bold),
               ),
               Text(
-                'Last week earning',
+                GrocartLocalizations.of(context)!.earnLastWeek!,
                 style: TextStyle(
                     color: mainColor,
                     fontSize: 13,
@@ -81,7 +82,9 @@ class _WeeklyEarningDetailsState extends State<WeeklyEarningDetails> {
                               style: TextStyle(
                                   fontWeight: FontWeight.bold, fontSize: 25),
                             ),
-                            Text('Total Earnings')
+                            Text(
+                              GrocartLocalizations.of(context)!.earnTotal!,
+                            )
                           ],
                         ),
                       ),
@@ -113,7 +116,9 @@ class _WeeklyEarningDetailsState extends State<WeeklyEarningDetails> {
                               style: TextStyle(
                                   fontWeight: FontWeight.bold, fontSize: 25),
                             ),
-                            Text('Order Earnings')
+                            Text(
+                              GrocartLocalizations.of(context)!.earnOrder!,
+                            )
                           ],
                         ),
                       ),
@@ -145,7 +150,9 @@ class _WeeklyEarningDetailsState extends State<WeeklyEarningDetails> {
                               style: TextStyle(
                                   fontWeight: FontWeight.bold, fontSize: 25),
                             ),
-                            Text('Bonuses')
+                            Text(
+                              GrocartLocalizations.of(context)!.bonuses!,
+                            )
                           ],
                         ),
                       ),
@@ -463,7 +470,7 @@ class _TabViewState extends State<TabView> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    "McDONALD's",
+                    GrocartLocalizations.of(context)!.shop1!,
                     style: TextStyle(
                         color: mainTextColor, fontWeight: FontWeight.bold),
                   ),
@@ -491,7 +498,7 @@ class _TabViewState extends State<TabView> {
                     ],
                   ),
                   Text(
-                    'Delivered',
+                    GrocartLocalizations.of(context)!.delivered!,
                     style: TextStyle(
                         color: mainColor, fontWeight: FontWeight.bold),
                   )
@@ -510,7 +517,7 @@ class _TabViewState extends State<TabView> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    "French Cafe",
+                    GrocartLocalizations.of(context)!.shop2!,
                     style: TextStyle(
                         color: mainTextColor, fontWeight: FontWeight.bold),
                   ),
@@ -538,7 +545,7 @@ class _TabViewState extends State<TabView> {
                     ],
                   ),
                   Text(
-                    'Delivered',
+                    GrocartLocalizations.of(context)!.delivered!,
                     style: TextStyle(
                         color: mainColor, fontWeight: FontWeight.bold),
                   )
@@ -557,7 +564,7 @@ class _TabViewState extends State<TabView> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    "Sky Food Center",
+                    GrocartLocalizations.of(context)!.shop3!,
                     style: TextStyle(
                         color: mainTextColor, fontWeight: FontWeight.bold),
                   ),
@@ -585,7 +592,7 @@ class _TabViewState extends State<TabView> {
                     ],
                   ),
                   Text(
-                    'Delivered',
+                    GrocartLocalizations.of(context)!.delivered!,
                     style: TextStyle(
                         color: mainColor, fontWeight: FontWeight.bold),
                   )
@@ -604,7 +611,7 @@ class _TabViewState extends State<TabView> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    "Knight",
+                    GrocartLocalizations.of(context)!.shop4!,
                     style: TextStyle(
                         color: mainTextColor, fontWeight: FontWeight.bold),
                   ),
@@ -632,7 +639,7 @@ class _TabViewState extends State<TabView> {
                     ],
                   ),
                   Text(
-                    'Delivered',
+                    GrocartLocalizations.of(context)!.delivered!,
                     style: TextStyle(
                         color: mainColor, fontWeight: FontWeight.bold),
                   )
@@ -651,7 +658,7 @@ class _TabViewState extends State<TabView> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    "Knight",
+                    GrocartLocalizations.of(context)!.shop5!,
                     style: TextStyle(
                         color: mainTextColor, fontWeight: FontWeight.bold),
                   ),
@@ -679,7 +686,7 @@ class _TabViewState extends State<TabView> {
                     ],
                   ),
                   Text(
-                    'Delivered',
+                    GrocartLocalizations.of(context)!.delivered!,
                     style: TextStyle(
                         color: mainColor, fontWeight: FontWeight.bold),
                   )
@@ -698,7 +705,7 @@ class _TabViewState extends State<TabView> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    "Weekly Insentive",
+                    GrocartLocalizations.of(context)!.weeklyInsentive!,
                     style: TextStyle(
                         color: mainTextColor, fontWeight: FontWeight.bold),
                   ),
@@ -727,7 +734,7 @@ class _TabViewState extends State<TabView> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    "Daily Insentive",
+                    GrocartLocalizations.of(context)!.dailyInsentive!,
                     style: TextStyle(
                         color: mainTextColor, fontWeight: FontWeight.bold),
                   ),

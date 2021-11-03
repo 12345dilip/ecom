@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/painting.dart';
 import 'package:flutter/widgets.dart';
 import 'package:grocart_delivery/Languages/locals.dart';
 import 'package:grocart_delivery/Pages/view_order_site.dart';
@@ -19,17 +21,19 @@ class _CollectCashState extends State<CollectCash> {
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pop(context);
+            },
             icon: Icon(
               Icons.arrow_back,
-              color: whiteColor,
+              color: mainTextColor,
             )),
         title: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
               GrocartLocalizations.of(context)!.delivery!,
-              style: TextStyle(color: whiteColor, fontSize: 15),
+              style: TextStyle(color: mainColor, fontSize: 15),
             ),
             Text(
               '9500340738',
@@ -45,17 +49,17 @@ class _CollectCashState extends State<CollectCash> {
               width: 50,
               decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  border: Border.all(width: 1, color: whiteColor)),
+                  border: Border.all(width: 1, color: iconColor)),
               child: Center(
                 child: Text(
                   GrocartLocalizations.of(context)!.help!,
-                  style: TextStyle(color: whiteColor),
+                  style: TextStyle(color: iconColor),
                 ),
               ),
             ),
           )
         ],
-        backgroundColor: mainColor,
+        backgroundColor: whiteColor,
       ),
       body: openSlide
           ? Align(
@@ -124,12 +128,16 @@ class _CollectCashState extends State<CollectCash> {
                                       children: [
                                         Container(
                                             child: Text(
-                                                  GrocartLocalizations.of(context)!.collectCash!,)),
+                                          GrocartLocalizations.of(context)!
+                                              .collectCash!,
+                                        )),
                                         SizedBox(
                                           height: 20,
                                         ),
                                         Text(
-                                            'ENTER ACTUAL AMOUNT PAID BY CUSTOMER'),
+                                          GrocartLocalizations.of(context)!
+                                              .actualPaid!,
+                                        ),
                                         SizedBox(
                                           height: 20,
                                         ),
@@ -142,7 +150,10 @@ class _CollectCashState extends State<CollectCash> {
                                         SizedBox(
                                           height: 20,
                                         ),
-                                        Text('RE_ENTER AMOUNT'),
+                                        Text(
+                                          GrocartLocalizations.of(context)!
+                                              .reEnterAmount!,
+                                        ),
                                         SizedBox(
                                           height: 20,
                                         ),
@@ -156,7 +167,8 @@ class _CollectCashState extends State<CollectCash> {
                                           height: 20,
                                         ),
                                         Text(
-                                          'Enter numeric amount in both fields',
+                                          GrocartLocalizations.of(context)!
+                                              .nuericField!,
                                           style: TextStyle(color: mainColor),
                                         ),
                                         Align(
@@ -172,13 +184,17 @@ class _CollectCashState extends State<CollectCash> {
                                                 Navigator.pop(context);
                                               },
                                               child: Text(
-                                                "CASH COLLECTED",
+                                                GrocartLocalizations.of(
+                                                        context)!
+                                                    .cashCollect!,
                                                 style: Theme.of(context)
                                                     .textTheme
                                                     .bodyText1!
                                                     .copyWith(
                                                         color: whiteColor,
-                                                        fontSize: 10),
+                                                        fontSize: 15,
+                                                        fontWeight:
+                                                            FontWeight.bold),
                                               ),
                                             ),
                                           ),
@@ -190,11 +206,14 @@ class _CollectCashState extends State<CollectCash> {
                           );
                         },
                         child: Text(
-                          "COLLECT NOW",
+                          GrocartLocalizations.of(context)!.collect!,
                           style: Theme.of(context)
                               .textTheme
                               .bodyText1!
-                              .copyWith(color: whiteColor, fontSize: 10),
+                              .copyWith(
+                                  color: whiteColor,
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.bold),
                         ),
                       ),
                     ))

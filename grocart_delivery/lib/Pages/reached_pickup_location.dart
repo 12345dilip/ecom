@@ -18,7 +18,9 @@ class _ReachedPickupState extends State<ReachedPickup> {
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pop(context);
+            },
             icon: Icon(
               Icons.arrow_back,
               color: mainTextColor,

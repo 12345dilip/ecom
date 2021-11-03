@@ -18,7 +18,6 @@ class _LiveTaskPageState extends State<LiveTaskPage> {
   @override
   void initState() {
     super.initState();
-    print(itemCount);
   }
 
   @override

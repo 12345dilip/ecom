@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:grocart_delivery/DriverAccountPage/driver_account_page.dart';
+import 'package:grocart_delivery/Languages/locals.dart';
 import 'package:grocart_delivery/ThemeColors/colors.dart';
 
 class ViewOrderSite extends StatefulWidget {
@@ -34,7 +36,7 @@ class _ViewOrderSiteState extends State<ViewOrderSite> {
                             onChanged: (value) {}),
                       ),
                       Text(
-                        'Payment Succesful',
+                        GrocartLocalizations.of(context)!.paymentSuccess!,
                         style: Theme.of(context)
                             .textTheme
                             .headline6!
@@ -69,10 +71,10 @@ class _ViewOrderSiteState extends State<ViewOrderSite> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            'DELIVERY LOCATION',
+                            GrocartLocalizations.of(context)!.dropLocation!,
                             style: Theme.of(context).textTheme.headline6,
                           ),
-                          Text('DilipWatto',
+                          Text(GrocartLocalizations.of(context)!.customerName!,
                               style: TextStyle(color: iconColor)),
                         ],
                       ),
@@ -99,7 +101,7 @@ class _ViewOrderSiteState extends State<ViewOrderSite> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          'ADDRESS',
+                          GrocartLocalizations.of(context)!.address!,
                           style: Theme.of(context).textTheme.headline6,
                         ),
                         Text('77/A2', style: TextStyle(color: iconColor)),
@@ -107,20 +109,19 @@ class _ViewOrderSiteState extends State<ViewOrderSite> {
                           height: 20.0,
                         ),
                         Text(
-                          'MORE DETAILS',
+                          GrocartLocalizations.of(context)!.moreDetails!,
                           style: Theme.of(context).textTheme.headline6,
                         ),
-                        Text(
-                            '77/A2, Spick Nagar, Thoothukudi, Thoothukudi, Tamil Nadu - 635887',
+                        Text(GrocartLocalizations.of(context)!.deliveryAddress!,
                             style: TextStyle(color: iconColor)),
                         SizedBox(
                           height: 20.0,
                         ),
                         Text(
-                          'LANDMARK',
+                          GrocartLocalizations.of(context)!.landMark!,
                           style: Theme.of(context).textTheme.headline6,
                         ),
-                        Text('Opposite To Alagar Jewellery',
+                        Text(GrocartLocalizations.of(context)!.landMarkDetails!,
                             style: TextStyle(color: iconColor)),
                         SizedBox(
                           height: 40.0,
@@ -132,7 +133,8 @@ class _ViewOrderSiteState extends State<ViewOrderSite> {
                                 Icons.phone,
                                 color: Colors.blue,
                               ),
-                              Text('Call', style: TextStyle(color: Colors.blue))
+                              Text(GrocartLocalizations.of(context)!.call!,
+                                  style: TextStyle(color: Colors.blue))
                             ],
                           ),
                           onTap: () {},
@@ -157,11 +159,11 @@ class _ViewOrderSiteState extends State<ViewOrderSite> {
                             builder: (context) => DriverAccountPage()));
                   },
                   child: Text(
-                    "DELIVERY COMPLETE",
-                    style: Theme.of(context)
-                        .textTheme
-                        .bodyText1!
-                        .copyWith(color: whiteColor, fontSize: 10),
+                    GrocartLocalizations.of(context)!.completeDelivery!,
+                    style: Theme.of(context).textTheme.bodyText1!.copyWith(
+                        color: whiteColor,
+                        fontSize: 15,
+                        fontWeight: FontWeight.bold),
                   ),
                 ),
               ))

@@ -23,7 +23,7 @@ class _HomePageState extends State<HomePage> {
         leading: IconButton(
             onPressed: () {},
             icon: Icon(
-              Icons.grid_4x4_outlined,
+              Icons.grid_on,
               color: mainTextColor,
             )),
         actions: [
@@ -32,13 +32,13 @@ class _HomePageState extends State<HomePage> {
               IconButton(
                   onPressed: () {},
                   icon: Icon(
-                    Icons.ac_unit_outlined,
+                    Icons.menu_book_outlined,
                     color: mainTextColor,
                   )),
               IconButton(
                   onPressed: () {},
                   icon: Icon(
-                    Icons.money,
+                    Icons.notifications,
                     color: mainTextColor,
                   ))
             ],
@@ -160,71 +160,217 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(top: 15.0),
-                child: GridView.builder(
-                    physics: NeverScrollableScrollPhysics(),
-                    shrinkWrap: true,
-                    gridDelegate:
-                        const SliverGridDelegateWithMaxCrossAxisExtent(
-                            maxCrossAxisExtent: 200,
-                            childAspectRatio: 3 / 2,
-                            crossAxisSpacing: 20,
-                            mainAxisSpacing: 20),
-                    itemCount: myProducts.length,
-                    itemBuilder: (BuildContext ctx, index) {
-                      return Container(
-                          padding: const EdgeInsets.only(
-                            left: 15.0,
-                            top: 15.0,
-                          ),
-                          alignment: Alignment.center,
-                          decoration: BoxDecoration(
-                              color: mainColor,
-                              borderRadius: BorderRadius.circular(5)),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Icon(Icons.file_copy),
-                              SizedBox(
-                                height: 10,
-                              ),
-                              Row(
+                  padding: const EdgeInsets.only(top: 15.0),
+                  child: Column(
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(5.0),
+                            child: Container(
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  Text('₹ '),
-                                  Text(
-                                    '980',
-                                    style: TextStyle(color: whiteColor),
+                                  Padding(
+                                    padding: const EdgeInsets.only(
+                                        left: 15.0, top: 5.0),
+                                    child: Image.asset(
+                                      "images/Wallet.png",
+                                      scale: 1.5,
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    height: 3,
+                                  ),
+                                  Row(
+                                    children: [
+                                      SizedBox(
+                                        width: 15,
+                                      ),
+                                      Text(
+                                        '₹ ',
+                                        style: TextStyle(fontSize: 20),
+                                      ),
+                                      Text(
+                                        '980',
+                                        style: TextStyle(
+                                            color: whiteColor, fontSize: 20),
+                                      )
+                                    ],
+                                  ),
+                                  FlatButton(
+                                      onPressed: () {
+                                        Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                                builder: (context) =>
+                                                    WeeklyEarningDetails()));
+                                      },
+                                      child: Row(
+                                        children: [
+                                          Text(
+                                            GrocartLocalizations.of(context)!
+                                                .earnToday!,
+                                            style: TextStyle(
+                                              color: whiteColor,
+                                            ),
+                                          ),
+                                          Icon(
+                                            Icons.chevron_right,
+                                            color: whiteColor,
+                                            size: 22,
+                                          )
+                                        ],
+                                      ))
+                                ],
+                              ),
+                              color: mainColor,
+                              width: 160,
+                              height: 120,
+                            ),
+                          ),
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(5.0),
+                            child: Container(
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Padding(
+                                    padding: const EdgeInsets.only(
+                                        left: 15.0, top: 5.0),
+                                    child: Image.asset(
+                                      "images/Wallet.png",
+                                      scale: 1.5,
+                                    ),
+                                  ),
+                                  Row(
+                                    children: [
+                                      SizedBox(
+                                        width: 15,
+                                      ),
+                                      Text(
+                                        '₹ ',
+                                        style: TextStyle(fontSize: 20),
+                                      ),
+                                      Text(
+                                        '8850',
+                                        style: TextStyle(
+                                            color: whiteColor, fontSize: 20),
+                                      )
+                                    ],
+                                  ),
+                                  FlatButton(
+                                      onPressed: () {
+                                        Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                                builder: (context) =>
+                                                    WeeklyEarningDetails()));
+                                      },
+                                      child: Row(
+                                        children: [
+                                          Text(
+                                            GrocartLocalizations.of(context)!
+                                                .earnWeekly!,
+                                            style: TextStyle(
+                                                color: whiteColor,
+                                                fontSize: 13),
+                                          ),
+                                          Icon(
+                                            Icons.chevron_right,
+                                            color: whiteColor,
+                                            size: 22,
+                                          )
+                                        ],
+                                      ))
+                                ],
+                              ),
+                              color: mainColor,
+                              width: 160,
+                              height: 120,
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBox(
+                        height: 15.0,
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(5.0),
+                            child: Container(
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Padding(
+                                    padding: const EdgeInsets.only(
+                                        left: 15.0, top: 10),
+                                    child: Image.asset(
+                                      "images/Money Bag Krona.png",
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    height: 5.0,
+                                  ),
+                                  Row(
+                                    children: [
+                                      SizedBox(
+                                        width: 15,
+                                      ),
+                                      Text(
+                                        '₹ ',
+                                        style: TextStyle(fontSize: 20),
+                                      ),
+                                      Text(
+                                        '980',
+                                        style: TextStyle(
+                                            color: whiteColor, fontSize: 20),
+                                      )
+                                    ],
                                   ),
                                 ],
                               ),
-                              SizedBox(
-                                height: 5,
-                              ),
-                              GestureDetector(
-                                onTap: () {
-                                  Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                          builder: (context) =>
-                                              WeeklyEarningDetails()));
-                                },
-                                child: Row(
+                              color: mainColor,
+                              width: 160,
+                              height: 120,
+                            ),
+                          ),
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(5.0),
+                            child: Container(
+                              child: Padding(
+                                padding:
+                                    const EdgeInsets.only(left: 15.0, top: 10),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                    Text(
-                                      myProducts[index]['name'],
-                                      style: TextStyle(color: whiteColor),
+                                    Image.asset(
+                                      "images/Clock.png",
+                                      scale: 1.2,
                                     ),
-                                    Icon(
-                                      Icons.chevron_right,
-                                      color: whiteColor,
-                                    )
+                                    SizedBox(
+                                      height: 10,
+                                    ),
+                                    Text(
+                                      '10:05 min',
+                                      style: TextStyle(
+                                          color: whiteColor, fontSize: 20),
+                                    ),
                                   ],
                                 ),
-                              )
-                            ],
-                          ));
-                    }),
-              ),
+                              ),
+                              color: mainColor,
+                              width: 160,
+                              height: 120,
+                            ),
+                          ),
+                        ],
+                      )
+                    ],
+                  )),
             ],
           ),
         ),

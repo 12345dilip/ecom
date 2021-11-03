@@ -157,6 +157,102 @@ class GrocartLocalizations {
   String? get toBeCollect {
     return _GrocartLocalizedValues[locale.languageCode]!['toBeCollect'];
   }
+
+  String? get collect {
+    return _GrocartLocalizedValues[locale.languageCode]!['collect'];
+  }
+
+  String? get actualPaid {
+    return _GrocartLocalizedValues[locale.languageCode]!['actualPaid'];
+  }
+
+  String? get reEnterAmount {
+    return _GrocartLocalizedValues[locale.languageCode]!['reEnterAmount'];
+  }
+
+  String? get nuericField {
+    return _GrocartLocalizedValues[locale.languageCode]!['nuericField'];
+  }
+
+  String? get cashCollect {
+    return _GrocartLocalizedValues[locale.languageCode]!['cashCollect'];
+  }
+
+  String? get paymentSuccess {
+    return _GrocartLocalizedValues[locale.languageCode]!['paymentSuccess'];
+  }
+
+  String? get landMarkDetails {
+    return _GrocartLocalizedValues[locale.languageCode]!['landMarkDetails'];
+  }
+
+  String? get landMark {
+    return _GrocartLocalizedValues[locale.languageCode]!['landMark'];
+  }
+
+  String? get call {
+    return _GrocartLocalizedValues[locale.languageCode]!['call'];
+  }
+
+  String? get completeDelivery {
+    return _GrocartLocalizedValues[locale.languageCode]!['completeDelivery'];
+  }
+
+  String? get earnWeeklyDetails {
+    return _GrocartLocalizedValues[locale.languageCode]!['earnWeeklyDetails'];
+  }
+
+  String? get earnLastWeek {
+    return _GrocartLocalizedValues[locale.languageCode]!['earnLastWeek'];
+  }
+
+  String? get earnTotal {
+    return _GrocartLocalizedValues[locale.languageCode]!['earnTotal'];
+  }
+
+  String? get bonuses {
+    return _GrocartLocalizedValues[locale.languageCode]!['bonuses'];
+  }
+
+  String? get delivered {
+    return _GrocartLocalizedValues[locale.languageCode]!['delivered'];
+  }
+
+  String? get shop1 {
+    return _GrocartLocalizedValues[locale.languageCode]!['shop1'];
+  }
+
+  String? get shop2 {
+    return _GrocartLocalizedValues[locale.languageCode]!['shop2'];
+  }
+
+  String? get shop3 {
+    return _GrocartLocalizedValues[locale.languageCode]!['shop3'];
+  }
+
+  String? get shop4 {
+    return _GrocartLocalizedValues[locale.languageCode]!['shop4'];
+  }
+
+  String? get shop5 {
+    return _GrocartLocalizedValues[locale.languageCode]!['shop5'];
+  }
+
+  String? get weeklyInsentive {
+    return _GrocartLocalizedValues[locale.languageCode]!['weeklyInsentive'];
+  }
+
+  String? get dailyInsentive {
+    return _GrocartLocalizedValues[locale.languageCode]!['dailyInsentive'];
+  }
+
+  String? get earnToday {
+    return _GrocartLocalizedValues[locale.languageCode]!['earnToday'];
+  }
+
+  String? get earnWeekly {
+    return _GrocartLocalizedValues[locale.languageCode]!['earnWeekly'];
+  }
 }
 
 class GrocartLocalizationsDelegate

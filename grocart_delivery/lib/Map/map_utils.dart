@@ -16,7 +16,15 @@ class _MapUtilsState extends State<MapUtils> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: mainColor,
+        backgroundColor: whiteColor,
+        leading: IconButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            icon: Icon(
+              Icons.arrow_back,
+              color: mainColor,
+            )),
       ),
       body: Stack(
         children: [
@@ -56,7 +64,9 @@ class _MapUtilsState extends State<MapUtils> {
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Text(GrocartLocalizations.of(context)!.pickupLocation!,
+                                Text(
+                                  GrocartLocalizations.of(context)!
+                                      .pickupLocation!,
                                   style: TextStyle(
                                       color: iconColor,
                                       fontWeight: FontWeight.bold,
@@ -76,7 +86,8 @@ class _MapUtilsState extends State<MapUtils> {
                                   height: 5.0,
                                 ),
                                 Text(
-                                    GrocartLocalizations.of(context)!.shopAddress!,
+                                    GrocartLocalizations.of(context)!
+                                        .shopAddress!,
                                     style: TextStyle(
                                         color: iconColor,
                                         fontWeight: FontWeight.bold,
@@ -93,7 +104,9 @@ class _MapUtilsState extends State<MapUtils> {
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Text(GrocartLocalizations.of(context)!.dropLocation!,
+                                Text(
+                                    GrocartLocalizations.of(context)!
+                                        .dropLocation!,
                                     style: TextStyle(
                                         color: iconColor,
                                         fontWeight: FontWeight.bold,
@@ -101,7 +114,9 @@ class _MapUtilsState extends State<MapUtils> {
                                 SizedBox(
                                   height: 5.0,
                                 ),
-                                Text(GrocartLocalizations.of(context)!.customerName!,
+                                Text(
+                                    GrocartLocalizations.of(context)!
+                                        .customerName!,
                                     style: TextStyle(
                                         color: mainColor,
                                         fontWeight: FontWeight.bold,
@@ -109,7 +124,9 @@ class _MapUtilsState extends State<MapUtils> {
                                 SizedBox(
                                   height: 5.0,
                                 ),
-                                Text(GrocartLocalizations.of(context)!.deliveryAddress!,
+                                Text(
+                                    GrocartLocalizations.of(context)!
+                                        .deliveryAddress!,
                                     style: TextStyle(
                                         color: iconColor,
                                         fontWeight: FontWeight.bold,
@@ -149,7 +166,9 @@ class _MapUtilsState extends State<MapUtils> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text(GrocartLocalizations.of(context)!.earnProduct2!,),
+                      Text(
+                        GrocartLocalizations.of(context)!.earnProduct2!,
+                      ),
                       Text('₹ 35.0')
                     ],
                   ),
