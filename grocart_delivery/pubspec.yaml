@@ -38,6 +38,11 @@ dependencies:
   timelines: ^0.1.0
   equatable: ^2.0.3
   url_launcher: ^6.0.12
+  animation_wrappers: ^2.0.0
+  flutter_bloc: ^7.3.3
+  google_fonts: ^2.1.0
+  country_code_picker: ^2.0.2
+  flutter_phoenix: ^1.0.0
   
 
 dev_dependencies:
@@ -61,12 +66,17 @@ flutter:
   # included with your application, so that you can use the icons in
   # the material Icons class.
   uses-material-design: true
-
-  # To add assets to your application, add an assets section, like this:
+  fonts:
+    - family: ProductSans
+      fonts:
+        - asset: fonts/Poppins-Regular.ttf
   assets:
     - images/
     - images/bottomIcon/
     - images/location/
+    - images/account/
+    - images/payment/
+    - images/icons/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

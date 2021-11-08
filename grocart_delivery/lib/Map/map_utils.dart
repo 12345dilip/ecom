@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:grocart_delivery/Languages/locals.dart';
-import 'package:grocart_delivery/Pages/live_task_page.dart';
+import 'package:grocart_delivery/Routers/routes.dart';
 import 'package:grocart_delivery/ThemeColors/colors.dart';
 import 'package:timelines/timelines.dart';
 
@@ -23,15 +23,15 @@ class _MapUtilsState extends State<MapUtils> {
             },
             icon: Icon(
               Icons.arrow_back,
-              color: mainColor,
+              color: mainTextColor,
             )),
       ),
       body: Stack(
         children: [
           SingleChildScrollView(
             child: Padding(
-              padding: const EdgeInsets.only(
-                  left: 15.0, right: 15.0, top: 20.0, bottom: 20.0),
+              padding:
+                  const EdgeInsets.only(left: 15.0, right: 15.0, bottom: 20.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -43,7 +43,7 @@ class _MapUtilsState extends State<MapUtils> {
                           color: mainColor,
                         ),
                         SizedBox(
-                          height: 110.0,
+                          height: 120.0,
                           child: DashedLineConnector(
                             color: mainColor,
                           ),
@@ -72,18 +72,16 @@ class _MapUtilsState extends State<MapUtils> {
                                       fontWeight: FontWeight.bold,
                                       fontSize: 12),
                                 ),
-                                SizedBox(
-                                  height: 5.0,
-                                ),
                                 Text(
                                   GrocartLocalizations.of(context)!.shopName!,
-                                  style: TextStyle(
-                                      color: mainColor,
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 20),
-                                ),
-                                SizedBox(
-                                  height: 5.0,
+                                  style: Theme.of(context)
+                                      .textTheme
+                                      .headline4!
+                                      .copyWith(
+                                          fontWeight: FontWeight.bold,
+                                          letterSpacing: 0.07,
+                                          color: mainColor,
+                                          fontSize: 17),
                                 ),
                                 Text(
                                     GrocartLocalizations.of(context)!
@@ -96,7 +94,7 @@ class _MapUtilsState extends State<MapUtils> {
                             ),
                           ),
                           SizedBox(
-                            height: 50.0,
+                            height: 40.0,
                           ),
                           Container(
                             padding:
@@ -111,18 +109,17 @@ class _MapUtilsState extends State<MapUtils> {
                                         color: iconColor,
                                         fontWeight: FontWeight.bold,
                                         fontSize: 12)),
-                                SizedBox(
-                                  height: 5.0,
-                                ),
                                 Text(
-                                    GrocartLocalizations.of(context)!
-                                        .customerName!,
-                                    style: TextStyle(
-                                        color: mainColor,
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 20)),
-                                SizedBox(
-                                  height: 5.0,
+                                  GrocartLocalizations.of(context)!
+                                      .customerName!,
+                                  style: Theme.of(context)
+                                      .textTheme
+                                      .headline4!
+                                      .copyWith(
+                                          fontWeight: FontWeight.bold,
+                                          letterSpacing: 0.07,
+                                          color: mainColor,
+                                          fontSize: 17),
                                 ),
                                 Text(
                                     GrocartLocalizations.of(context)!
@@ -147,90 +144,94 @@ class _MapUtilsState extends State<MapUtils> {
                   ),
                   Text(GrocartLocalizations.of(context)!.earnDetails!,
                       style: TextStyle(
-                        color: iconColor,
-                        fontWeight: FontWeight.bold,
-                      )),
+                          color: iconColor,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 15)),
                   SizedBox(
-                    height: 20,
+                    height: 15,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text(GrocartLocalizations.of(context)!.earnProduct1!),
+                      Flexible(
+                        child: Text(
+                            GrocartLocalizations.of(context)!.earnProduct1!,
+                            style: TextStyle(fontSize: 13)),
+                      ),
                       Text('₹ 5.0')
                     ],
                   ),
                   SizedBox(
-                    height: 20,
+                    height: 10,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text(
-                        GrocartLocalizations.of(context)!.earnProduct2!,
+                      Flexible(
+                        child: Text(
+                            GrocartLocalizations.of(context)!.earnProduct2!,
+                            style: TextStyle(fontSize: 13)),
                       ),
                       Text('₹ 35.0')
                     ],
                   ),
                   SizedBox(
-                    height: 10,
+                    height: 5,
                   ),
                   Divider(),
                   SizedBox(
-                    height: 10,
+                    height: 5,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(GrocartLocalizations.of(context)!.earnOrder!,
                           style: TextStyle(
-                            color: iconColor,
-                            fontWeight: FontWeight.bold,
-                          )),
+                              color: iconColor,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 15)),
                       Text('₹ 40.0')
                     ],
                   ),
                   SizedBox(
-                    height: 20,
+                    height: 15,
                   ),
                   Text(GrocartLocalizations.of(context)!.incentives!,
-                      style: TextStyle(
-                        color: iconColor,
-                      )),
+                      style: TextStyle(color: iconColor, fontSize: 13)),
                   SizedBox(
-                    height: 10,
+                    height: 5,
                   ),
                   Divider(),
                   SizedBox(
-                    height: 10,
+                    height: 5,
                   ),
                   Text(GrocartLocalizations.of(context)!.distance!,
                       style: TextStyle(
-                        color: iconColor,
-                        fontWeight: FontWeight.bold,
-                      )),
+                          color: iconColor,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 15)),
                   SizedBox(
-                    height: 20,
+                    height: 10,
                   ),
                   Row(
                     children: [
                       Text('3.884km',
                           style: TextStyle(
-                            color: mainColor,
-                            fontWeight: FontWeight.bold,
-                          )),
+                              color: mainColor,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 13)),
                       Spacer(),
                       Text('1.884km',
                           style: TextStyle(
-                            color: mainColor,
-                            fontWeight: FontWeight.bold,
-                          )),
+                              color: mainColor,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 13)),
                       Spacer(),
                       Text('5.768km',
                           style: TextStyle(
-                            color: mainColor,
-                            fontWeight: FontWeight.bold,
-                          ))
+                              color: mainColor,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 13))
                     ],
                   ),
                   SizedBox(
@@ -239,21 +240,18 @@ class _MapUtilsState extends State<MapUtils> {
                   Row(
                     children: [
                       Text(GrocartLocalizations.of(context)!.miles1!,
-                          style: TextStyle(
-                            color: iconColor,
-                          )),
+                          style: TextStyle(color: iconColor, fontSize: 13)),
                       Spacer(),
                       Text(GrocartLocalizations.of(context)!.miles2!,
-                          style: TextStyle(
-                            color: iconColor,
-                          )),
+                          style: TextStyle(color: iconColor, fontSize: 13)),
                       Spacer(),
                       Text(GrocartLocalizations.of(context)!.totals!,
-                          style: TextStyle(
-                            color: iconColor,
-                          ))
+                          style: TextStyle(color: iconColor, fontSize: 13))
                     ],
-                  )
+                  ),
+                  SizedBox(
+                    height: 40,
+                  ),
                 ],
               ),
             ),
@@ -265,14 +263,14 @@ class _MapUtilsState extends State<MapUtils> {
                 width: double.infinity,
                 child: TextButton(
                     onPressed: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => LiveTaskPage()));
+                      Navigator.pushNamed(context, PageRoutes.liveTaskPage);
                     },
                     child: Text(
                       GrocartLocalizations.of(context)!.confirm!,
-                      style: TextStyle(color: whiteColor),
+                      style: TextStyle(
+                          color: whiteColor,
+                          fontSize: 15,
+                          fontWeight: FontWeight.bold),
                     )),
               ))
         ],

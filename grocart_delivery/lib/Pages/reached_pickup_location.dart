@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:grocart_delivery/Languages/locals.dart';
 import 'package:grocart_delivery/Pages/live_task_page.dart';
+import 'package:grocart_delivery/Routers/routes.dart';
 import 'package:grocart_delivery/ThemeColors/colors.dart';
 
 class ReachedPickup extends StatefulWidget {
@@ -50,7 +51,10 @@ class _ReachedPickupState extends State<ReachedPickup> {
               child: Center(
                 child: Text(
                   GrocartLocalizations.of(context)!.help!,
-                  style: TextStyle(color: mainTextColor),
+                  style: TextStyle(
+                      color: mainTextColor,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 11),
                 ),
               ),
             ),
@@ -69,12 +73,14 @@ class _ReachedPickupState extends State<ReachedPickup> {
                 children: [
                   Text(
                     GrocartLocalizations.of(context)!.pickupItem1!,
-                    style: TextStyle(
-                        color: mainColor, fontWeight: FontWeight.bold),
+                    style: Theme.of(context).textTheme.headline4!.copyWith(
+                        fontWeight: FontWeight.bold,
+                        letterSpacing: 0.07,
+                        color: mainColor,
+                        fontSize: 17),
                   ),
                   Padding(
-                    padding:
-                        const EdgeInsets.only(left: 20, right: 20, top: 20),
+                    padding: const EdgeInsets.only(right: 20, top: 20),
                     child: Row(
                       children: [
                         ButtonTheme(
@@ -96,17 +102,25 @@ class _ReachedPickupState extends State<ReachedPickup> {
                         ),
                         Text(
                           GrocartLocalizations.of(context)!.camera!,
-                          style: TextStyle(fontWeight: FontWeight.bold),
+                          style: Theme.of(context)
+                              .textTheme
+                              .headline4!
+                              .copyWith(
+                                  fontWeight: FontWeight.bold,
+                                  letterSpacing: 0.07,
+                                  fontSize: 17),
                         )
                       ],
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(left: 90.0, bottom: 15.0),
+                    padding: const EdgeInsets.only(left: 65.0, bottom: 15.0),
                     child: Text(
                       '-' + GrocartLocalizations.of(context)!.drone!,
                       style: TextStyle(
-                          fontWeight: FontWeight.bold, color: iconColor),
+                          fontWeight: FontWeight.bold,
+                          color: iconColor,
+                          fontSize: 15),
                     ),
                   ),
                   Divider(),
@@ -124,14 +138,14 @@ class _ReachedPickupState extends State<ReachedPickup> {
                       setState(() {
                         itemCount = true;
                       });
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => LiveTaskPage()));
+                      Navigator.pushNamed(context, PageRoutes.liveTaskPage);
                     },
                     child: Text(
                       GrocartLocalizations.of(context)!.confirmItems!,
-                      style: TextStyle(color: whiteColor),
+                      style: TextStyle(
+                          color: whiteColor,
+                          fontSize: 15,
+                          fontWeight: FontWeight.bold),
                     )),
               ))
         ],

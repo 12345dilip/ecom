@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/painting.dart';
 import 'package:flutter/widgets.dart';
-import 'package:grocart_delivery/DriverAccountPage/driver_account_page.dart';
 import 'package:grocart_delivery/Languages/locals.dart';
+import 'package:grocart_delivery/Routers/routes.dart';
 import 'package:grocart_delivery/ThemeColors/colors.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class ViewOrderSite extends StatefulWidget {
   @override
@@ -10,6 +12,15 @@ class ViewOrderSite extends StatefulWidget {
 }
 
 class _ViewOrderSiteState extends State<ViewOrderSite> {
+  _openMap() async {
+    const url = 'https://www.google.com/maps/search/?api=1&query=52.32,4.917';
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw 'Could not launch $url';
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Hero(
@@ -37,10 +48,10 @@ class _ViewOrderSiteState extends State<ViewOrderSite> {
                       ),
                       Text(
                         GrocartLocalizations.of(context)!.paymentSuccess!,
-                        style: Theme.of(context)
-                            .textTheme
-                            .headline6!
-                            .copyWith(color: iconColor),
+                        style: Theme.of(context).textTheme.headline6!.copyWith(
+                            color: iconColor,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 18),
                       ),
                       Spacer(),
                       Container(
@@ -59,7 +70,13 @@ class _ViewOrderSiteState extends State<ViewOrderSite> {
                       )
                     ],
                   ),
+                  SizedBox(
+                    height: 10,
+                  ),
                   Divider(),
+                  SizedBox(
+                    height: 20,
+                  ),
                   Row(
                     children: [
                       Icon(
@@ -72,10 +89,25 @@ class _ViewOrderSiteState extends State<ViewOrderSite> {
                         children: [
                           Text(
                             GrocartLocalizations.of(context)!.dropLocation!,
-                            style: Theme.of(context).textTheme.headline6,
+                            style: Theme.of(context)
+                                .textTheme
+                                .headline4!
+                                .copyWith(
+                                    fontWeight: FontWeight.bold,
+                                    letterSpacing: 0.07,
+                                    fontSize: 17),
                           ),
-                          Text(GrocartLocalizations.of(context)!.customerName!,
-                              style: TextStyle(color: iconColor)),
+                          Text(
+                            GrocartLocalizations.of(context)!.customerName!,
+                            style: Theme.of(context)
+                                .textTheme
+                                .headline4!
+                                .copyWith(
+                                    fontWeight: FontWeight.bold,
+                                    letterSpacing: 0.07,
+                                    color: iconColor,
+                                    fontSize: 17),
+                          ),
                         ],
                       ),
                       Spacer(),
@@ -83,7 +115,7 @@ class _ViewOrderSiteState extends State<ViewOrderSite> {
                         width: 40,
                         height: 40,
                         child: IconButton(
-                            onPressed: () {},
+                            onPressed: _openMap,
                             icon: Icon(
                               Icons.directions,
                               color: whiteColor,
@@ -102,27 +134,46 @@ class _ViewOrderSiteState extends State<ViewOrderSite> {
                       children: [
                         Text(
                           GrocartLocalizations.of(context)!.address!,
-                          style: Theme.of(context).textTheme.headline6,
+                          style: Theme.of(context)
+                              .textTheme
+                              .headline4!
+                              .copyWith(
+                                  fontWeight: FontWeight.bold,
+                                  letterSpacing: 0.07,
+                                  fontSize: 17),
                         ),
-                        Text('77/A2', style: TextStyle(color: iconColor)),
+                        Text('77/A2',
+                            style: TextStyle(color: iconColor, fontSize: 15)),
                         SizedBox(
                           height: 20.0,
                         ),
                         Text(
                           GrocartLocalizations.of(context)!.moreDetails!,
-                          style: Theme.of(context).textTheme.headline6,
+                          style: Theme.of(context)
+                              .textTheme
+                              .headline4!
+                              .copyWith(
+                                  fontWeight: FontWeight.bold,
+                                  letterSpacing: 0.07,
+                                  fontSize: 17),
                         ),
                         Text(GrocartLocalizations.of(context)!.deliveryAddress!,
-                            style: TextStyle(color: iconColor)),
+                            style: TextStyle(color: iconColor, fontSize: 15)),
                         SizedBox(
                           height: 20.0,
                         ),
                         Text(
                           GrocartLocalizations.of(context)!.landMark!,
-                          style: Theme.of(context).textTheme.headline6,
+                          style: Theme.of(context)
+                              .textTheme
+                              .headline4!
+                              .copyWith(
+                                  fontWeight: FontWeight.bold,
+                                  letterSpacing: 0.07,
+                                  fontSize: 17),
                         ),
                         Text(GrocartLocalizations.of(context)!.landMarkDetails!,
-                            style: TextStyle(color: iconColor)),
+                            style: TextStyle(color: iconColor, fontSize: 15)),
                         SizedBox(
                           height: 40.0,
                         ),
@@ -134,7 +185,8 @@ class _ViewOrderSiteState extends State<ViewOrderSite> {
                                 color: Colors.blue,
                               ),
                               Text(GrocartLocalizations.of(context)!.call!,
-                                  style: TextStyle(color: Colors.blue))
+                                  style: TextStyle(
+                                      color: Colors.blue, fontSize: 15))
                             ],
                           ),
                           onTap: () {},
@@ -153,10 +205,8 @@ class _ViewOrderSiteState extends State<ViewOrderSite> {
                 width: double.infinity,
                 child: TextButton(
                   onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => DriverAccountPage()));
+                    Navigator.pushNamed(
+                        context, PageRoutes.homeOrderAccountSite);
                   },
                   child: Text(
                     GrocartLocalizations.of(context)!.completeDelivery!,

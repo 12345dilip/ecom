@@ -5,6 +5,7 @@ import 'package:flutter/widgets.dart';
 import 'package:grocart_delivery/Languages/locals.dart';
 import 'package:grocart_delivery/Map/pickup_location.dart';
 import 'package:grocart_delivery/Pages/delivery_location.dart';
+import 'package:grocart_delivery/Routers/routes.dart';
 import 'package:grocart_delivery/ThemeColors/colors.dart';
 
 var itemCount;
@@ -35,7 +36,11 @@ class _LiveTaskPageState extends State<LiveTaskPage> {
             )),
         title: Text(
           GrocartLocalizations.of(context)!.live!,
-          style: TextStyle(color: mainColor),
+          style: Theme.of(context).textTheme.headline4!.copyWith(
+              fontWeight: FontWeight.bold,
+              letterSpacing: 0.07,
+              color: mainColor,
+              fontSize: 17),
         ),
         actions: [
           Padding(
@@ -50,7 +55,7 @@ class _LiveTaskPageState extends State<LiveTaskPage> {
                 child: Text(
                   GrocartLocalizations.of(context)!.help!,
                   style: TextStyle(
-                      color: iconColor,
+                      color: mainTextColor,
                       fontWeight: FontWeight.bold,
                       fontSize: 11),
                 ),
@@ -70,7 +75,7 @@ class _LiveTaskPageState extends State<LiveTaskPage> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Container(
-                                height: 100,
+                                height: 110,
                                 width: double.infinity,
                                 decoration: BoxDecoration(
                                   border: Border.all(
@@ -82,7 +87,7 @@ class _LiveTaskPageState extends State<LiveTaskPage> {
                                     Row(
                                       children: [
                                         Container(
-                                          height: 100,
+                                          height: 110,
                                           width: 50,
                                           color: mainColor,
                                           child: Icon(
@@ -120,11 +125,15 @@ class _LiveTaskPageState extends State<LiveTaskPage> {
                                                   GrocartLocalizations.of(
                                                           context)!
                                                       .shopName!,
-                                                  style: TextStyle(
-                                                      color: mainColor,
-                                                      fontWeight:
-                                                          FontWeight.bold,
-                                                      fontSize: 20),
+                                                  style: Theme.of(context)
+                                                      .textTheme
+                                                      .headline4!
+                                                      .copyWith(
+                                                          fontWeight:
+                                                              FontWeight.bold,
+                                                          letterSpacing: 0.07,
+                                                          color: mainColor,
+                                                          fontSize: 17),
                                                 ),
                                                 SizedBox(
                                                   height: 5.0,
@@ -148,11 +157,8 @@ class _LiveTaskPageState extends State<LiveTaskPage> {
                                       alignment: Alignment.topRight,
                                       child: GestureDetector(
                                         onTap: () {
-                                          Navigator.push(
-                                              context,
-                                              MaterialPageRoute(
-                                                  builder: (context) =>
-                                                      PickupLocationPage()));
+                                          Navigator.pushNamed(context,
+                                              PageRoutes.pickupLocationPage);
                                         },
                                         child: Padding(
                                           padding: const EdgeInsets.only(
@@ -180,7 +186,7 @@ class _LiveTaskPageState extends State<LiveTaskPage> {
                               height: 50.0,
                             ),
                             Container(
-                              height: 100,
+                              height: 110,
                               width: double.infinity,
                               decoration: BoxDecoration(
                                 border: Border.all(
@@ -190,7 +196,7 @@ class _LiveTaskPageState extends State<LiveTaskPage> {
                               child: Row(
                                 children: [
                                   Container(
-                                    height: 100,
+                                    height: 110,
                                     width: 50,
                                     color: iconColor,
                                     child: Icon(
@@ -220,12 +226,17 @@ class _LiveTaskPageState extends State<LiveTaskPage> {
                                             height: 5.0,
                                           ),
                                           Text(
-                                              GrocartLocalizations.of(context)!
-                                                  .customerName!,
-                                              style: TextStyle(
-                                                  color: mainColor,
-                                                  fontWeight: FontWeight.bold,
-                                                  fontSize: 20)),
+                                            GrocartLocalizations.of(context)!
+                                                .customerName!,
+                                            style: Theme.of(context)
+                                                .textTheme
+                                                .headline4!
+                                                .copyWith(
+                                                    fontWeight: FontWeight.bold,
+                                                    letterSpacing: 0.07,
+                                                    color: mainColor,
+                                                    fontSize: 17),
+                                          ),
                                           SizedBox(
                                             height: 5.0,
                                           ),
@@ -253,7 +264,7 @@ class _LiveTaskPageState extends State<LiveTaskPage> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Container(
-                                height: 100,
+                                height: 110,
                                 width: double.infinity,
                                 decoration: BoxDecoration(
                                   border: Border.all(
@@ -265,7 +276,7 @@ class _LiveTaskPageState extends State<LiveTaskPage> {
                                     Row(
                                       children: [
                                         Container(
-                                          height: 100,
+                                          height: 110,
                                           width: 50,
                                           color: iconColor,
                                           child: Icon(
@@ -299,14 +310,19 @@ class _LiveTaskPageState extends State<LiveTaskPage> {
                                                   height: 5.0,
                                                 ),
                                                 Text(
-                                                    GrocartLocalizations.of(
-                                                            context)!
-                                                        .customerName!,
-                                                    style: TextStyle(
-                                                        color: mainColor,
-                                                        fontWeight:
-                                                            FontWeight.bold,
-                                                        fontSize: 20)),
+                                                  GrocartLocalizations.of(
+                                                          context)!
+                                                      .customerName!,
+                                                  style: Theme.of(context)
+                                                      .textTheme
+                                                      .headline4!
+                                                      .copyWith(
+                                                          fontWeight:
+                                                              FontWeight.bold,
+                                                          letterSpacing: 0.07,
+                                                          color: mainColor,
+                                                          fontSize: 17),
+                                                ),
                                                 SizedBox(
                                                   height: 5.0,
                                                 ),
@@ -329,11 +345,8 @@ class _LiveTaskPageState extends State<LiveTaskPage> {
                                       alignment: Alignment.topRight,
                                       child: GestureDetector(
                                         onTap: () {
-                                          Navigator.push(
-                                              context,
-                                              MaterialPageRoute(
-                                                  builder: (context) =>
-                                                      DeliveryLocation()));
+                                          Navigator.pushNamed(context,
+                                              PageRoutes.deliveryLocationPage);
                                         },
                                         child: Padding(
                                           padding: const EdgeInsets.only(

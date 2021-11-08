@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:grocart_delivery/Languages/locals.dart';
 import 'package:grocart_delivery/Map/map_utils.dart';
 import 'package:grocart_delivery/Pages/weekly_earning_details.dart';
+import 'package:grocart_delivery/Routers/routes.dart';
 import 'package:grocart_delivery/ThemeColors/colors.dart';
 import 'package:syncfusion_flutter_gauges/gauges.dart';
 
@@ -96,7 +97,7 @@ class _HomePageState extends State<HomePage> {
                         pointers: <GaugePointer>[
                           RangePointer(
                               value: 5,
-                              width: 20,
+                              width: 15,
                               color: mainColor,
                               enableAnimation: true,
                               cornerStyle: CornerStyle.bothCurve)
@@ -104,7 +105,7 @@ class _HomePageState extends State<HomePage> {
                         annotations: <GaugeAnnotation>[
                           GaugeAnnotation(
                               widget: Padding(
-                                padding: const EdgeInsets.only(top: 60.0),
+                                padding: const EdgeInsets.only(top: 50.0),
                                 child: Center(
                                   child: Column(
                                     children: [
@@ -113,14 +114,15 @@ class _HomePageState extends State<HomePage> {
                                               fontWeight: FontWeight.bold,
                                               fontSize: 40)),
                                       SizedBox(
-                                        height: 5.0,
+                                        height: 6.0,
                                       ),
                                       Text(
                                         GrocartLocalizations.of(context)!
                                             .farThisWeek!,
                                         style: TextStyle(
-                                            fontWeight: FontWeight.bold),
-                                      )
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 12),
+                                      ),
                                     ],
                                   ),
                                 ),
@@ -136,7 +138,7 @@ class _HomePageState extends State<HomePage> {
               ),
               Text(
                 GrocartLocalizations.of(context)!.taskComplete!,
-                style: TextStyle(fontWeight: FontWeight.bold),
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13),
               ),
               SizedBox(
                 height: 20.0,
@@ -149,8 +151,7 @@ class _HomePageState extends State<HomePage> {
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(30)),
                   onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => MapUtils()));
+                    Navigator.pushNamed(context, PageRoutes.mapUtils);
                   },
                   child: Text(
                     GrocartLocalizations.of(context)!.startDuty!,
@@ -201,11 +202,8 @@ class _HomePageState extends State<HomePage> {
                                   ),
                                   FlatButton(
                                       onPressed: () {
-                                        Navigator.push(
-                                            context,
-                                            MaterialPageRoute(
-                                                builder: (context) =>
-                                                    WeeklyEarningDetails()));
+                                        Navigator.pushNamed(context,
+                                            PageRoutes.earnWeeklyDetails);
                                       },
                                       child: Row(
                                         children: [
@@ -219,7 +217,7 @@ class _HomePageState extends State<HomePage> {
                                           Icon(
                                             Icons.chevron_right,
                                             color: whiteColor,
-                                            size: 22,
+                                            size: 17,
                                           )
                                         ],
                                       ))
@@ -227,7 +225,7 @@ class _HomePageState extends State<HomePage> {
                               ),
                               color: mainColor,
                               width: 160,
-                              height: 120,
+                              height: 130,
                             ),
                           ),
                           ClipRRect(
@@ -243,6 +241,9 @@ class _HomePageState extends State<HomePage> {
                                       "images/Wallet.png",
                                       scale: 1.5,
                                     ),
+                                  ),
+                                  SizedBox(
+                                    height: 3,
                                   ),
                                   Row(
                                     children: [
@@ -262,11 +263,8 @@ class _HomePageState extends State<HomePage> {
                                   ),
                                   FlatButton(
                                       onPressed: () {
-                                        Navigator.push(
-                                            context,
-                                            MaterialPageRoute(
-                                                builder: (context) =>
-                                                    WeeklyEarningDetails()));
+                                        Navigator.pushNamed(context,
+                                            PageRoutes.earnWeeklyDetails);
                                       },
                                       child: Row(
                                         children: [
@@ -275,12 +273,12 @@ class _HomePageState extends State<HomePage> {
                                                 .earnWeekly!,
                                             style: TextStyle(
                                                 color: whiteColor,
-                                                fontSize: 13),
+                                                fontSize: 12),
                                           ),
                                           Icon(
                                             Icons.chevron_right,
                                             color: whiteColor,
-                                            size: 22,
+                                            size: 17,
                                           )
                                         ],
                                       ))
@@ -288,7 +286,7 @@ class _HomePageState extends State<HomePage> {
                               ),
                               color: mainColor,
                               width: 160,
-                              height: 120,
+                              height: 130,
                             ),
                           ),
                         ],
@@ -313,7 +311,7 @@ class _HomePageState extends State<HomePage> {
                                     ),
                                   ),
                                   SizedBox(
-                                    height: 5.0,
+                                    height: 10.0,
                                   ),
                                   Row(
                                     children: [
@@ -335,7 +333,7 @@ class _HomePageState extends State<HomePage> {
                               ),
                               color: mainColor,
                               width: 160,
-                              height: 120,
+                              height: 130,
                             ),
                           ),
                           ClipRRect(
@@ -352,7 +350,7 @@ class _HomePageState extends State<HomePage> {
                                       scale: 1.2,
                                     ),
                                     SizedBox(
-                                      height: 10,
+                                      height: 15,
                                     ),
                                     Text(
                                       '10:05 min',
@@ -364,7 +362,7 @@ class _HomePageState extends State<HomePage> {
                               ),
                               color: mainColor,
                               width: 160,
-                              height: 120,
+                              height: 130,
                             ),
                           ),
                         ],

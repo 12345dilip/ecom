@@ -253,6 +253,223 @@ class GrocartLocalizations {
   String? get earnWeekly {
     return _GrocartLocalizedValues[locale.languageCode]!['earnWeekly'];
   }
+
+  String? get walletSite {
+    return _GrocartLocalizedValues[locale.languageCode]!['walletSite'];
+  }
+
+  String? get availableBalance {
+    return _GrocartLocalizedValues[locale.languageCode]!['availableBalance'];
+  }
+
+  String? get addingAmount {
+    return _GrocartLocalizedValues[locale.languageCode]!['addingAmount'];
+  }
+
+  String? get recent {
+    return _GrocartLocalizedValues[locale.languageCode]!['recent'];
+  }
+
+  String? get ironBox {
+    return _GrocartLocalizedValues[locale.languageCode]!['ironBox'];
+  }
+
+  String? get speaker {
+    return _GrocartLocalizedValues[locale.languageCode]!['speaker'];
+  }
+
+  String? get droneCam {
+    return _GrocartLocalizedValues[locale.languageCode]!['droneCam'];
+  }
+
+  String? get ac {
+    return _GrocartLocalizedValues[locale.languageCode]!['ac'];
+  }
+
+  String? get penDrive {
+    return _GrocartLocalizedValues[locale.languageCode]!['penDrive'];
+  }
+
+  String? get lens {
+    return _GrocartLocalizedValues[locale.languageCode]!['lens'];
+  }
+
+  String? get playStation {
+    return _GrocartLocalizedValues[locale.languageCode]!['playStation'];
+  }
+
+  String? get darkMode {
+    return _GrocartLocalizedValues[locale.languageCode]!['darkMode'];
+  }
+
+  String? get darkText {
+    return _GrocartLocalizedValues[locale.languageCode]!['darkText'];
+  }
+
+  String? get lightMode {
+    return _GrocartLocalizedValues[locale.languageCode]!['lightMode'];
+  }
+
+  String? get lightText {
+    return _GrocartLocalizedValues[locale.languageCode]!['lightText'];
+  }
+
+  String? get settings {
+    return _GrocartLocalizedValues[locale.languageCode]!['settings'];
+  }
+
+  String? get display {
+    return _GrocartLocalizedValues[locale.languageCode]!['display'];
+  }
+
+  String? get selectLanguage {
+    return _GrocartLocalizedValues[locale.languageCode]!['selectLanguage'];
+  }
+
+  String? get submit {
+    return _GrocartLocalizedValues[locale.languageCode]!['submit'];
+  }
+
+  String? get verification {
+    return _GrocartLocalizedValues[locale.languageCode]!['verification'];
+  }
+
+  String? get enterVerification {
+    return _GrocartLocalizedValues[locale.languageCode]!['enterVerification'];
+  }
+
+  String? get verificationCode {
+    return _GrocartLocalizedValues[locale.languageCode]!['verificationCode'];
+  }
+
+  String? get resend {
+    return _GrocartLocalizedValues[locale.languageCode]!['resend'];
+  }
+
+  String? get continueText {
+    return _GrocartLocalizedValues[locale.languageCode]!['continueText'];
+  }
+
+  String? get hey {
+    return _GrocartLocalizedValues[locale.languageCode]!['hey'];
+  }
+
+  String? get youreAlmostin {
+    return _GrocartLocalizedValues[locale.languageCode]!['youreAlmostin'];
+  }
+
+  String? get verificationText {
+    return _GrocartLocalizedValues[locale.languageCode]!['verificationText'];
+  }
+
+  String? get register {
+    return _GrocartLocalizedValues[locale.languageCode]!['register'];
+  }
+
+  String? get fullName {
+    return _GrocartLocalizedValues[locale.languageCode]!['fullName'];
+  }
+
+  String? get emailAddress {
+    return _GrocartLocalizedValues[locale.languageCode]!['emailAddress'];
+  }
+
+  String? get mobileNumber {
+    return _GrocartLocalizedValues[locale.languageCode]!['mobileNumber'];
+  }
+
+  String? get login {
+    return _GrocartLocalizedValues[locale.languageCode]!['login'];
+  }
+
+  String? get or {
+    return _GrocartLocalizedValues[locale.languageCode]!['or'];
+  }
+
+  String? get tnc {
+    return _GrocartLocalizedValues[locale.languageCode]!['tnc'];
+  }
+
+  String? get termsOfUse {
+    return _GrocartLocalizedValues[locale.languageCode]!['termsOfUse'];
+  }
+
+  String? get companyPolicy {
+    return _GrocartLocalizedValues[locale.languageCode]!['companyPolicy'];
+  }
+
+  String? get orWrite {
+    return _GrocartLocalizedValues[locale.languageCode]!['orWrite'];
+  }
+
+  String? get yourWords {
+    return _GrocartLocalizedValues[locale.languageCode]!['yourWords'];
+  }
+
+  String? get message {
+    return _GrocartLocalizedValues[locale.languageCode]!['message'];
+  }
+
+  String? get enterMessage {
+    return _GrocartLocalizedValues[locale.languageCode]!['enterMessage'];
+  }
+
+  String? get support {
+    return _GrocartLocalizedValues[locale.languageCode]!['support'];
+  }
+
+  String? get enterAmountToAdd {
+    return _GrocartLocalizedValues[locale.languageCode]!['enterAmountToAdd'];
+  }
+
+  String? get addVia {
+    return _GrocartLocalizedValues[locale.languageCode]!['addVia'];
+  }
+
+  String? get credit {
+    return _GrocartLocalizedValues[locale.languageCode]!['credit'];
+  }
+
+  String? get debit {
+    return _GrocartLocalizedValues[locale.languageCode]!['debit'];
+  }
+
+  String? get paypal {
+    return _GrocartLocalizedValues[locale.languageCode]!['paypal'];
+  }
+
+  String? get payU {
+    return _GrocartLocalizedValues[locale.languageCode]!['payU'];
+  }
+
+  String? get stripe {
+    return _GrocartLocalizedValues[locale.languageCode]!['stripe'];
+  }
+
+  String? get bankInfo {
+    return _GrocartLocalizedValues[locale.languageCode]!['bankInfo'];
+  }
+
+  String? get accountHolderName {
+    return _GrocartLocalizedValues[locale.languageCode]!['accountHolderName'];
+  }
+
+  String? get bankName {
+    return _GrocartLocalizedValues[locale.languageCode]!['bankName'];
+  }
+
+  String? get branchCode {
+    return _GrocartLocalizedValues[locale.languageCode]!['branchCode'];
+  }
+
+  String? get accountNumber {
+    return _GrocartLocalizedValues[locale.languageCode]!['accountNumber'];
+  }
+
+  String? get enterAmountToTransfer {
+    return _GrocartLocalizedValues[locale.languageCode]![
+        'enterAmountToTransfer'];
+  }
 }
 
 class GrocartLocalizationsDelegate

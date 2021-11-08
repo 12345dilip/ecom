@@ -3,7 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:grocart_delivery/Chat/animated_bottom_bar.dart';
 import 'package:grocart_delivery/DriverAccountPage/home_page.dart';
 import 'package:grocart_delivery/DriverAccountPage/order_page.dart';
-import 'package:grocart_delivery/DriverAccountPage/profile_page.dart';
+import 'package:grocart_delivery/DriverAccountPage/Profile/profile_page.dart';
 
 class DriverAccountPage extends StatefulWidget {
   final int number;

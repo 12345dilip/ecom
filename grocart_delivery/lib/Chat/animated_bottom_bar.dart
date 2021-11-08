@@ -60,7 +60,6 @@ class _AnimatedBottomBarState extends State<AnimatedBottomBar>
               ImageIcon(
                 AssetImage(itemList.photo!),
                 color: selected ? mainColor : mainTextColor,
-                //Theme.of(context).secondaryHeaderColor,
               ),
               SizedBox(
                 width: 10.0,

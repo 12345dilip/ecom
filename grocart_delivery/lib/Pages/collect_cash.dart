@@ -53,7 +53,9 @@ class _CollectCashState extends State<CollectCash> {
               child: Center(
                 child: Text(
                   GrocartLocalizations.of(context)!.help!,
-                  style: TextStyle(color: iconColor),
+                  style: TextStyle(color: mainTextColor,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 11),
                 ),
               ),
             ),
@@ -142,7 +144,6 @@ class _CollectCashState extends State<CollectCash> {
                                           height: 20,
                                         ),
                                         TextFormField(
-                                            //controller: firstNameController,
                                             decoration: InputDecoration(
                                           labelText: "Enter Amount",
                                           enabledBorder: OutlineInputBorder(),
@@ -158,7 +159,6 @@ class _CollectCashState extends State<CollectCash> {
                                           height: 20,
                                         ),
                                         TextFormField(
-                                            //controller: firstNameController,
                                             decoration: InputDecoration(
                                           labelText: "Re-Enter Amount",
                                           enabledBorder: OutlineInputBorder(),

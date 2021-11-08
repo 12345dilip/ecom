@@ -1,4 +1,4 @@
-package com.example.grocart_delivery
+package com.flutter.grocart_delivery
 
 import io.flutter.embedding.android.FlutterActivity
 

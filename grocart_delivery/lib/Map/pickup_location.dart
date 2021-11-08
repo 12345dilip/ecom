@@ -4,6 +4,7 @@ import 'package:flutter/painting.dart';
 import 'package:flutter/widgets.dart';
 import 'package:grocart_delivery/Languages/locals.dart';
 import 'package:grocart_delivery/Pages/reached_pickup_location.dart';
+import 'package:grocart_delivery/Routers/routes.dart';
 import 'package:grocart_delivery/ThemeColors/colors.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -62,99 +63,100 @@ class _PickupLocationPageState extends State<PickupLocationPage> {
               child: Center(
                 child: Text(
                   GrocartLocalizations.of(context)!.help!,
-                  style: TextStyle(color: mainTextColor),
+                  style: TextStyle(color: mainTextColor, fontSize: 11),
                 ),
               ),
             ),
           )
         ],
       ),
-      body: SingleChildScrollView(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            GestureDetector(
-              child: Image.asset("images/location/map.jpeg"),
-            ),
-            Align(
-              alignment: Alignment.bottomCenter,
-              child: Column(
-                children: [
-                  Container(
-                    color: Colors.grey.shade300,
-                    width: double.infinity,
-                    height: 118,
-                    child: Stack(
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.all(10.0),
-                          child: Align(
-                              alignment: Alignment.topRight,
-                              child: IconButton(
-                                  onPressed: _openMap,
-                                  icon: Icon(
-                                    Icons.directions,
-                                    color: mainColor,
-                                  ))),
-                        ),
-                        Row(
-                          children: [
-                            Icon(
-                              Icons.location_pin,
-                              size: 70,
-                            ),
-                            Flexible(
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  SizedBox(
-                                    height: 20,
-                                  ),
-                                  Text(
-                                    GrocartLocalizations.of(context)!.shopName!,
-                                    style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 20),
-                                  ),
-                                  SizedBox(
-                                    height: 10,
-                                  ),
-                                  Text(
-                                    GrocartLocalizations.of(context)!
-                                        .shopAddress!,
-                                  )
-                                ],
-                              ),
-                            )
-                          ],
-                        ),
-                      ],
-                    ),
-                  ),
-                  Container(
-                    color: mainColor,
-                    width: double.infinity,
-                    child: TextButton(
-                      onPressed: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => ReachedPickup()));
-                      },
-                      child: Text(
-                        GrocartLocalizations.of(context)!.reachedPickup!,
-                        style: Theme.of(context).textTheme.bodyText1!.copyWith(
-                            color: whiteColor,
-                            fontSize: 15,
-                            fontWeight: FontWeight.bold),
+      body: Stack(
+        children: [
+          SingleChildScrollView(
+            child: Image.asset("images/location/map.jpeg"),
+          ),
+          Align(
+            alignment: Alignment.bottomCenter,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                Container(
+                  color: Colors.grey.shade300,
+                  width: double.infinity,
+                  height: 118,
+                  child: Stack(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(10.0),
+                        child: Align(
+                            alignment: Alignment.topRight,
+                            child: IconButton(
+                                onPressed: _openMap,
+                                icon: Icon(
+                                  Icons.directions,
+                                  size: 35,
+                                  color: mainColor,
+                                ))),
                       ),
+                      Row(
+                        children: [
+                          Icon(
+                            Icons.location_pin,
+                            size: 70,
+                          ),
+                          Flexible(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                SizedBox(
+                                  height: 20,
+                                ),
+                                Text(
+                                  GrocartLocalizations.of(context)!.shopName!,
+                                  style: Theme.of(context)
+                                      .textTheme
+                                      .headline4!
+                                      .copyWith(
+                                          fontWeight: FontWeight.bold,
+                                          letterSpacing: 0.07,
+                                          fontSize: 17),
+                                ),
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                Text(
+                                  GrocartLocalizations.of(context)!
+                                      .shopAddress!,
+                                  style: TextStyle(fontSize: 15),
+                                )
+                              ],
+                            ),
+                          )
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+                Container(
+                  color: mainColor,
+                  width: double.infinity,
+                  child: TextButton(
+                    onPressed: () {
+                      Navigator.pushNamed(context, PageRoutes.reachedPickup);
+                    },
+                    child: Text(
+                      GrocartLocalizations.of(context)!.reachedPickup!,
+                      style: Theme.of(context).textTheme.bodyText1!.copyWith(
+                          color: whiteColor,
+                          fontSize: 15,
+                          fontWeight: FontWeight.bold),
                     ),
                   ),
-                ],
-              ),
-            )
-          ],
-        ),
+                ),
+              ],
+            ),
+          )
+        ],
       ),
     );
   }

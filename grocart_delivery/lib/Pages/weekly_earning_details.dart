@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
@@ -80,10 +82,12 @@ class _WeeklyEarningDetailsState extends State<WeeklyEarningDetails> {
                             Text(
                               '₹ 9998',
                               style: TextStyle(
-                                  fontWeight: FontWeight.bold, fontSize: 25),
+                                  fontWeight: FontWeight.bold, fontSize: 20),
                             ),
                             Text(
                               GrocartLocalizations.of(context)!.earnTotal!,
+                              style: TextStyle(
+                                  fontSize: 12, fontWeight: FontWeight.bold),
                             )
                           ],
                         ),
@@ -114,10 +118,12 @@ class _WeeklyEarningDetailsState extends State<WeeklyEarningDetails> {
                             Text(
                               '₹ 6358',
                               style: TextStyle(
-                                  fontWeight: FontWeight.bold, fontSize: 25),
+                                  fontWeight: FontWeight.bold, fontSize: 20),
                             ),
                             Text(
                               GrocartLocalizations.of(context)!.earnOrder!,
+                              style: TextStyle(
+                                  fontSize: 12, fontWeight: FontWeight.bold),
                             )
                           ],
                         ),
@@ -148,10 +154,12 @@ class _WeeklyEarningDetailsState extends State<WeeklyEarningDetails> {
                             Text(
                               '₹ 0',
                               style: TextStyle(
-                                  fontWeight: FontWeight.bold, fontSize: 25),
+                                  fontWeight: FontWeight.bold, fontSize: 20),
                             ),
                             Text(
                               GrocartLocalizations.of(context)!.bonuses!,
+                              style: TextStyle(
+                                  fontSize: 12, fontWeight: FontWeight.bold),
                             )
                           ],
                         ),
@@ -171,7 +179,9 @@ class _WeeklyEarningDetailsState extends State<WeeklyEarningDetails> {
                   child: Container(
                     height: 80,
                     child: Card(
-                        color: openTab ? Colors.grey.shade300 : whiteColor,
+                        color: openTab
+                            ? Colors.grey.shade300
+                            : cardBackgroundColor,
                         elevation: 1,
                         child: Padding(
                           padding:
@@ -466,20 +476,26 @@ class _TabViewState extends State<TabView> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    GrocartLocalizations.of(context)!.shop1!,
-                    style: TextStyle(
-                        color: mainTextColor, fontWeight: FontWeight.bold),
-                  ),
-                  Text(
-                    '9:30 PM',
-                    style: TextStyle(
-                        color: iconColor, fontWeight: FontWeight.bold),
-                  ),
-                ],
+              Flexible(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      GrocartLocalizations.of(context)!.shop1!,
+                      style: TextStyle(
+                          color: mainTextColor,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 15),
+                    ),
+                    Text(
+                      '9:30 PM',
+                      style: TextStyle(
+                          color: iconColor,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 15),
+                    ),
+                  ],
+                ),
               ),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -489,7 +505,9 @@ class _TabViewState extends State<TabView> {
                       Text(
                         '₹ 60.5',
                         style: TextStyle(
-                            color: mainTextColor, fontWeight: FontWeight.bold),
+                            color: mainTextColor,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 15),
                       ),
                       Icon(
                         Icons.chevron_right,
@@ -500,7 +518,9 @@ class _TabViewState extends State<TabView> {
                   Text(
                     GrocartLocalizations.of(context)!.delivered!,
                     style: TextStyle(
-                        color: mainColor, fontWeight: FontWeight.bold),
+                        color: mainColor,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 15),
                   )
                 ],
               ),
@@ -513,20 +533,26 @@ class _TabViewState extends State<TabView> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    GrocartLocalizations.of(context)!.shop2!,
-                    style: TextStyle(
-                        color: mainTextColor, fontWeight: FontWeight.bold),
-                  ),
-                  Text(
-                    '9:30 PM',
-                    style: TextStyle(
-                        color: iconColor, fontWeight: FontWeight.bold),
-                  ),
-                ],
+              Flexible(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      GrocartLocalizations.of(context)!.shop2!,
+                      style: TextStyle(
+                          color: mainTextColor,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 15),
+                    ),
+                    Text(
+                      '9:30 PM',
+                      style: TextStyle(
+                          color: iconColor,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 15),
+                    ),
+                  ],
+                ),
               ),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -536,7 +562,9 @@ class _TabViewState extends State<TabView> {
                       Text(
                         '₹ 50.5',
                         style: TextStyle(
-                            color: mainTextColor, fontWeight: FontWeight.bold),
+                            color: mainTextColor,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 15),
                       ),
                       Icon(
                         Icons.chevron_right,
@@ -547,7 +575,9 @@ class _TabViewState extends State<TabView> {
                   Text(
                     GrocartLocalizations.of(context)!.delivered!,
                     style: TextStyle(
-                        color: mainColor, fontWeight: FontWeight.bold),
+                        color: mainColor,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 15),
                   )
                 ],
               ),
@@ -560,20 +590,26 @@ class _TabViewState extends State<TabView> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    GrocartLocalizations.of(context)!.shop3!,
-                    style: TextStyle(
-                        color: mainTextColor, fontWeight: FontWeight.bold),
-                  ),
-                  Text(
-                    '9:30 PM',
-                    style: TextStyle(
-                        color: iconColor, fontWeight: FontWeight.bold),
-                  ),
-                ],
+              Flexible(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      GrocartLocalizations.of(context)!.shop3!,
+                      style: TextStyle(
+                          color: mainTextColor,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 15),
+                    ),
+                    Text(
+                      '9:30 PM',
+                      style: TextStyle(
+                          color: iconColor,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 15),
+                    ),
+                  ],
+                ),
               ),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -583,7 +619,9 @@ class _TabViewState extends State<TabView> {
                       Text(
                         '₹ 80.5',
                         style: TextStyle(
-                            color: mainTextColor, fontWeight: FontWeight.bold),
+                            color: mainTextColor,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 15),
                       ),
                       Icon(
                         Icons.chevron_right,
@@ -594,7 +632,9 @@ class _TabViewState extends State<TabView> {
                   Text(
                     GrocartLocalizations.of(context)!.delivered!,
                     style: TextStyle(
-                        color: mainColor, fontWeight: FontWeight.bold),
+                        color: mainColor,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 15),
                   )
                 ],
               ),
@@ -607,20 +647,26 @@ class _TabViewState extends State<TabView> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    GrocartLocalizations.of(context)!.shop4!,
-                    style: TextStyle(
-                        color: mainTextColor, fontWeight: FontWeight.bold),
-                  ),
-                  Text(
-                    '9:30 PM',
-                    style: TextStyle(
-                        color: iconColor, fontWeight: FontWeight.bold),
-                  ),
-                ],
+              Flexible(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      GrocartLocalizations.of(context)!.shop4!,
+                      style: TextStyle(
+                          color: mainTextColor,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 15),
+                    ),
+                    Text(
+                      '9:30 PM',
+                      style: TextStyle(
+                          color: iconColor,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 15),
+                    ),
+                  ],
+                ),
               ),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -630,7 +676,9 @@ class _TabViewState extends State<TabView> {
                       Text(
                         '₹ 40.5',
                         style: TextStyle(
-                            color: mainTextColor, fontWeight: FontWeight.bold),
+                            color: mainTextColor,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 15),
                       ),
                       Icon(
                         Icons.chevron_right,
@@ -641,7 +689,9 @@ class _TabViewState extends State<TabView> {
                   Text(
                     GrocartLocalizations.of(context)!.delivered!,
                     style: TextStyle(
-                        color: mainColor, fontWeight: FontWeight.bold),
+                        color: mainColor,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 15),
                   )
                 ],
               ),
@@ -654,20 +704,26 @@ class _TabViewState extends State<TabView> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    GrocartLocalizations.of(context)!.shop5!,
-                    style: TextStyle(
-                        color: mainTextColor, fontWeight: FontWeight.bold),
-                  ),
-                  Text(
-                    '9:30 PM',
-                    style: TextStyle(
-                        color: iconColor, fontWeight: FontWeight.bold),
-                  ),
-                ],
+              Flexible(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      GrocartLocalizations.of(context)!.shop5!,
+                      style: TextStyle(
+                          color: mainTextColor,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 15),
+                    ),
+                    Text(
+                      '9:30 PM',
+                      style: TextStyle(
+                          color: iconColor,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 15),
+                    ),
+                  ],
+                ),
               ),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -677,7 +733,9 @@ class _TabViewState extends State<TabView> {
                       Text(
                         '₹ 45.5',
                         style: TextStyle(
-                            color: mainTextColor, fontWeight: FontWeight.bold),
+                            color: mainTextColor,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 15),
                       ),
                       Icon(
                         Icons.chevron_right,
@@ -688,7 +746,9 @@ class _TabViewState extends State<TabView> {
                   Text(
                     GrocartLocalizations.of(context)!.delivered!,
                     style: TextStyle(
-                        color: mainColor, fontWeight: FontWeight.bold),
+                        color: mainColor,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 15),
                   )
                 ],
               ),
@@ -701,25 +761,33 @@ class _TabViewState extends State<TabView> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    GrocartLocalizations.of(context)!.weeklyInsentive!,
-                    style: TextStyle(
-                        color: mainTextColor, fontWeight: FontWeight.bold),
-                  ),
-                  Text(
-                    '9:30 PM',
-                    style: TextStyle(
-                        color: iconColor, fontWeight: FontWeight.bold),
-                  ),
-                ],
+              Flexible(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      GrocartLocalizations.of(context)!.weeklyInsentive!,
+                      style: TextStyle(
+                          color: mainTextColor,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 15),
+                    ),
+                    Text(
+                      '9:30 PM',
+                      style: TextStyle(
+                          color: iconColor,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 15),
+                    ),
+                  ],
+                ),
               ),
               Text(
                 '₹ 800',
                 style: TextStyle(
-                    color: mainTextColor, fontWeight: FontWeight.bold),
+                    color: mainTextColor,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 15),
               ),
             ],
           ),
@@ -730,25 +798,33 @@ class _TabViewState extends State<TabView> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    GrocartLocalizations.of(context)!.dailyInsentive!,
-                    style: TextStyle(
-                        color: mainTextColor, fontWeight: FontWeight.bold),
-                  ),
-                  Text(
-                    '9:30 PM',
-                    style: TextStyle(
-                        color: iconColor, fontWeight: FontWeight.bold),
-                  ),
-                ],
+              Flexible(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      GrocartLocalizations.of(context)!.dailyInsentive!,
+                      style: TextStyle(
+                          color: mainTextColor,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 15),
+                    ),
+                    Text(
+                      '9:30 PM',
+                      style: TextStyle(
+                          color: iconColor,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 15),
+                    ),
+                  ],
+                ),
               ),
               Text(
                 '₹ 400',
                 style: TextStyle(
-                    color: mainTextColor, fontWeight: FontWeight.bold),
+                    color: mainTextColor,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 15),
               ),
             ],
           ),
