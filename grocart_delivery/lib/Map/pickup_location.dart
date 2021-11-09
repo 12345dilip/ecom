@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
+import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
 import 'package:grocart_delivery/Languages/locals.dart';
 import 'package:grocart_delivery/Pages/reached_pickup_location.dart';
@@ -43,11 +44,15 @@ class _PickupLocationPageState extends State<PickupLocationPage> {
           children: [
             Text(
               GrocartLocalizations.of(context)!.pickupLocation!,
-              style: TextStyle(color: mainTextColor, fontSize: 15),
+              style: TextStyle(
+                  color: mainTextColor,
+                  fontSize: 15,
+                  fontWeight: FontWeight.bold),
             ),
             Text(
               '9500340738',
-              style: TextStyle(color: iconColor, fontSize: 15),
+              style: TextStyle(
+                  color: iconColor, fontSize: 15, fontWeight: FontWeight.bold),
             )
           ],
         ),
@@ -73,7 +78,11 @@ class _PickupLocationPageState extends State<PickupLocationPage> {
       body: Stack(
         children: [
           SingleChildScrollView(
-            child: Image.asset("images/location/map.jpeg"),
+            child: Image.asset(
+              "images/location/map3.jpeg",
+              height: MediaQuery.of(context).size.height,
+              fit: BoxFit.cover,
+            ),
           ),
           Align(
             alignment: Alignment.bottomCenter,
@@ -100,38 +109,40 @@ class _PickupLocationPageState extends State<PickupLocationPage> {
                       ),
                       Row(
                         children: [
-                          Icon(
-                            Icons.location_pin,
-                            size: 70,
-                          ),
                           Flexible(
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                SizedBox(
-                                  height: 20,
-                                ),
-                                Text(
-                                  GrocartLocalizations.of(context)!.shopName!,
-                                  style: Theme.of(context)
-                                      .textTheme
-                                      .headline4!
-                                      .copyWith(
-                                          fontWeight: FontWeight.bold,
-                                          letterSpacing: 0.07,
-                                          fontSize: 17),
-                                ),
-                                SizedBox(
-                                  height: 10,
-                                ),
-                                Text(
-                                  GrocartLocalizations.of(context)!
-                                      .shopAddress!,
-                                  style: TextStyle(fontSize: 15),
-                                )
-                              ],
+                            child: Icon(
+                              Icons.location_on_outlined,
+                              color: iconColor,
+                              size: 70,
                             ),
-                          )
+                          ),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              SizedBox(
+                                height: 30,
+                              ),
+                              Text(
+                                GrocartLocalizations.of(context)!.shopName!,
+                                style: Theme.of(context)
+                                    .textTheme
+                                    .headline4!
+                                    .copyWith(
+                                      fontWeight: FontWeight.bold,
+                                      letterSpacing: 0.07,
+                                      fontSize: 17,
+                                    ),
+                              ),
+                              SizedBox(
+                                height: 10,
+                              ),
+                              Text(
+                                GrocartLocalizations.of(context)!.shopAddress!,
+                                style: TextStyle(
+                                    fontSize: 15, fontWeight: FontWeight.bold),
+                              )
+                            ],
+                          ),
                         ],
                       ),
                     ],

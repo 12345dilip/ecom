@@ -6,19 +6,12 @@ import 'package:grocart_delivery/Languages/locals.dart';
 import 'package:grocart_delivery/Routers/routes.dart';
 import 'package:grocart_delivery/ThemeColors/colors.dart';
 
-var itemCount;
-
-class LiveTaskPage extends StatefulWidget {
+class DropLocation extends StatefulWidget {
   @override
-  _LiveTaskPageState createState() => _LiveTaskPageState();
+  _DropLocationState createState() => _DropLocationState();
 }
 
-class _LiveTaskPageState extends State<LiveTaskPage> {
-  @override
-  void initState() {
-    super.initState();
-  }
-
+class _DropLocationState extends State<DropLocation> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -86,7 +79,7 @@ class _LiveTaskPageState extends State<LiveTaskPage> {
                                   Container(
                                     height: 110,
                                     width: 50,
-                                    color: mainColor,
+                                    color: iconColor,
                                     child: Icon(
                                       Icons.location_pin,
                                       color: whiteColor,
@@ -102,21 +95,20 @@ class _LiveTaskPageState extends State<LiveTaskPage> {
                                             CrossAxisAlignment.start,
                                         children: [
                                           Text(
-                                            GrocartLocalizations.of(context)!
-                                                    .pickupLocation! +
-                                                ' - ' +
-                                                '9500340738',
-                                            style: TextStyle(
-                                                color: iconColor,
-                                                fontWeight: FontWeight.bold,
-                                                fontSize: 12),
-                                          ),
+                                              GrocartLocalizations.of(context)!
+                                                      .dropLocation! +
+                                                  ' - ' +
+                                                  '9655551781',
+                                              style: TextStyle(
+                                                  color: iconColor,
+                                                  fontWeight: FontWeight.bold,
+                                                  fontSize: 12)),
                                           SizedBox(
                                             height: 5.0,
                                           ),
                                           Text(
                                             GrocartLocalizations.of(context)!
-                                                .shopName!,
+                                                .customerName!,
                                             style: Theme.of(context)
                                                 .textTheme
                                                 .headline4!
@@ -131,7 +123,7 @@ class _LiveTaskPageState extends State<LiveTaskPage> {
                                           ),
                                           Text(
                                               GrocartLocalizations.of(context)!
-                                                  .shopAddress!,
+                                                  .deliveryAddress!,
                                               style: TextStyle(
                                                   color: iconColor,
                                                   fontWeight: FontWeight.bold,
@@ -146,8 +138,8 @@ class _LiveTaskPageState extends State<LiveTaskPage> {
                                 alignment: Alignment.topRight,
                                 child: GestureDetector(
                                   onTap: () {
-                                    Navigator.pushNamed(
-                                        context, PageRoutes.pickupLocationPage);
+                                    Navigator.pushNamed(context,
+                                        PageRoutes.deliveryLocationPage);
                                   },
                                   child: Padding(
                                     padding:
@@ -172,78 +164,10 @@ class _LiveTaskPageState extends State<LiveTaskPage> {
                             ],
                           )),
                       SizedBox(
-                        height: 20.0,
-                      ),
-                      Container(
-                        height: 110,
-                        width: double.infinity,
-                        decoration: BoxDecoration(
-                          border: Border.all(
-                            color: iconColor,
-                          ),
-                        ),
-                        child: Row(
-                          children: [
-                            Container(
-                              height: 110,
-                              width: 50,
-                              color: iconColor,
-                              child: Icon(
-                                Icons.location_pin,
-                                color: whiteColor,
-                                size: 50,
-                              ),
-                            ),
-                            Flexible(
-                              child: Container(
-                                padding: const EdgeInsets.only(
-                                    left: 10.0, right: 15.0, top: 10.0),
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                        GrocartLocalizations.of(context)!
-                                                .dropLocation! +
-                                            ' - ' +
-                                            '9655551781',
-                                        style: TextStyle(
-                                            color: iconColor,
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 12)),
-                                    SizedBox(
-                                      height: 5.0,
-                                    ),
-                                    Text(
-                                      GrocartLocalizations.of(context)!
-                                          .customerName!,
-                                      style: Theme.of(context)
-                                          .textTheme
-                                          .headline4!
-                                          .copyWith(
-                                              fontWeight: FontWeight.bold,
-                                              letterSpacing: 0.07,
-                                              color: mainColor,
-                                              fontSize: 17),
-                                    ),
-                                    SizedBox(
-                                      height: 5.0,
-                                    ),
-                                    Text(
-                                        GrocartLocalizations.of(context)!
-                                            .deliveryAddress!,
-                                        style: TextStyle(
-                                            color: iconColor,
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 11))
-                                  ],
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
+                        height: 50.0,
                       ),
                     ])),
-          )
+          ),
         ],
       ),
     );

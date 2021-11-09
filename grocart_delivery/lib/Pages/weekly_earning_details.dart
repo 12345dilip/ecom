@@ -55,120 +55,126 @@ class _WeeklyEarningDetailsState extends State<WeeklyEarningDetails> {
         ),
         body: SingleChildScrollView(
           child: Padding(
-            padding: const EdgeInsets.only(left: 15.0, right: 15.0, top: 20.0),
+            padding: const EdgeInsets.only(left: 15.0, right: 15.0, top: 15.0),
             child: Column(
               children: [
                 Row(
                   children: [
-                    GestureDetector(
-                      onTap: () {
-                        setState(() {
-                          tabTotalEarn = !tabTotalEarn;
-                          tabOrderEarn = false;
-                          tabBonuses = false;
-                        });
-                      },
-                      child: Container(
-                        height: 80,
-                        width: 100,
-                        decoration: BoxDecoration(
-                            color: tabTotalEarn
-                                ? Colors.grey.shade500
-                                : Colors.grey.shade300,
-                            borderRadius: BorderRadius.circular(5)),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: [
-                            Text(
-                              '₹ 9998',
-                              style: TextStyle(
-                                  fontWeight: FontWeight.bold, fontSize: 20),
-                            ),
-                            Text(
-                              GrocartLocalizations.of(context)!.earnTotal!,
-                              style: TextStyle(
-                                  fontSize: 12, fontWeight: FontWeight.bold),
-                            )
-                          ],
+                    Flexible(
+                      child: GestureDetector(
+                        onTap: () {
+                          setState(() {
+                            tabTotalEarn = !tabTotalEarn;
+                            tabOrderEarn = false;
+                            tabBonuses = false;
+                          });
+                        },
+                        child: Container(
+                          height: 80,
+                          width: MediaQuery.of(context).size.width,
+                          decoration: BoxDecoration(
+                              color: tabTotalEarn
+                                  ? Colors.grey.shade500
+                                  : Colors.grey.shade300,
+                              borderRadius: BorderRadius.circular(5)),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              Text(
+                                '₹ 9998',
+                                style: TextStyle(
+                                    fontWeight: FontWeight.bold, fontSize: 20),
+                              ),
+                              Text(
+                                GrocartLocalizations.of(context)!.earnTotal!,
+                                style: TextStyle(
+                                    fontSize: 12, fontWeight: FontWeight.bold),
+                              )
+                            ],
+                          ),
                         ),
                       ),
                     ),
                     SizedBox(
                       width: 15.0,
                     ),
-                    GestureDetector(
-                      onTap: () {
-                        setState(() {
-                          tabOrderEarn = !tabOrderEarn;
-                          tabTotalEarn = false;
-                          tabBonuses = false;
-                        });
-                      },
-                      child: Container(
-                        height: 80,
-                        width: 100,
-                        decoration: BoxDecoration(
-                            color: tabOrderEarn
-                                ? Colors.grey.shade500
-                                : Colors.grey.shade300,
-                            borderRadius: BorderRadius.circular(5)),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: [
-                            Text(
-                              '₹ 6358',
-                              style: TextStyle(
-                                  fontWeight: FontWeight.bold, fontSize: 20),
-                            ),
-                            Text(
-                              GrocartLocalizations.of(context)!.earnOrder!,
-                              style: TextStyle(
-                                  fontSize: 12, fontWeight: FontWeight.bold),
-                            )
-                          ],
+                    Flexible(
+                      child: GestureDetector(
+                        onTap: () {
+                          setState(() {
+                            tabOrderEarn = !tabOrderEarn;
+                            tabTotalEarn = false;
+                            tabBonuses = false;
+                          });
+                        },
+                        child: Container(
+                          height: 80,
+                          width: MediaQuery.of(context).size.width,
+                          decoration: BoxDecoration(
+                              color: tabOrderEarn
+                                  ? Colors.grey.shade500
+                                  : Colors.grey.shade300,
+                              borderRadius: BorderRadius.circular(5)),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              Text(
+                                '₹ 6358',
+                                style: TextStyle(
+                                    fontWeight: FontWeight.bold, fontSize: 20),
+                              ),
+                              Text(
+                                GrocartLocalizations.of(context)!.earnOrder!,
+                                style: TextStyle(
+                                    fontSize: 12, fontWeight: FontWeight.bold),
+                              )
+                            ],
+                          ),
                         ),
                       ),
                     ),
                     SizedBox(
                       width: 15.0,
                     ),
-                    GestureDetector(
-                      onTap: () {
-                        setState(() {
-                          tabBonuses = !tabBonuses;
-                          tabTotalEarn = false;
-                          tabOrderEarn = false;
-                        });
-                      },
-                      child: Container(
-                        height: 80,
-                        width: 100,
-                        decoration: BoxDecoration(
-                            color: tabBonuses
-                                ? Colors.grey.shade500
-                                : Colors.grey.shade300,
-                            borderRadius: BorderRadius.circular(5)),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: [
-                            Text(
-                              '₹ 0',
-                              style: TextStyle(
-                                  fontWeight: FontWeight.bold, fontSize: 20),
-                            ),
-                            Text(
-                              GrocartLocalizations.of(context)!.bonuses!,
-                              style: TextStyle(
-                                  fontSize: 12, fontWeight: FontWeight.bold),
-                            )
-                          ],
+                    Flexible(
+                      child: GestureDetector(
+                        onTap: () {
+                          setState(() {
+                            tabBonuses = !tabBonuses;
+                            tabTotalEarn = false;
+                            tabOrderEarn = false;
+                          });
+                        },
+                        child: Container(
+                          height: 80,
+                          width: MediaQuery.of(context).size.width,
+                          decoration: BoxDecoration(
+                              color: tabBonuses
+                                  ? Colors.grey.shade500
+                                  : Colors.grey.shade300,
+                              borderRadius: BorderRadius.circular(5)),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              Text(
+                                '₹ 0',
+                                style: TextStyle(
+                                    fontWeight: FontWeight.bold, fontSize: 20),
+                              ),
+                              Text(
+                                GrocartLocalizations.of(context)!.bonuses!,
+                                style: TextStyle(
+                                    fontSize: 12, fontWeight: FontWeight.bold),
+                              )
+                            ],
+                          ),
                         ),
                       ),
                     )
                   ],
                 ),
                 SizedBox(
-                  height: 20,
+                  height: 15,
                 ),
                 GestureDetector(
                   onTap: () {
@@ -229,7 +235,7 @@ class _WeeklyEarningDetailsState extends State<WeeklyEarningDetails> {
                     : Column(
                         children: [
                           SizedBox(
-                            height: 20,
+                            height: 5,
                           ),
                           GestureDetector(
                             child: Container(
@@ -273,7 +279,7 @@ class _WeeklyEarningDetailsState extends State<WeeklyEarningDetails> {
                             ),
                           ),
                           SizedBox(
-                            height: 20,
+                            height: 5,
                           ),
                           GestureDetector(
                             child: Container(
@@ -317,7 +323,7 @@ class _WeeklyEarningDetailsState extends State<WeeklyEarningDetails> {
                             ),
                           ),
                           SizedBox(
-                            height: 20,
+                            height: 5,
                           ),
                           GestureDetector(
                             child: Container(
@@ -361,7 +367,7 @@ class _WeeklyEarningDetailsState extends State<WeeklyEarningDetails> {
                             ),
                           ),
                           SizedBox(
-                            height: 20,
+                            height: 5,
                           ),
                           GestureDetector(
                             child: Container(
@@ -405,7 +411,7 @@ class _WeeklyEarningDetailsState extends State<WeeklyEarningDetails> {
                             ),
                           ),
                           SizedBox(
-                            height: 20,
+                            height: 5,
                           ),
                           GestureDetector(
                             child: Container(

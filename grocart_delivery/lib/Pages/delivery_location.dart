@@ -44,13 +44,19 @@ class _DeliveryLocationState extends State<DeliveryLocation> {
         title: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
-              GrocartLocalizations.of(context)!.delivery!,
-              style: TextStyle(color: mainColor, fontSize: 15),
-            ),
+            Text(GrocartLocalizations.of(context)!.delivery!,
+                style: TextStyle(
+                  color: mainTextColor,
+                  fontSize: 15,
+                  fontWeight: FontWeight.bold,
+                )),
             Text(
               '9500340738',
-              style: TextStyle(color: iconColor, fontSize: 15),
+              style: TextStyle(
+                color: iconColor,
+                fontSize: 15,
+                fontWeight: FontWeight.bold,
+              ),
             )
           ],
         ),
@@ -89,99 +95,10 @@ class _DeliveryLocationState extends State<DeliveryLocation> {
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: <Widget>[
-                        Image.asset("images/location/map3.jpeg"),
-                        Container(
-                          color: Colors.grey.shade300,
-                          child: Column(
-                            children: [
-                              Padding(
-                                padding: const EdgeInsets.only(right: 15.0),
-                                child: Row(
-                                  children: <Widget>[
-                                    Icon(
-                                      Icons.location_pin,
-                                      size: 40,
-                                    ),
-                                    Text(
-                                      GrocartLocalizations.of(context)!
-                                          .customerName!,
-                                      style: Theme.of(context)
-                                          .textTheme
-                                          .headline4!
-                                          .copyWith(
-                                              fontWeight: FontWeight.bold,
-                                              letterSpacing: 0.07,
-                                              color: iconColor,
-                                              fontSize: 20),
-                                    ),
-                                    Spacer(),
-                                    IconButton(
-                                        onPressed: _openMap,
-                                        icon: Icon(
-                                          Icons.directions,
-                                          size: 35,
-                                          color: mainColor,
-                                        ))
-                                  ],
-                                ),
-                              ),
-                              Divider(),
-                              Padding(
-                                padding: const EdgeInsets.only(left: 40.0),
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      GrocartLocalizations.of(context)!
-                                          .address!,
-                                      style: Theme.of(context)
-                                          .textTheme
-                                          .headline4!
-                                          .copyWith(
-                                              fontWeight: FontWeight.bold,
-                                              letterSpacing: 0.07,
-                                              fontSize: 17),
-                                    ),
-                                    SizedBox(
-                                      height: 5,
-                                    ),
-                                    Text(
-                                      '77/A2',
-                                      style: TextStyle(
-                                          color: iconColor, fontSize: 15),
-                                    ),
-                                    SizedBox(
-                                      height: 10,
-                                    ),
-                                    Text(
-                                      GrocartLocalizations.of(context)!
-                                          .moreDetails!,
-                                      style: Theme.of(context)
-                                          .textTheme
-                                          .headline4!
-                                          .copyWith(
-                                              fontWeight: FontWeight.bold,
-                                              letterSpacing: 0.07,
-                                              color: mainColor,
-                                              fontSize: 17),
-                                    ),
-                                    SizedBox(
-                                      height: 5,
-                                    ),
-                                    Text(
-                                      GrocartLocalizations.of(context)!
-                                          .deliveryAddress!,
-                                      style: TextStyle(
-                                          color: iconColor, fontSize: 15),
-                                    ),
-                                    SizedBox(
-                                      height: 100,
-                                    ),
-                                  ],
-                                ),
-                              )
-                            ],
-                          ),
+                        Image.asset(
+                          "images/location/map3.jpeg",
+                          fit: BoxFit.cover,
+                          height: MediaQuery.of(context).size.height,
                         ),
                       ],
                     ),
@@ -209,7 +126,7 @@ class _DeliveryLocationState extends State<DeliveryLocation> {
                             width: 50.0,
                             height: 50.0,
                             decoration: new BoxDecoration(
-                              color: iconColor,
+                              color: Colors.black54,
                               shape: BoxShape.circle,
                             ),
                           ),
@@ -227,7 +144,7 @@ class _DeliveryLocationState extends State<DeliveryLocation> {
                           Text(
                             '₹ 150',
                             style: TextStyle(
-                                color: iconColor,
+                                color: Colors.black54,
                                 fontWeight: FontWeight.bold,
                                 fontSize: 22),
                           )
@@ -238,133 +155,211 @@ class _DeliveryLocationState extends State<DeliveryLocation> {
                 ),
                 Align(
                     alignment: Alignment.bottomCenter,
-                    child: Container(
-                      color: mainColor,
-                      width: double.infinity,
-                      child: TextButton(
-                        onPressed: () {
-                          showModalBottomSheet(
-                            backgroundColor: Colors.transparent,
-                            isScrollControlled: true,
-                            context: context,
-                            builder: (context) {
-                              return Container(
-                                  color: Theme.of(context).cardColor,
-                                  child: SingleChildScrollView(
-                                      child: Padding(
-                                    padding: const EdgeInsets.only(
-                                        left: 15.0,
-                                        right: 15.0,
-                                        top: 20.0,
-                                        bottom: 20.0),
-                                    child: Column(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: [
-                                        Container(
-                                            child: Text(
-                                          GrocartLocalizations.of(context)!
-                                              .collectCash!,
-                                          style: TextStyle(
-                                              color: mainTextColor,
-                                              fontWeight: FontWeight.bold),
-                                        )),
-                                        SizedBox(
-                                          height: 20,
-                                        ),
-                                        Text(
-                                          GrocartLocalizations.of(context)!
-                                              .actualPaid!,
-                                          style: TextStyle(
-                                              fontWeight: FontWeight.bold,
-                                              fontSize: 15),
-                                        ),
-                                        SizedBox(
-                                          height: 20,
-                                        ),
-                                        TextFormField(
-                                            decoration: InputDecoration(
-                                          labelText: "Enter Amount",
-                                          enabledBorder: OutlineInputBorder(),
-                                        )),
-                                        SizedBox(
-                                          height: 10,
-                                        ),
-                                        Text(
-                                          GrocartLocalizations.of(context)!
-                                              .reEnterAmount!,
-                                          style: TextStyle(
-                                              fontWeight: FontWeight.bold,
-                                              fontSize: 15),
-                                        ),
-                                        SizedBox(
-                                          height: 10,
-                                        ),
-                                        TextFormField(
-                                            decoration: InputDecoration(
-                                          labelText: "Re-Enter Amount",
-                                          enabledBorder: OutlineInputBorder(),
-                                        )),
-                                        SizedBox(
-                                          height: 10,
-                                        ),
-                                        Text(
-                                          GrocartLocalizations.of(context)!
-                                              .nuericField!,
-                                          style: TextStyle(
-                                              color: mainColor,
-                                              fontSize: 13,
-                                              fontWeight: FontWeight.bold),
-                                        ),
-                                        SizedBox(
-                                          height: 10,
-                                        ),
-                                        Align(
-                                          alignment: Alignment.bottomCenter,
-                                          child: Container(
-                                            color: mainColor,
-                                            width: double.infinity,
-                                            child: TextButton(
-                                              onPressed: () {
-                                                setState(() {
-                                                  openSlide = !openSlide;
-                                                });
-                                                Navigator.pop(context);
-                                              },
-                                              child: Text(
-                                                GrocartLocalizations.of(
-                                                        context)!
-                                                    .cashCollect!,
-                                                style: Theme.of(context)
-                                                    .textTheme
-                                                    .bodyText1!
-                                                    .copyWith(
-                                                        color: whiteColor,
-                                                        fontSize: 15,
-                                                        fontWeight:
-                                                            FontWeight.bold),
-                                              ),
-                                            ),
-                                          ),
-                                        )
-                                      ],
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        Container(
+                          color: Colors.grey.shade300,
+                          child: Column(
+                            children: [
+                              Padding(
+                                padding:
+                                    const EdgeInsets.only(right: 15.0, top: 5),
+                                child: Row(
+                                  children: <Widget>[
+                                    Icon(
+                                      Icons.location_pin,
+                                      color: Colors.black54,
+                                      size: 40,
                                     ),
-                                  )));
-                            },
-                          );
-                        },
-                        child: Text(
-                          GrocartLocalizations.of(context)!
-                              .reachedDeliveryLocation!,
-                          style: Theme.of(context)
-                              .textTheme
-                              .bodyText1!
-                              .copyWith(
-                                  color: whiteColor,
-                                  fontSize: 15,
-                                  fontWeight: FontWeight.bold),
+                                    Text(
+                                      GrocartLocalizations.of(context)!
+                                          .customerName!,
+                                      style: Theme.of(context)
+                                          .textTheme
+                                          .headline4!
+                                          .copyWith(
+                                              fontWeight: FontWeight.bold,
+                                              letterSpacing: 0.07,
+                                              color: Colors.black54,
+                                              fontSize: 17),
+                                    ),
+                                    Spacer(),
+                                    IconButton(
+                                        onPressed: _openMap,
+                                        icon: Icon(
+                                          Icons.directions,
+                                          size: 35,
+                                          color: mainColor,
+                                        ))
+                                  ],
+                                ),
+                              ),
+                              Divider(),
+                              Padding(
+                                padding: const EdgeInsets.only(left: 40.0),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      GrocartLocalizations.of(context)!
+                                          .address!,
+                                      style: Theme.of(context)
+                                          .textTheme
+                                          .headline4!
+                                          .copyWith(
+                                              fontWeight: FontWeight.bold,
+                                              letterSpacing: 0.07,
+                                              color: mainTextColor,
+                                              fontSize: 17),
+                                    ),
+                                    SizedBox(
+                                      height: 5,
+                                    ),
+                                    Text(
+                                      GrocartLocalizations.of(context)!
+                                          .deliveryAddress!,
+                                      style: TextStyle(
+                                          color: iconColor, fontSize: 15),
+                                    ),
+                                  ],
+                                ),
+                              )
+                            ],
+                          ),
                         ),
-                      ),
+                        Container(
+                          color: mainColor,
+                          width: double.infinity,
+                          child: TextButton(
+                            onPressed: () {
+                              showModalBottomSheet(
+                                backgroundColor: Colors.transparent,
+                                isScrollControlled: true,
+                                context: context,
+                                builder: (context) {
+                                  return Container(
+                                      color: Theme.of(context).cardColor,
+                                      child: SingleChildScrollView(
+                                          child: Padding(
+                                        padding: const EdgeInsets.only(
+                                            left: 15.0,
+                                            right: 15.0,
+                                            top: 20.0,
+                                            bottom: 20.0),
+                                        child: Column(
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                          children: [
+                                            Container(
+                                                child: Text(
+                                              GrocartLocalizations.of(context)!
+                                                  .collectCash!,
+                                              style: TextStyle(
+                                                  color: mainTextColor,
+                                                  fontWeight: FontWeight.bold),
+                                            )),
+                                            SizedBox(
+                                              height: 20,
+                                            ),
+                                            Text(
+                                              GrocartLocalizations.of(context)!
+                                                  .actualPaid!,
+                                              style: TextStyle(
+                                                  fontWeight: FontWeight.bold,
+                                                  fontSize: 15),
+                                            ),
+                                            SizedBox(
+                                              height: 10,
+                                            ),
+                                            TextFormField(
+                                                decoration: InputDecoration(
+                                              labelText: "Enter Amount",
+                                              enabledBorder:
+                                                  OutlineInputBorder(),
+                                            )),
+                                            SizedBox(
+                                              height: 10,
+                                            ),
+                                            Text(
+                                              GrocartLocalizations.of(context)!
+                                                  .reEnterAmount!,
+                                              style: TextStyle(
+                                                  fontWeight: FontWeight.bold,
+                                                  fontSize: 15),
+                                            ),
+                                            SizedBox(
+                                              height: 10,
+                                            ),
+                                            TextFormField(
+                                                decoration: InputDecoration(
+                                              labelText: "Re-Enter Amount",
+                                              enabledBorder:
+                                                  OutlineInputBorder(),
+                                            )),
+                                            SizedBox(
+                                              height: 10,
+                                            ),
+                                            Text(
+                                              GrocartLocalizations.of(context)!
+                                                  .nuericField!,
+                                              style: TextStyle(
+                                                  color: mainColor,
+                                                  fontSize: 13,
+                                                  fontWeight: FontWeight.bold),
+                                            ),
+                                            SizedBox(
+                                              height: 10,
+                                            ),
+                                            Align(
+                                              alignment: Alignment.bottomCenter,
+                                              child: Container(
+                                                color: mainColor,
+                                                width: double.infinity,
+                                                child: TextButton(
+                                                  onPressed: () {
+                                                    setState(() {
+                                                      openSlide = !openSlide;
+                                                    });
+                                                    Navigator.pop(context);
+                                                  },
+                                                  child: Text(
+                                                    GrocartLocalizations.of(
+                                                            context)!
+                                                        .cashCollect!,
+                                                    style: Theme.of(context)
+                                                        .textTheme
+                                                        .bodyText1!
+                                                        .copyWith(
+                                                            color: whiteColor,
+                                                            fontSize: 15,
+                                                            fontWeight:
+                                                                FontWeight
+                                                                    .bold),
+                                                  ),
+                                                ),
+                                              ),
+                                            )
+                                          ],
+                                        ),
+                                      )));
+                                },
+                              );
+                            },
+                            child: Text(
+                              GrocartLocalizations.of(context)!
+                                  .reachedDeliveryLocation!,
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .bodyText1!
+                                  .copyWith(
+                                      color: whiteColor,
+                                      fontSize: 15,
+                                      fontWeight: FontWeight.bold),
+                            ),
+                          ),
+                        ),
+                      ],
                     ))
               ],
             ),

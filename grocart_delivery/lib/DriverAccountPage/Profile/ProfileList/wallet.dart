@@ -88,8 +88,7 @@ class WalletTile extends StatelessWidget {
                     child: Text(
                       GrocartLocalizations.of(context)!.addingAmount!,
                       style: TextStyle(
-                        fontWeight: FontWeight.w500,
-                      ),
+                          fontWeight: FontWeight.w500, color: whiteColor),
                     ),
                   ),
                 ),

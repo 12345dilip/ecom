@@ -48,8 +48,7 @@ class _HomePageState extends State<HomePage> {
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.only(
-              left: 15.0, right: 15.0, top: 20.0, bottom: 20.0),
+          padding: const EdgeInsets.only(left: 15.0, right: 15.0, bottom: 20.0),
           child: Column(
             children: [
               Container(
@@ -167,126 +166,133 @@ class _HomePageState extends State<HomePage> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          ClipRRect(
-                            borderRadius: BorderRadius.circular(5.0),
-                            child: Container(
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Padding(
-                                    padding: const EdgeInsets.only(
-                                        left: 15.0, top: 5.0),
-                                    child: Image.asset(
-                                      "images/Wallet.png",
-                                      scale: 1.5,
+                          Flexible(
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(5.0),
+                              child: Container(
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.only(
+                                          left: 15.0, top: 5.0),
+                                      child: Image.asset(
+                                        "images/Wallet.png",
+                                        scale: 1.5,
+                                      ),
                                     ),
-                                  ),
-                                  SizedBox(
-                                    height: 3,
-                                  ),
-                                  Row(
-                                    children: [
-                                      SizedBox(
-                                        width: 15,
-                                      ),
-                                      Text(
-                                        '₹ ',
-                                        style: TextStyle(fontSize: 20),
-                                      ),
-                                      Text(
-                                        '980',
-                                        style: TextStyle(
-                                            color: whiteColor, fontSize: 20),
-                                      )
-                                    ],
-                                  ),
-                                  FlatButton(
-                                      onPressed: () {
-                                        Navigator.pushNamed(context,
-                                            PageRoutes.earnWeeklyDetails);
-                                      },
-                                      child: Row(
-                                        children: [
-                                          Text(
-                                            GrocartLocalizations.of(context)!
-                                                .earnToday!,
-                                            style: TextStyle(
-                                              color: whiteColor,
+                                    SizedBox(
+                                      height: 3,
+                                    ),
+                                    Row(
+                                      children: [
+                                        SizedBox(
+                                          width: 15,
+                                        ),
+                                        Text(
+                                          '₹ ',
+                                          style: TextStyle(fontSize: 20),
+                                        ),
+                                        Text(
+                                          '980',
+                                          style: TextStyle(
+                                              color: whiteColor, fontSize: 20),
+                                        )
+                                      ],
+                                    ),
+                                    FlatButton(
+                                        onPressed: () {
+                                          Navigator.pushNamed(context,
+                                              PageRoutes.earnWeeklyDetails);
+                                        },
+                                        child: Row(
+                                          children: [
+                                            Text(
+                                              GrocartLocalizations.of(context)!
+                                                  .earnToday!,
+                                              style: TextStyle(
+                                                  color: whiteColor,
+                                                  fontSize: 12),
                                             ),
-                                          ),
-                                          Icon(
-                                            Icons.chevron_right,
-                                            color: whiteColor,
-                                            size: 17,
-                                          )
-                                        ],
-                                      ))
-                                ],
+                                            Icon(
+                                              Icons.chevron_right,
+                                              color: whiteColor,
+                                              size: 17,
+                                            )
+                                          ],
+                                        ))
+                                  ],
+                                ),
+                                color: mainColor,
+                                height: 130,
+                                width: MediaQuery.of(context).size.width,
                               ),
-                              color: mainColor,
-                              width: 160,
-                              height: 130,
                             ),
                           ),
-                          ClipRRect(
-                            borderRadius: BorderRadius.circular(5.0),
-                            child: Container(
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Padding(
-                                    padding: const EdgeInsets.only(
-                                        left: 15.0, top: 5.0),
-                                    child: Image.asset(
-                                      "images/Wallet.png",
-                                      scale: 1.5,
+                          SizedBox(
+                            width: 15,
+                          ),
+                          Flexible(
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(5.0),
+                              child: Container(
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.only(
+                                          left: 15.0, top: 5.0),
+                                      child: Image.asset(
+                                        "images/Wallet.png",
+                                        scale: 1.5,
+                                      ),
                                     ),
-                                  ),
-                                  SizedBox(
-                                    height: 3,
-                                  ),
-                                  Row(
-                                    children: [
-                                      SizedBox(
-                                        width: 15,
-                                      ),
-                                      Text(
-                                        '₹ ',
-                                        style: TextStyle(fontSize: 20),
-                                      ),
-                                      Text(
-                                        '8850',
-                                        style: TextStyle(
-                                            color: whiteColor, fontSize: 20),
-                                      )
-                                    ],
-                                  ),
-                                  FlatButton(
-                                      onPressed: () {
-                                        Navigator.pushNamed(context,
-                                            PageRoutes.earnWeeklyDetails);
-                                      },
-                                      child: Row(
-                                        children: [
-                                          Text(
-                                            GrocartLocalizations.of(context)!
-                                                .earnWeekly!,
-                                            style: TextStyle(
-                                                color: whiteColor,
-                                                fontSize: 12),
-                                          ),
-                                          Icon(
-                                            Icons.chevron_right,
-                                            color: whiteColor,
-                                            size: 17,
-                                          )
-                                        ],
-                                      ))
-                                ],
+                                    SizedBox(
+                                      height: 3,
+                                    ),
+                                    Row(
+                                      children: [
+                                        SizedBox(
+                                          width: 15,
+                                        ),
+                                        Text(
+                                          '₹ ',
+                                          style: TextStyle(fontSize: 20),
+                                        ),
+                                        Text(
+                                          '8850',
+                                          style: TextStyle(
+                                              color: whiteColor, fontSize: 20),
+                                        )
+                                      ],
+                                    ),
+                                    FlatButton(
+                                        onPressed: () {
+                                          Navigator.pushNamed(context,
+                                              PageRoutes.earnWeeklyDetails);
+                                        },
+                                        child: Row(
+                                          children: [
+                                            Text(
+                                              GrocartLocalizations.of(context)!
+                                                  .earnWeekly!,
+                                              style: TextStyle(
+                                                  color: whiteColor,
+                                                  fontSize: 12),
+                                            ),
+                                            Icon(
+                                              Icons.chevron_right,
+                                              color: whiteColor,
+                                              size: 17,
+                                            )
+                                          ],
+                                        ))
+                                  ],
+                                ),
+                                color: mainColor,
+                                width: MediaQuery.of(context).size.width,
+                                height: 130,
                               ),
-                              color: mainColor,
-                              width: 160,
-                              height: 130,
                             ),
                           ),
                         ],
@@ -297,72 +303,80 @@ class _HomePageState extends State<HomePage> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          ClipRRect(
-                            borderRadius: BorderRadius.circular(5.0),
-                            child: Container(
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Padding(
-                                    padding: const EdgeInsets.only(
-                                        left: 15.0, top: 10),
-                                    child: Image.asset(
-                                      "images/Money Bag Krona.png",
-                                    ),
-                                  ),
-                                  SizedBox(
-                                    height: 10.0,
-                                  ),
-                                  Row(
-                                    children: [
-                                      SizedBox(
-                                        width: 15,
-                                      ),
-                                      Text(
-                                        '₹ ',
-                                        style: TextStyle(fontSize: 20),
-                                      ),
-                                      Text(
-                                        '980',
-                                        style: TextStyle(
-                                            color: whiteColor, fontSize: 20),
-                                      )
-                                    ],
-                                  ),
-                                ],
-                              ),
-                              color: mainColor,
-                              width: 160,
-                              height: 130,
-                            ),
-                          ),
-                          ClipRRect(
-                            borderRadius: BorderRadius.circular(5.0),
-                            child: Container(
-                              child: Padding(
-                                padding:
-                                    const EdgeInsets.only(left: 15.0, top: 10),
+                          Flexible(
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(5.0),
+                              child: Container(
                                 child: Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                    Image.asset(
-                                      "images/Clock.png",
-                                      scale: 1.2,
+                                    Padding(
+                                      padding: const EdgeInsets.only(
+                                          left: 15.0, top: 10),
+                                      child: Image.asset(
+                                        "images/Money Bag Krona.png",
+                                      ),
                                     ),
                                     SizedBox(
-                                      height: 15,
+                                      height: 10.0,
                                     ),
-                                    Text(
-                                      '10:05 min',
-                                      style: TextStyle(
-                                          color: whiteColor, fontSize: 20),
+                                    Row(
+                                      children: [
+                                        SizedBox(
+                                          width: 15,
+                                        ),
+                                        Text(
+                                          '₹ ',
+                                          style: TextStyle(fontSize: 20),
+                                        ),
+                                        Text(
+                                          '980',
+                                          style: TextStyle(
+                                              color: whiteColor, fontSize: 20),
+                                        )
+                                      ],
                                     ),
                                   ],
                                 ),
+                                color: mainColor,
+                                width: MediaQuery.of(context).size.width,
+                                height: 130,
                               ),
-                              color: mainColor,
-                              width: 160,
-                              height: 130,
+                            ),
+                          ),
+                          SizedBox(
+                            width: 15,
+                          ),
+                          Flexible(
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(5.0),
+                              child: Container(
+                                child: Padding(
+                                  padding: const EdgeInsets.only(
+                                      left: 15.0, top: 10),
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Image.asset(
+                                        "images/Clock.png",
+                                        scale: 1.2,
+                                      ),
+                                      SizedBox(
+                                        height: 15,
+                                      ),
+                                      Text(
+                                        '10:05 min',
+                                        style: TextStyle(
+                                            color: whiteColor, fontSize: 20),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                color: mainColor,
+                                width: MediaQuery.of(context).size.width,
+                                height: 130,
+                              ),
                             ),
                           ),
                         ],

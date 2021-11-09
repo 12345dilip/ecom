@@ -31,11 +31,15 @@ class _ReachedPickupState extends State<ReachedPickup> {
           children: [
             Text(
               GrocartLocalizations.of(context)!.pickupLocation!,
-              style: TextStyle(color: mainTextColor, fontSize: 15),
+              style: TextStyle(
+                  color: mainTextColor,
+                  fontSize: 15,
+                  fontWeight: FontWeight.bold),
             ),
             Text(
               '9500340738',
-              style: TextStyle(color: iconColor, fontSize: 15),
+              style: TextStyle(
+                  color: iconColor, fontSize: 15, fontWeight: FontWeight.bold),
             )
           ],
         ),
@@ -138,7 +142,7 @@ class _ReachedPickupState extends State<ReachedPickup> {
                       setState(() {
                         itemCount = true;
                       });
-                      Navigator.pushNamed(context, PageRoutes.liveTaskPage);
+                      Navigator.pushNamed(context, PageRoutes.dropLocation);
                     },
                     child: Text(
                       GrocartLocalizations.of(context)!.confirmItems!,
