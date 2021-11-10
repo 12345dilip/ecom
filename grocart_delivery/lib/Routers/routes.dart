@@ -8,6 +8,7 @@ import 'package:grocart_delivery/DriverAccountPage/Profile/ProfileList/support.d
 import 'package:grocart_delivery/DriverAccountPage/Profile/ProfileList/t_and_c.dart';
 import 'package:grocart_delivery/DriverAccountPage/Profile/ProfileList/wallet.dart';
 import 'package:grocart_delivery/DriverAccountPage/driver_account_page.dart';
+import 'package:grocart_delivery/DriverAccountPage/order_page.dart';
 import 'package:grocart_delivery/Map/map_utils.dart';
 import 'package:grocart_delivery/Map/pickup_location.dart';
 import 'package:grocart_delivery/Pages/delivery_location.dart';
@@ -32,6 +33,7 @@ class PageRoutes {
   static const String addingAmount = 'add_money';
   static const String settings = 'settings';
   static const String dropLocation = 'drop_location';
+  static const String orderPage = 'order_page';
 
   Map<String, WidgetBuilder> routes() {
     return {
@@ -49,7 +51,8 @@ class PageRoutes {
       addingWallet: (context) => AddToWallet(),
       addingAmount: (context) => AddMoney(),
       settings: (context) => Settings(),
-      dropLocation:(context)=>DropLocation(),
+      dropLocation: (context) => DropLocation(),
+      orderPage: (context) => OrderPage()
     };
   }
 }

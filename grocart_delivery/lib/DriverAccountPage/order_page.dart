@@ -6,6 +6,7 @@ import 'package:flutter/painting.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
 import 'package:grocart_delivery/Languages/locals.dart';
+import 'package:grocart_delivery/Routers/routes.dart';
 import 'package:grocart_delivery/ThemeColors/colors.dart';
 
 class OrderPage extends StatefulWidget {
@@ -481,20 +482,26 @@ class _TabViewState extends State<TabView> {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Row(
-                    children: [
-                      Text(
-                        '₹ 60.5',
-                        style: TextStyle(
-                            color: mainTextColor,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 15),
-                      ),
-                      Icon(
-                        Icons.chevron_right,
-                        color: mainTextColor,
-                      )
-                    ],
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.pushNamed(
+                          context, PageRoutes.earnWeeklyDetails);
+                    },
+                    child: Row(
+                      children: [
+                        Text(
+                          '₹ 60.5',
+                          style: TextStyle(
+                              color: mainTextColor,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 15),
+                        ),
+                        Icon(
+                          Icons.chevron_right,
+                          color: mainTextColor,
+                        )
+                      ],
+                    ),
                   ),
                   Text(
                     GrocartLocalizations.of(context)!.delivered!,
@@ -538,20 +545,26 @@ class _TabViewState extends State<TabView> {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Row(
-                    children: [
-                      Text(
-                        '₹ 50.5',
-                        style: TextStyle(
-                            color: mainTextColor,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 15),
-                      ),
-                      Icon(
-                        Icons.chevron_right,
-                        color: mainTextColor,
-                      )
-                    ],
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.pushNamed(
+                          context, PageRoutes.earnWeeklyDetails);
+                    },
+                    child: Row(
+                      children: [
+                        Text(
+                          '₹ 50.5',
+                          style: TextStyle(
+                              color: mainTextColor,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 15),
+                        ),
+                        Icon(
+                          Icons.chevron_right,
+                          color: mainTextColor,
+                        )
+                      ],
+                    ),
                   ),
                   Text(
                     GrocartLocalizations.of(context)!.delivered!,
@@ -595,20 +608,26 @@ class _TabViewState extends State<TabView> {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Row(
-                    children: [
-                      Text(
-                        '₹ 80.5',
-                        style: TextStyle(
-                            color: mainTextColor,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 15),
-                      ),
-                      Icon(
-                        Icons.chevron_right,
-                        color: mainTextColor,
-                      )
-                    ],
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.pushNamed(
+                          context, PageRoutes.earnWeeklyDetails);
+                    },
+                    child: Row(
+                      children: [
+                        Text(
+                          '₹ 80.5',
+                          style: TextStyle(
+                              color: mainTextColor,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 15),
+                        ),
+                        Icon(
+                          Icons.chevron_right,
+                          color: mainTextColor,
+                        )
+                      ],
+                    ),
                   ),
                   Text(
                     GrocartLocalizations.of(context)!.delivered!,
@@ -652,20 +671,26 @@ class _TabViewState extends State<TabView> {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Row(
-                    children: [
-                      Text(
-                        '₹ 40.5',
-                        style: TextStyle(
-                            color: mainTextColor,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 15),
-                      ),
-                      Icon(
-                        Icons.chevron_right,
-                        color: mainTextColor,
-                      )
-                    ],
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.pushNamed(
+                          context, PageRoutes.earnWeeklyDetails);
+                    },
+                    child: Row(
+                      children: [
+                        Text(
+                          '₹ 40.5',
+                          style: TextStyle(
+                              color: mainTextColor,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 15),
+                        ),
+                        Icon(
+                          Icons.chevron_right,
+                          color: mainTextColor,
+                        )
+                      ],
+                    ),
                   ),
                   Text(
                     GrocartLocalizations.of(context)!.delivered!,
@@ -709,20 +734,26 @@ class _TabViewState extends State<TabView> {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Row(
-                    children: [
-                      Text(
-                        '₹ 45.5',
-                        style: TextStyle(
-                            color: mainTextColor,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 15),
-                      ),
-                      Icon(
-                        Icons.chevron_right,
-                        color: mainTextColor,
-                      )
-                    ],
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.pushNamed(
+                          context, PageRoutes.earnWeeklyDetails);
+                    },
+                    child: Row(
+                      children: [
+                        Text(
+                          '₹ 45.5',
+                          style: TextStyle(
+                              color: mainTextColor,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 15),
+                        ),
+                        Icon(
+                          Icons.chevron_right,
+                          color: mainTextColor,
+                        )
+                      ],
+                    ),
                   ),
                   Text(
                     GrocartLocalizations.of(context)!.delivered!,

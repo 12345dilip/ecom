@@ -1,12 +1,8 @@
-import 'dart:ui';
-
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/painting.dart';
-import 'package:flutter/rendering.dart';
-import 'package:flutter/widgets.dart';
 import 'package:grocart_delivery/Languages/locals.dart';
+import 'package:grocart_delivery/Routers/routes.dart';
 import 'package:grocart_delivery/ThemeColors/colors.dart';
+import 'package:timelines/timelines.dart';
 
 class WeeklyEarningDetails extends StatefulWidget {
   const WeeklyEarningDetails({Key? key}) : super(key: key);
@@ -16,832 +12,258 @@ class WeeklyEarningDetails extends StatefulWidget {
 }
 
 class _WeeklyEarningDetailsState extends State<WeeklyEarningDetails> {
-  bool openTab = false;
-  bool tabTotalEarn = false;
-  bool tabOrderEarn = false;
-  bool tabBonuses = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          backgroundColor: whiteColor,
-          leading: IconButton(
-              onPressed: () {
-                Navigator.pop(context);
-              },
-              icon: Icon(
-                Icons.arrow_back,
-                color: mainTextColor,
-              )),
-          title: Column(
+      appBar: AppBar(
+        backgroundColor: whiteColor,
+        leading: IconButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            icon: Icon(
+              Icons.arrow_back,
+              color: mainTextColor,
+            )),
+      ),
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.only(left: 15.0, right: 15.0, bottom: 20.0),
+          child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(
-                GrocartLocalizations.of(context)!.earnWeeklyDetails!,
-                style: TextStyle(
-                    color: mainTextColor,
-                    fontSize: 15.0,
-                    fontWeight: FontWeight.bold),
-              ),
-              Text(
-                GrocartLocalizations.of(context)!.earnLastWeek!,
-                style: TextStyle(
-                    color: mainColor,
-                    fontSize: 13,
-                    fontWeight: FontWeight.bold),
-              )
-            ],
-          ),
-        ),
-        body: SingleChildScrollView(
-          child: Padding(
-            padding: const EdgeInsets.only(left: 15.0, right: 15.0, top: 15.0),
-            child: Column(
-              children: [
-                Row(
-                  children: [
-                    Flexible(
-                      child: GestureDetector(
-                        onTap: () {
-                          setState(() {
-                            tabTotalEarn = !tabTotalEarn;
-                            tabOrderEarn = false;
-                            tabBonuses = false;
-                          });
-                        },
-                        child: Container(
-                          height: 80,
-                          width: MediaQuery.of(context).size.width,
-                          decoration: BoxDecoration(
-                              color: tabTotalEarn
-                                  ? Colors.grey.shade500
-                                  : Colors.grey.shade300,
-                              borderRadius: BorderRadius.circular(5)),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [
-                              Text(
-                                '₹ 9998',
-                                style: TextStyle(
-                                    fontWeight: FontWeight.bold, fontSize: 20),
-                              ),
-                              Text(
-                                GrocartLocalizations.of(context)!.earnTotal!,
-                                style: TextStyle(
-                                    fontSize: 12, fontWeight: FontWeight.bold),
-                              )
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
-                    SizedBox(
-                      width: 15.0,
-                    ),
-                    Flexible(
-                      child: GestureDetector(
-                        onTap: () {
-                          setState(() {
-                            tabOrderEarn = !tabOrderEarn;
-                            tabTotalEarn = false;
-                            tabBonuses = false;
-                          });
-                        },
-                        child: Container(
-                          height: 80,
-                          width: MediaQuery.of(context).size.width,
-                          decoration: BoxDecoration(
-                              color: tabOrderEarn
-                                  ? Colors.grey.shade500
-                                  : Colors.grey.shade300,
-                              borderRadius: BorderRadius.circular(5)),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [
-                              Text(
-                                '₹ 6358',
-                                style: TextStyle(
-                                    fontWeight: FontWeight.bold, fontSize: 20),
-                              ),
-                              Text(
-                                GrocartLocalizations.of(context)!.earnOrder!,
-                                style: TextStyle(
-                                    fontSize: 12, fontWeight: FontWeight.bold),
-                              )
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
-                    SizedBox(
-                      width: 15.0,
-                    ),
-                    Flexible(
-                      child: GestureDetector(
-                        onTap: () {
-                          setState(() {
-                            tabBonuses = !tabBonuses;
-                            tabTotalEarn = false;
-                            tabOrderEarn = false;
-                          });
-                        },
-                        child: Container(
-                          height: 80,
-                          width: MediaQuery.of(context).size.width,
-                          decoration: BoxDecoration(
-                              color: tabBonuses
-                                  ? Colors.grey.shade500
-                                  : Colors.grey.shade300,
-                              borderRadius: BorderRadius.circular(5)),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [
-                              Text(
-                                '₹ 0',
-                                style: TextStyle(
-                                    fontWeight: FontWeight.bold, fontSize: 20),
-                              ),
-                              Text(
-                                GrocartLocalizations.of(context)!.bonuses!,
-                                style: TextStyle(
-                                    fontSize: 12, fontWeight: FontWeight.bold),
-                              )
-                            ],
-                          ),
-                        ),
-                      ),
-                    )
-                  ],
-                ),
-                SizedBox(
-                  height: 15,
-                ),
-                GestureDetector(
-                  onTap: () {
-                    setState(() {
-                      openTab = !openTab;
-                    });
-                  },
-                  child: Container(
-                    height: 80,
-                    child: Card(
-                        color: openTab
-                            ? Colors.grey.shade300
-                            : cardBackgroundColor,
-                        elevation: 1,
-                        child: Padding(
-                          padding:
-                              const EdgeInsets.only(left: 15.0, right: 15.0),
-                          child: Row(
-                            children: [
-                              Text(
-                                'Sun',
-                                style: TextStyle(
-                                    color: mainColor,
-                                    fontWeight: FontWeight.bold),
-                              ),
-                              SizedBox(
-                                width: 10,
-                              ),
-                              Text(
-                                '25 Apr',
-                                style: TextStyle(
-                                    color: iconColor,
-                                    fontWeight: FontWeight.bold),
-                              ),
-                              Spacer(),
-                              Text(
-                                '₹ 9998',
-                                style: TextStyle(
-                                    color: mainColor,
-                                    fontWeight: FontWeight.bold),
-                              ),
-                              Icon(
-                                openTab
-                                    ? Icons.keyboard_arrow_up
-                                    : Icons.keyboard_arrow_down,
-                                color: mainColor,
-                              )
-                            ],
-                          ),
-                        )),
-                  ),
-                ),
-                openTab
-                    ? Padding(
-                        padding: const EdgeInsets.only(left: 8.0, right: 8.0),
-                        child: TabView(),
-                      )
-                    : Column(
+              Stack(
+                children: [
+                  Row(
+                    children: [
+                      Column(
                         children: [
                           SizedBox(
-                            height: 5,
+                            height: 10,
                           ),
-                          GestureDetector(
-                            child: Container(
-                              height: 80,
-                              child: Card(
-                                  elevation: 1,
-                                  child: Padding(
-                                    padding: const EdgeInsets.only(
-                                        left: 15.0, right: 15.0),
-                                    child: Row(
-                                      children: [
-                                        Text(
-                                          'Sat',
-                                          style: TextStyle(
-                                              color: mainColor,
-                                              fontWeight: FontWeight.bold),
-                                        ),
-                                        SizedBox(
-                                          width: 10,
-                                        ),
-                                        Text(
-                                          '24 Apr',
-                                          style: TextStyle(
-                                              color: iconColor,
-                                              fontWeight: FontWeight.bold),
-                                        ),
-                                        Spacer(),
-                                        Text(
-                                          '₹ 1689',
-                                          style: TextStyle(
-                                              color: mainColor,
-                                              fontWeight: FontWeight.bold),
-                                        ),
-                                        Icon(
-                                          Icons.keyboard_arrow_down,
-                                          color: mainColor,
-                                        )
-                                      ],
-                                    ),
-                                  )),
-                            ),
+                          Icon(
+                            Icons.location_pin,
+                            color: mainColor,
                           ),
-                          SizedBox(
-                            height: 5,
-                          ),
-                          GestureDetector(
-                            child: Container(
-                              height: 80,
-                              child: Card(
-                                  elevation: 1,
-                                  child: Padding(
-                                    padding: const EdgeInsets.only(
-                                        left: 15.0, right: 15.0),
-                                    child: Row(
-                                      children: [
-                                        Text(
-                                          'Fri',
-                                          style: TextStyle(
-                                              color: mainColor,
-                                              fontWeight: FontWeight.bold),
-                                        ),
-                                        SizedBox(
-                                          width: 10,
-                                        ),
-                                        Text(
-                                          '23 Apr',
-                                          style: TextStyle(
-                                              color: iconColor,
-                                              fontWeight: FontWeight.bold),
-                                        ),
-                                        Spacer(),
-                                        Text(
-                                          '₹ 1580',
-                                          style: TextStyle(
-                                              color: mainColor,
-                                              fontWeight: FontWeight.bold),
-                                        ),
-                                        Icon(
-                                          Icons.keyboard_arrow_down,
-                                          color: mainColor,
-                                        )
-                                      ],
-                                    ),
-                                  )),
-                            ),
-                          ),
-                          SizedBox(
-                            height: 5,
-                          ),
-                          GestureDetector(
-                            child: Container(
-                              height: 80,
-                              child: Card(
-                                  elevation: 1,
-                                  child: Padding(
-                                    padding: const EdgeInsets.only(
-                                        left: 15.0, right: 15.0),
-                                    child: Row(
-                                      children: [
-                                        Text(
-                                          'Wed',
-                                          style: TextStyle(
-                                              color: mainColor,
-                                              fontWeight: FontWeight.bold),
-                                        ),
-                                        SizedBox(
-                                          width: 10,
-                                        ),
-                                        Text(
-                                          '21 Apr',
-                                          style: TextStyle(
-                                              color: iconColor,
-                                              fontWeight: FontWeight.bold),
-                                        ),
-                                        Spacer(),
-                                        Text(
-                                          '₹ 1480',
-                                          style: TextStyle(
-                                              color: mainColor,
-                                              fontWeight: FontWeight.bold),
-                                        ),
-                                        Icon(
-                                          Icons.keyboard_arrow_down,
-                                          color: mainColor,
-                                        )
-                                      ],
-                                    ),
-                                  )),
-                            ),
-                          ),
-                          SizedBox(
-                            height: 5,
-                          ),
-                          GestureDetector(
-                            child: Container(
-                              height: 80,
-                              child: Card(
-                                  elevation: 1,
-                                  child: Padding(
-                                    padding: const EdgeInsets.only(
-                                        left: 15.0, right: 15.0),
-                                    child: Row(
-                                      children: [
-                                        Text(
-                                          'Tue',
-                                          style: TextStyle(
-                                              color: mainColor,
-                                              fontWeight: FontWeight.bold),
-                                        ),
-                                        SizedBox(
-                                          width: 10,
-                                        ),
-                                        Text(
-                                          '20 Apr',
-                                          style: TextStyle(
-                                              color: iconColor,
-                                              fontWeight: FontWeight.bold),
-                                        ),
-                                        Spacer(),
-                                        Text(
-                                          '₹ 1458',
-                                          style: TextStyle(
-                                              color: mainColor,
-                                              fontWeight: FontWeight.bold),
-                                        ),
-                                        Icon(
-                                          Icons.keyboard_arrow_down,
-                                          color: mainColor,
-                                        )
-                                      ],
-                                    ),
-                                  )),
-                            ),
-                          ),
-                          SizedBox(
-                            height: 5,
-                          ),
-                          GestureDetector(
-                            child: Container(
-                              height: 80,
-                              child: Card(
-                                  elevation: 1,
-                                  child: Padding(
-                                    padding: const EdgeInsets.only(
-                                        left: 15.0, right: 15.0),
-                                    child: Row(
-                                      children: [
-                                        Text(
-                                          'Mon',
-                                          style: TextStyle(
-                                              color: mainColor,
-                                              fontWeight: FontWeight.bold),
-                                        ),
-                                        SizedBox(
-                                          width: 10,
-                                        ),
-                                        Text(
-                                          '19 Apr',
-                                          style: TextStyle(
-                                              color: iconColor,
-                                              fontWeight: FontWeight.bold),
-                                        ),
-                                        Spacer(),
-                                        Text(
-                                          '₹ 1280',
-                                          style: TextStyle(
-                                              color: mainColor,
-                                              fontWeight: FontWeight.bold),
-                                        ),
-                                        Icon(
-                                          Icons.keyboard_arrow_down,
-                                          color: mainColor,
-                                        )
-                                      ],
-                                    ),
-                                  )),
-                            ),
+                          Container(
+                              height: 85,
+                              child: DashedLineConnector(
+                                color: iconColor,
+                              )),
+                          Icon(
+                            Icons.location_pin,
+                            color: mainTextColor,
                           ),
                         ],
                       ),
-              ],
-            ),
-          ),
-        ));
-  }
-}
-
-class TabView extends StatefulWidget {
-  const TabView({Key? key}) : super(key: key);
-
-  @override
-  _TabViewState createState() => _TabViewState();
-}
-
-class _TabViewState extends State<TabView> {
-  @override
-  Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Column(
-        children: [
-          SizedBox(
-            height: 10,
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Flexible(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      GrocartLocalizations.of(context)!.shop1!,
-                      style: TextStyle(
-                          color: mainTextColor,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 15),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                GrocartLocalizations.of(context)!
+                                    .pickupLocation!,
+                                style: TextStyle(
+                                    color: iconColor,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 12),
+                              ),
+                              Text(
+                                GrocartLocalizations.of(context)!.shopName!,
+                                style: Theme.of(context)
+                                    .textTheme
+                                    .headline4!
+                                    .copyWith(
+                                        fontWeight: FontWeight.bold,
+                                        letterSpacing: 0.07,
+                                        color: mainColor,
+                                        fontSize: 17),
+                              ),
+                              Text(
+                                  GrocartLocalizations.of(context)!
+                                      .shopAddress!,
+                                  style: TextStyle(
+                                      color: iconColor,
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 11))
+                            ],
+                          ),
+                          SizedBox(
+                            height: 50,
+                          ),
+                          Text(GrocartLocalizations.of(context)!.dropLocation!,
+                              style: TextStyle(
+                                  color: iconColor,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 12)),
+                        ],
+                      ),
+                    ],
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 135, left: 24),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          GrocartLocalizations.of(context)!.customerName!,
+                          style: Theme.of(context)
+                              .textTheme
+                              .headline4!
+                              .copyWith(
+                                  fontWeight: FontWeight.bold,
+                                  letterSpacing: 0.07,
+                                  color: mainColor,
+                                  fontSize: 17),
+                        ),
+                        Text(GrocartLocalizations.of(context)!.deliveryAddress!,
+                            style: TextStyle(
+                                color: iconColor,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 11))
+                      ],
                     ),
-                    Text(
-                      '9:30 PM',
+                  ),
+                ],
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Divider(),
+              SizedBox(
+                height: 10,
+              ),
+              Text(GrocartLocalizations.of(context)!.earnDetails!,
+                  style: TextStyle(
+                      color: iconColor,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 15)),
+              SizedBox(
+                height: 15,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Flexible(
+                    child: Text(GrocartLocalizations.of(context)!.earnProduct1!,
+                        style: TextStyle(fontSize: 13)),
+                  ),
+                  Text('₹ 5.0',
+                      style: TextStyle(color: mainTextColor, fontSize: 15))
+                ],
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Flexible(
+                    child: Text(GrocartLocalizations.of(context)!.earnProduct2!,
+                        style: TextStyle(fontSize: 13)),
+                  ),
+                  Text('₹ 35.0',
+                      style: TextStyle(color: mainTextColor, fontSize: 15))
+                ],
+              ),
+              SizedBox(
+                height: 5,
+              ),
+              Divider(),
+              SizedBox(
+                height: 5,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(GrocartLocalizations.of(context)!.earnOrder!,
                       style: TextStyle(
                           color: iconColor,
                           fontWeight: FontWeight.bold,
-                          fontSize: 15),
-                    ),
-                  ],
-                ),
+                          fontSize: 15)),
+                  Text('₹ 40.0',
+                      style: TextStyle(color: mainTextColor, fontSize: 15))
+                ],
               ),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
+              SizedBox(
+                height: 15,
+              ),
+              Text(GrocartLocalizations.of(context)!.incentives!,
+                  style: TextStyle(color: iconColor, fontSize: 13)),
+              SizedBox(
+                height: 5,
+              ),
+              Divider(),
+              SizedBox(
+                height: 5,
+              ),
+              Text(GrocartLocalizations.of(context)!.distance!,
+                  style: TextStyle(
+                      color: iconColor,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 15)),
+              SizedBox(
+                height: 10,
+              ),
+              Row(
                 children: [
-                  Row(
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(
-                        '₹ 60.5',
-                        style: TextStyle(
-                            color: mainTextColor,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 15),
+                      Text('3.884km',
+                          style: TextStyle(
+                              color: mainColor,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 13)),
+                      SizedBox(
+                        height: 10,
                       ),
-                      Icon(
-                        Icons.chevron_right,
-                        color: mainTextColor,
-                      )
+                      Text(GrocartLocalizations.of(context)!.miles1!,
+                          style: TextStyle(color: iconColor, fontSize: 13)),
                     ],
                   ),
-                  Text(
-                    GrocartLocalizations.of(context)!.delivered!,
-                    style: TextStyle(
-                        color: mainColor,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 15),
+                  Spacer(),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text('1.884km',
+                          style: TextStyle(
+                              color: mainColor,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 13)),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      Text(GrocartLocalizations.of(context)!.miles2!,
+                          style: TextStyle(color: iconColor, fontSize: 13)),
+                    ],
+                  ),
+                  Spacer(),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text('5.768km',
+                          style: TextStyle(
+                              color: mainColor,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 13)),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      Text(GrocartLocalizations.of(context)!.totals!,
+                          style: TextStyle(color: iconColor, fontSize: 13))
+                    ],
                   )
                 ],
               ),
-            ],
-          ),
-          SizedBox(
-            height: 10,
-          ),
-          Divider(),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Flexible(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      GrocartLocalizations.of(context)!.shop2!,
-                      style: TextStyle(
-                          color: mainTextColor,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 15),
-                    ),
-                    Text(
-                      '9:30 PM',
-                      style: TextStyle(
-                          color: iconColor,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 15),
-                    ),
-                  ],
-                ),
-              ),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Row(
-                    children: [
-                      Text(
-                        '₹ 50.5',
-                        style: TextStyle(
-                            color: mainTextColor,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 15),
-                      ),
-                      Icon(
-                        Icons.chevron_right,
-                        color: mainTextColor,
-                      )
-                    ],
-                  ),
-                  Text(
-                    GrocartLocalizations.of(context)!.delivered!,
-                    style: TextStyle(
-                        color: mainColor,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 15),
-                  )
-                ],
+              SizedBox(
+                height: 40,
               ),
             ],
           ),
-          SizedBox(
-            height: 10,
-          ),
-          Divider(),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Flexible(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      GrocartLocalizations.of(context)!.shop3!,
-                      style: TextStyle(
-                          color: mainTextColor,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 15),
-                    ),
-                    Text(
-                      '9:30 PM',
-                      style: TextStyle(
-                          color: iconColor,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 15),
-                    ),
-                  ],
-                ),
-              ),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Row(
-                    children: [
-                      Text(
-                        '₹ 80.5',
-                        style: TextStyle(
-                            color: mainTextColor,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 15),
-                      ),
-                      Icon(
-                        Icons.chevron_right,
-                        color: mainTextColor,
-                      )
-                    ],
-                  ),
-                  Text(
-                    GrocartLocalizations.of(context)!.delivered!,
-                    style: TextStyle(
-                        color: mainColor,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 15),
-                  )
-                ],
-              ),
-            ],
-          ),
-          SizedBox(
-            height: 10,
-          ),
-          Divider(),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Flexible(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      GrocartLocalizations.of(context)!.shop4!,
-                      style: TextStyle(
-                          color: mainTextColor,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 15),
-                    ),
-                    Text(
-                      '9:30 PM',
-                      style: TextStyle(
-                          color: iconColor,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 15),
-                    ),
-                  ],
-                ),
-              ),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Row(
-                    children: [
-                      Text(
-                        '₹ 40.5',
-                        style: TextStyle(
-                            color: mainTextColor,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 15),
-                      ),
-                      Icon(
-                        Icons.chevron_right,
-                        color: mainTextColor,
-                      )
-                    ],
-                  ),
-                  Text(
-                    GrocartLocalizations.of(context)!.delivered!,
-                    style: TextStyle(
-                        color: mainColor,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 15),
-                  )
-                ],
-              ),
-            ],
-          ),
-          SizedBox(
-            height: 10,
-          ),
-          Divider(),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Flexible(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      GrocartLocalizations.of(context)!.shop5!,
-                      style: TextStyle(
-                          color: mainTextColor,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 15),
-                    ),
-                    Text(
-                      '9:30 PM',
-                      style: TextStyle(
-                          color: iconColor,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 15),
-                    ),
-                  ],
-                ),
-              ),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Row(
-                    children: [
-                      Text(
-                        '₹ 45.5',
-                        style: TextStyle(
-                            color: mainTextColor,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 15),
-                      ),
-                      Icon(
-                        Icons.chevron_right,
-                        color: mainTextColor,
-                      )
-                    ],
-                  ),
-                  Text(
-                    GrocartLocalizations.of(context)!.delivered!,
-                    style: TextStyle(
-                        color: mainColor,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 15),
-                  )
-                ],
-              ),
-            ],
-          ),
-          SizedBox(
-            height: 10,
-          ),
-          Divider(),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Flexible(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      GrocartLocalizations.of(context)!.weeklyInsentive!,
-                      style: TextStyle(
-                          color: mainTextColor,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 15),
-                    ),
-                    Text(
-                      '9:30 PM',
-                      style: TextStyle(
-                          color: iconColor,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 15),
-                    ),
-                  ],
-                ),
-              ),
-              Text(
-                '₹ 800',
-                style: TextStyle(
-                    color: mainTextColor,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 15),
-              ),
-            ],
-          ),
-          SizedBox(
-            height: 10,
-          ),
-          Divider(),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Flexible(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      GrocartLocalizations.of(context)!.dailyInsentive!,
-                      style: TextStyle(
-                          color: mainTextColor,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 15),
-                    ),
-                    Text(
-                      '9:30 PM',
-                      style: TextStyle(
-                          color: iconColor,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 15),
-                    ),
-                  ],
-                ),
-              ),
-              Text(
-                '₹ 400',
-                style: TextStyle(
-                    color: mainTextColor,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 15),
-              ),
-            ],
-          ),
-          SizedBox(
-            height: 10,
-          ),
-          Divider(),
-          SizedBox(
-            height: 10,
-          ),
-        ],
+        ),
       ),
     );
   }

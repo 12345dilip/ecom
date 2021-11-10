@@ -41,12 +41,15 @@ class _MapUtilsState extends State<MapUtils> {
                         children: [
                           Column(
                             children: [
+                              SizedBox(
+                                height: 10,
+                              ),
                               Icon(
                                 Icons.location_pin,
                                 color: mainColor,
                               ),
                               Container(
-                                  height: 80,
+                                  height: 85,
                                   child: DashedLineConnector(
                                     color: iconColor,
                                   )),
@@ -105,7 +108,7 @@ class _MapUtilsState extends State<MapUtils> {
                         ],
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(top: 125, left: 24),
+                        padding: const EdgeInsets.only(top: 135, left: 24),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
@@ -215,38 +218,53 @@ class _MapUtilsState extends State<MapUtils> {
                   ),
                   Row(
                     children: [
-                      Text('3.884km',
-                          style: TextStyle(
-                              color: mainColor,
-                              fontWeight: FontWeight.bold,
-                              fontSize: 13)),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text('3.884km',
+                              style: TextStyle(
+                                  color: mainColor,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 13)),
+                          SizedBox(
+                            height: 10,
+                          ),
+                          Text(GrocartLocalizations.of(context)!.miles1!,
+                              style: TextStyle(color: iconColor, fontSize: 13)),
+                        ],
+                      ),
                       Spacer(),
-                      Text('1.884km',
-                          style: TextStyle(
-                              color: mainColor,
-                              fontWeight: FontWeight.bold,
-                              fontSize: 13)),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text('1.884km',
+                              style: TextStyle(
+                                  color: mainColor,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 13)),
+                          SizedBox(
+                            height: 10,
+                          ),
+                          Text(GrocartLocalizations.of(context)!.miles2!,
+                              style: TextStyle(color: iconColor, fontSize: 13)),
+                        ],
+                      ),
                       Spacer(),
-                      Text('5.768km',
-                          style: TextStyle(
-                              color: mainColor,
-                              fontWeight: FontWeight.bold,
-                              fontSize: 13))
-                    ],
-                  ),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  Row(
-                    children: [
-                      Text(GrocartLocalizations.of(context)!.miles1!,
-                          style: TextStyle(color: iconColor, fontSize: 13)),
-                      Spacer(),
-                      Text(GrocartLocalizations.of(context)!.miles2!,
-                          style: TextStyle(color: iconColor, fontSize: 13)),
-                      Spacer(),
-                      Text(GrocartLocalizations.of(context)!.totals!,
-                          style: TextStyle(color: iconColor, fontSize: 13))
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text('5.768km',
+                              style: TextStyle(
+                                  color: mainColor,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 13)),
+                          SizedBox(
+                            height: 10,
+                          ),
+                          Text(GrocartLocalizations.of(context)!.totals!,
+                              style: TextStyle(color: iconColor, fontSize: 13))
+                        ],
+                      )
                     ],
                   ),
                   SizedBox(

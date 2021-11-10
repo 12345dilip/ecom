@@ -197,7 +197,8 @@ class _DeliveryLocationState extends State<DeliveryLocation> {
                               ),
                               Divider(),
                               Padding(
-                                padding: const EdgeInsets.only(left: 40.0),
+                                padding: const EdgeInsets.only(
+                                    left: 40.0, bottom: 25),
                                 child: Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [

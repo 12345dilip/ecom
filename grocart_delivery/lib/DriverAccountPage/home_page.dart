@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:grocart_delivery/Languages/locals.dart';
-import 'package:grocart_delivery/Map/map_utils.dart';
-import 'package:grocart_delivery/Pages/weekly_earning_details.dart';
 import 'package:grocart_delivery/Routers/routes.dart';
 import 'package:grocart_delivery/ThemeColors/colors.dart';
 import 'package:syncfusion_flutter_gauges/gauges.dart';
@@ -202,8 +200,8 @@ class _HomePageState extends State<HomePage> {
                                     ),
                                     FlatButton(
                                         onPressed: () {
-                                          Navigator.pushNamed(context,
-                                              PageRoutes.earnWeeklyDetails);
+                                          Navigator.pushNamed(
+                                              context, PageRoutes.orderPage);
                                         },
                                         child: Row(
                                           children: [
@@ -268,8 +266,8 @@ class _HomePageState extends State<HomePage> {
                                     ),
                                     FlatButton(
                                         onPressed: () {
-                                          Navigator.pushNamed(context,
-                                              PageRoutes.earnWeeklyDetails);
+                                          Navigator.pushNamed(
+                                              context, PageRoutes.orderPage);
                                         },
                                         child: Row(
                                           children: [
