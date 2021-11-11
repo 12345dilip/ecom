@@ -133,7 +133,8 @@ class _ReviewPageState extends State<ReviewPage> {
                     ),
                   ),
                   Text(
-                    listOfReviews[index].content!,
+                    'content',
+                    //listOfReviews[index].content!,
                     textAlign: TextAlign.justify,
                     style: Theme.of(context)
                         .textTheme

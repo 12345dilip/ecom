@@ -43,7 +43,6 @@ class _MobileInputState extends State<MobileInput> {
         SizedBox(
           width: 10.0,
         ),
-        //takes phone number as input
         Expanded(
           child: EntryField(
             controller: _controller,
@@ -55,7 +54,6 @@ class _MobileInputState extends State<MobileInput> {
           ),
         ),
 
-        //if phone number is valid, button gets enabled and takes to register screen
         ElevatedButton(
           style: ElevatedButton.styleFrom(
             primary: Theme.of(context).primaryColor,

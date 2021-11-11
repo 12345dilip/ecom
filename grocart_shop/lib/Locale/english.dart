@@ -42,7 +42,7 @@ Map<String, String> english() {
     'invalidName': 'Invalid Name',
     'invalidEmail': 'Invalid Email',
     'invalidNameAndEmail': 'Invalid Name and Email',
-    'fullName': 'Restaurant Name',
+    'fullName': 'Shop Name',
     'emailAddress': 'Email Address',
     'mobileNumber': 'Phone Number',
     'verificationText': 'We\'ll send verification code on above given number.',
@@ -158,5 +158,6 @@ Map<String, String> english() {
     'mirrorless': 'Mirrorless Cameras',
     'dslr': 'DSLR Cameras',
     'action': 'Action Cameras',
+    'profileInfo': 'Shop Info',
   };
 }

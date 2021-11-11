@@ -332,69 +332,6 @@ class _AddState extends State<Add> {
                   padding:
                       EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
                   child: Text(
-                    "DO YOU HAVE eMENU APP?",
-                    style: Theme.of(context).textTheme.headline6!.copyWith(
-                        fontWeight: FontWeight.bold,
-                        letterSpacing: 0.67,
-                        color: kHintColor),
-                  ),
-                ),
-                Row(
-                  children: [
-                    Row(
-                      children: [
-                        Radio(
-                          groupValue: haveApp,
-                          onChanged: (dynamic value) {
-                            setState(() {
-                              haveApp = value;
-                            });
-                          },
-                          activeColor: kMainColor,
-                          value: 0,
-                        ),
-                        Text(
-                          "Yes",
-                          style: Theme.of(context).textTheme.caption,
-                        )
-                      ],
-                    ),
-                    SizedBox(
-                      width: 20,
-                    ),
-                    Row(
-                      children: [
-                        Radio(
-                          groupValue: haveApp,
-                          onChanged: (dynamic value) {
-                            setState(() {
-                              haveApp = value;
-                            });
-                          },
-                          activeColor: kMainColor,
-                          value: 1,
-                        ),
-                        Text(
-                          "No",
-                          style: Theme.of(context).textTheme.caption,
-                        )
-                      ],
-                    ),
-                  ],
-                )
-              ],
-            ),
-            Divider(
-              color: Theme.of(context).cardColor,
-              thickness: 8.0,
-            ),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Padding(
-                  padding:
-                      EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
-                  child: Text(
                     "ITEM DESCRIPTION",
                     style: Theme.of(context).textTheme.headline6!.copyWith(
                         fontWeight: FontWeight.bold,
@@ -428,7 +365,7 @@ class _AddState extends State<Add> {
                   padding:
                       EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
                   child: Text(
-                    "INGREDIENTS",
+                    "VARIATIONS",
                     style: Theme.of(context).textTheme.headline6!.copyWith(
                         fontWeight: FontWeight.bold,
                         letterSpacing: 0.67,
@@ -442,7 +379,7 @@ class _AddState extends State<Add> {
                         Row(
                           children: [
                             Text(
-                              "Flour",
+                              "Compact",
                               style: Theme.of(context).textTheme.caption,
                             ),
                             SizedBox(
@@ -462,7 +399,7 @@ class _AddState extends State<Add> {
                         Row(
                           children: [
                             Text(
-                              "Sugar",
+                              "DSLR",
                               style: Theme.of(context).textTheme.caption,
                             ),
                             SizedBox(
@@ -482,7 +419,7 @@ class _AddState extends State<Add> {
                         Row(
                           children: [
                             Text(
-                              "Baking Powder",
+                              "Bridge",
                               style: Theme.of(context).textTheme.caption,
                             ),
                             SizedBox(
@@ -502,7 +439,7 @@ class _AddState extends State<Add> {
                         Row(
                           children: [
                             Text(
-                              "Salt",
+                              "DSLR mirrorless",
                               style: Theme.of(context).textTheme.caption,
                             ),
                             SizedBox(
@@ -607,24 +544,24 @@ class _AddState extends State<Add> {
                           Icons.keyboard_arrow_down,
                           color: Colors.black,
                         ),
-                        hint: "Servings for",
-                        initialValue: "2 Pople Serving",
+                        hint: "Colors",
+                        initialValue: "Black",
                       ),
                       EntryField(
                         suffixIcon: Icon(
                           Icons.keyboard_arrow_down,
                           color: Colors.black,
                         ),
-                        hint: "Cooking time",
-                        initialValue: "12 min",
+                        hint: "Sizes",
+                        initialValue: "12 inch",
                       ),
                       EntryField(
                         suffixIcon: Icon(
                           Icons.keyboard_arrow_down,
                           color: Colors.black,
                         ),
-                        hint: "Energy (in kcal)",
-                        initialValue: "227 (kcal)",
+                        hint: "Stocks",
+                        initialValue: "12",
                       )
                     ],
                   ),

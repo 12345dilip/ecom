@@ -35,36 +35,8 @@ class AppLocalizations {
     return _localizedValues[locale.languageCode]!['fullNamee'];
   }
 
-  String? get cheese {
-    return _localizedValues[locale.languageCode]!['cheese'];
-  }
-
-  String? get sandwich {
-    return _localizedValues[locale.languageCode]!['sandwich'];
-  }
-
-  String? get csandwich {
-    return _localizedValues[locale.languageCode]!['csandwich'];
-  }
-
-  String? get frankie {
-    return _localizedValues[locale.languageCode]!['frankie'];
-  }
-
-  String? get chicken {
-    return _localizedValues[locale.languageCode]!['chicken'];
-  }
-
   String? get cash {
     return _localizedValues[locale.languageCode]!['cash'];
-  }
-
-  String? get juice {
-    return _localizedValues[locale.languageCode]!['juice'];
-  }
-
-  String? get burger {
-    return _localizedValues[locale.languageCode]!['burger'];
   }
 
   String? get television {
@@ -79,24 +51,8 @@ class AppLocalizations {
     return _localizedValues[locale.languageCode]!['customize'];
   }
 
-  String? get veg {
-    return _localizedValues[locale.languageCode]!['veg'];
-  }
-
-  String? get nonVeg {
-    return _localizedValues[locale.languageCode]!['nonVeg'];
-  }
-
   String? get camera {
     return _localizedValues[locale.languageCode]!['camera'];
-  }
-
-  String? get sea {
-    return _localizedValues[locale.languageCode]!['sea'];
-  }
-
-  String? get chinese {
-    return _localizedValues[locale.languageCode]!['chinese'];
   }
 
   String? get speaker {
@@ -351,10 +307,6 @@ class AppLocalizations {
     return _localizedValues[locale.languageCode]!['recent'];
   }
 
-  String? get vegetable {
-    return _localizedValues[locale.languageCode]!['vegetable'];
-  }
-
   String? get today {
     return _localizedValues[locale.languageCode]!['today'];
   }
@@ -445,18 +397,6 @@ class AppLocalizations {
 
   String? get sales {
     return _localizedValues[locale.languageCode]!['sales'];
-  }
-
-  String? get tomato {
-    return _localizedValues[locale.languageCode]!['tomato'];
-  }
-
-  String? get onion {
-    return _localizedValues[locale.languageCode]!['onion'];
-  }
-
-  String? get fingers {
-    return _localizedValues[locale.languageCode]!['fingers'];
   }
 
   String? get closingTime {
@@ -557,22 +497,6 @@ class AppLocalizations {
 
   String? get pastOrder {
     return _localizedValues[locale.languageCode]!['pastOrder'];
-  }
-
-  String? get vegetables {
-    return _localizedValues[locale.languageCode]!['vegetables'];
-  }
-
-  String? get fruits {
-    return _localizedValues[locale.languageCode]!['fruits'];
-  }
-
-  String? get herbs {
-    return _localizedValues[locale.languageCode]!['herbs'];
-  }
-
-  String? get dairy {
-    return _localizedValues[locale.languageCode]!['dairy'];
   }
 
   String? get items {
@@ -733,17 +657,29 @@ class AppLocalizations {
 
   String? get lens {
     return _localizedValues[locale.languageCode]!['lens'];
-  }String? get compact {
+  }
+
+  String? get compact {
     return _localizedValues[locale.languageCode]!['compact'];
-  }String? get bridge {
+  }
+
+  String? get bridge {
     return _localizedValues[locale.languageCode]!['bridge'];
-  }String? get film {
+  }
+
+  String? get film {
     return _localizedValues[locale.languageCode]!['film'];
-  }String? get mirrorless {
+  }
+
+  String? get mirrorless {
     return _localizedValues[locale.languageCode]!['mirrorless'];
-  }String? get dslr {
+  }
+
+  String? get dslr {
     return _localizedValues[locale.languageCode]!['dslr'];
-  }String? get action {
+  }
+
+  String? get action {
     return _localizedValues[locale.languageCode]!['action'];
   }
 }

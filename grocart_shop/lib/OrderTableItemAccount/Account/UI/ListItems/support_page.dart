@@ -38,7 +38,7 @@ class SupportPage extends StatelessWidget {
                 padding: EdgeInsets.symmetric(vertical: 48.0),
                 color: Theme.of(context).cardColor,
                 child: Image(
-                  image: AssetImage("images/logo_restro.png"), //delivoo logo
+                  image: AssetImage("images/GROCART.png"), //delivoo logo
                   height: 130.0,
                   width: 99.7,
                 ),

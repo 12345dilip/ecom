@@ -21,6 +21,7 @@ class ProfilePage extends StatelessWidget {
         leading: IconButton(
           icon: Icon(
             Icons.chevron_left,
+            color: kMainTextColor,
             size: 30,
           ),
           onPressed: () {
@@ -29,7 +30,11 @@ class ProfilePage extends StatelessWidget {
         ),
         title: Text(
           AppLocalizations.of(context)!.editProfile!,
-          style: TextStyle(fontSize: 16.7, fontWeight: FontWeight.bold),
+          style: TextStyle(
+            fontSize: 16.7,
+            fontWeight: FontWeight.bold,
+            color: kMainTextColor,
+          ),
         ),
       ),
 
@@ -136,9 +141,9 @@ class _RegisterFormState extends State<RegisterForm> {
                   padding: EdgeInsets.symmetric(horizontal: 12.0),
                   child: SmallTextFormField(
                       AppLocalizations.of(context)!.fullName!.toUpperCase(),
-                      "Enter Restraunt Name",
+                      "Enter Shop Name",
                       null,
-                      "Food Junction"),
+                      "Grocart"),
                 ),
                 //category textField
                 Padding(
@@ -150,7 +155,7 @@ class _RegisterFormState extends State<RegisterForm> {
                         Icons.keyboard_arrow_down,
                         color: Colors.black,
                       ),
-                      "Fast Food, Italian, Chinese"),
+                      "Camera, Laptop, Mobile"),
                 ),
                 //phone textField
                 Padding(
@@ -169,7 +174,7 @@ class _RegisterFormState extends State<RegisterForm> {
                     AppLocalizations.of(context)!.emailAddress!.toUpperCase(),
                     'Enter Email Address',
                     null,
-                    'storename@email.com',
+                    'grocart@email.com',
                   ),
                 ),
               ],
@@ -208,7 +213,7 @@ class _RegisterFormState extends State<RegisterForm> {
                                 .bodyText2!
                                 .copyWith(color: Colors.black, fontSize: 14),
                             initialValue:
-                                " 1124, Veggy Garden, City Food Park, United States",
+                                " 1124, Electronic City, United States",
                             decoration: InputDecoration(
                                 prefix: GestureDetector(
                                   onTap: () => Navigator.pushNamed(

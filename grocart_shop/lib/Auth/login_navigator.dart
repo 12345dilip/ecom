@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:grocart_shop/Auth/MobileNumber/UI/phone_number.dart';
 import 'package:grocart_shop/Auth/Registration/UI/register_page.dart';
 import 'package:grocart_shop/Auth/Verification/UI/verification_page.dart';
-import 'package:grocart_shop/Auth/social.dart';
 import 'package:grocart_shop/Routes/routes.dart';
 
 GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
@@ -41,9 +40,6 @@ class LoginNavigator extends StatelessWidget {
           switch (settings.name) {
             case LoginRoutes.loginRoot:
               builder = (BuildContext _) => PhoneNumber();
-              break;
-            case LoginRoutes.social:
-              builder = (BuildContext _) => SocialLogIn();
               break;
             case LoginRoutes.registration:
               builder = (BuildContext _) => RegisterPage();

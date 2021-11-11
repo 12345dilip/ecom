@@ -199,7 +199,7 @@ class Insight extends StatelessWidget {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  Text(AppLocalizations.of(context)!.sandwich!,
+                  Text(AppLocalizations.of(context)!.action!,
                       style: Theme.of(context).textTheme.bodyText1!.copyWith(
                           fontSize: 15.0, fontWeight: FontWeight.bold)),
                   SizedBox(height: 8.0),
@@ -226,7 +226,7 @@ class Insight extends StatelessWidget {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  Text(AppLocalizations.of(context)!.chicken!,
+                  Text(AppLocalizations.of(context)!.dslr!,
                       style: Theme.of(context).textTheme.bodyText1!.copyWith(
                           fontSize: 15.0, fontWeight: FontWeight.bold)),
                   SizedBox(height: 8.0),
@@ -253,7 +253,7 @@ class Insight extends StatelessWidget {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  Text(AppLocalizations.of(context)!.burger!,
+                  Text(AppLocalizations.of(context)!.mirrorless!,
                       style: Theme.of(context).textTheme.bodyText1!.copyWith(
                           fontSize: 15.0, fontWeight: FontWeight.bold)),
                   SizedBox(height: 8.0),
@@ -280,7 +280,7 @@ class Insight extends StatelessWidget {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  Text(AppLocalizations.of(context)!.chicken!,
+                  Text(AppLocalizations.of(context)!.dslr!,
                       style: Theme.of(context).textTheme.bodyText1!.copyWith(
                           fontSize: 15.0, fontWeight: FontWeight.bold)),
                   SizedBox(height: 8.0),
@@ -307,7 +307,7 @@ class Insight extends StatelessWidget {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  Text(AppLocalizations.of(context)!.burger!,
+                  Text(AppLocalizations.of(context)!.mirrorless!,
                       style: Theme.of(context).textTheme.bodyText1!.copyWith(
                           fontSize: 15.0, fontWeight: FontWeight.bold)),
                   SizedBox(height: 8.0),

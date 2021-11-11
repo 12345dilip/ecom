@@ -106,7 +106,7 @@ Map<String, String> arabic() {
     'viewOrderInfo': 'عرض معلومات النظام',
     'ready': 'إجعلها جاهز',
     'storeText': 'الاتحاد السوق',
-    'storeProfile': 'n\\nRestaurant الملف الشخصي',
+    'storeProfile': 'n\\nGrocart الملف الشخصي',
     'top': 'TOP 5 بنود بيع\n',
     'total': 'مجموع 112 المبيعات البند',
     'sales': 'مبيعات',

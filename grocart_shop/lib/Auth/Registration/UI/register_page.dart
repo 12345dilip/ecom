@@ -7,7 +7,6 @@ import 'package:grocart_shop/Components/textfield.dart';
 import 'package:grocart_shop/Locale/locales.dart';
 import 'package:grocart_shop/Themes/colors.dart';
 
-//register page for registration of a new user
 class RegisterPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -32,7 +31,6 @@ class RegisterPage extends StatelessWidget {
         ),
       ),
 
-      //this column contains 3 textFields and a bottom bar
       body: RegisterForm(),
     );
   }
@@ -47,12 +45,9 @@ class _RegisterFormState extends State<RegisterForm> {
   final TextEditingController _nameController = TextEditingController();
   final TextEditingController _emailController = TextEditingController();
 
-  // RegisterBloc _registerBloc;
-
   @override
   void initState() {
     super.initState();
-    // _registerBloc = BlocProvider.of<RegisterBloc>(context);
   }
 
   @override

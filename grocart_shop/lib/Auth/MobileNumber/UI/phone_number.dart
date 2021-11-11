@@ -5,8 +5,6 @@ import 'package:grocart_shop/Locale/locales.dart';
 import 'package:grocart_shop/Themes/colors.dart';
 
 import 'mobile_input.dart';
-
-//first page that takes phone number as input for verification
 class PhoneNumber extends StatefulWidget {
   static const String id = 'phone_number';
 
@@ -19,7 +17,6 @@ class _PhoneNumberState extends State<PhoneNumber> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SingleChildScrollView(
-        //used for scrolling when keyboard pops up
         child: Container(
           color: Theme.of(context).cardColor,
           height: MediaQuery.of(context).size.height,
@@ -31,7 +28,6 @@ class _PhoneNumberState extends State<PhoneNumber> {
               Expanded(
                 child: Image.asset(
                   "images/GROCART.png",
-                  // scale: 3,
                 ),
               ),
               Center(
@@ -63,7 +59,7 @@ class _PhoneNumberState extends State<PhoneNumber> {
               Expanded(
                 flex: 5,
                 child: Image.asset(
-                  "images/SIGNIN.png", //footer image
+                  "images/SIGNIN.png",
                 ),
               ),
               Padding(

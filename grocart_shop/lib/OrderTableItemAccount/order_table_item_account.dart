@@ -22,7 +22,6 @@ class _OrderItemAccountState extends State<OrderItemAccount> {
 
   final List<Widget> _children = [
     OrderPage(),
-    //BookingsPage(),
     ItemsPage(),
     AccountPage(),
   ];
@@ -35,8 +34,6 @@ class _OrderItemAccountState extends State<OrderItemAccount> {
 
   static String bottomIconItem = 'images/footermenu/ic_item.png';
 
-  //static String bottomIconTable = 'images/footermenu/ic_table.png';
-
   static String bottomIconOrder = 'images/footermenu/ic_orders.png';
 
   static String bottomIconAccount = 'images/footermenu/ic_profile.png';
@@ -48,10 +45,6 @@ class _OrderItemAccountState extends State<OrderItemAccount> {
         text: AppLocalizations.of(context)!.orders,
         image: bottomIconOrder,
       ),
-      // BarItem(
-      //   text: "Table",
-      //   image: bottomIconTable,
-      // ),
       BarItem(
         text: AppLocalizations.of(context)!.product,
         image: bottomIconItem,

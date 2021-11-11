@@ -215,69 +215,6 @@ class _AddState extends State<Add> {
                   padding:
                       EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
                   child: Text(
-                    "DO YOU HAVE eMENU APP?",
-                    style: Theme.of(context).textTheme.headline6!.copyWith(
-                        fontWeight: FontWeight.bold,
-                        letterSpacing: 0.67,
-                        color: kHintColor),
-                  ),
-                ),
-                Row(
-                  children: [
-                    Row(
-                      children: [
-                        Radio(
-                          groupValue: haveApp,
-                          onChanged: (dynamic value) {
-                            setState(() {
-                              haveApp = value;
-                            });
-                          },
-                          activeColor: kMainColor,
-                          value: 0,
-                        ),
-                        Text(
-                          "Yes",
-                          style: Theme.of(context).textTheme.caption,
-                        )
-                      ],
-                    ),
-                    SizedBox(
-                      width: 20,
-                    ),
-                    Row(
-                      children: [
-                        Radio(
-                          groupValue: haveApp,
-                          onChanged: (dynamic value) {
-                            setState(() {
-                              haveApp = value;
-                            });
-                          },
-                          activeColor: kMainColor,
-                          value: 1,
-                        ),
-                        Text(
-                          "No",
-                          style: Theme.of(context).textTheme.caption,
-                        )
-                      ],
-                    ),
-                  ],
-                )
-              ],
-            ),
-            Divider(
-              color: Theme.of(context).cardColor,
-              thickness: 8.0,
-            ),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Padding(
-                  padding:
-                      EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
-                  child: Text(
                     "ITEM DESCRIPTION",
                     style: Theme.of(context).textTheme.headline6!.copyWith(
                         fontWeight: FontWeight.bold,
@@ -311,7 +248,7 @@ class _AddState extends State<Add> {
                   padding:
                       EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
                   child: Text(
-                    "INGREDIENTS",
+                    "VARIATIONS",
                     style: Theme.of(context).textTheme.headline6!.copyWith(
                         fontWeight: FontWeight.bold,
                         letterSpacing: 0.67,
@@ -323,7 +260,7 @@ class _AddState extends State<Add> {
                   child: EntryField(
                     maxLength: 5,
                     maxLines: 5,
-                    hint: "Add Ingredients",
+                    hint: "Add variations",
                     // initialValue:
                     //     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
                   ),
@@ -413,15 +350,15 @@ class _AddState extends State<Add> {
                   child: Column(
                     children: [
                       EntryField(
-                        hint: "Servings for",
+                        hint: "Colors",
                         //initialValue: "2 Pople Serving",
                       ),
                       EntryField(
-                        hint: "Cooking time",
+                        hint: "Sizes",
                         // initialValue: "12 min",
                       ),
                       EntryField(
-                        hint: "Energy (in kcal)",
+                        hint: "Stocks",
                         //initialValue: "227 (kcal)",
                       )
                     ],
