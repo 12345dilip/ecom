@@ -156,7 +156,7 @@ Map<String, String> english() {
     'service': 'Service Fee',
     'payment': 'Payment Info',
     'add': 'Add Product',
-    'edit': 'Add Product',
+    'edit': 'Edit Product',
     'editt': 'Update info',
     'info': 'ITEM INFO',
     'title': 'ITEM TITLE',

@@ -96,7 +96,7 @@ class _ItemsPageState extends State<ItemsPage> {
                               scale: 7.6,
                             ),
                             SizedBox(
-                              width: 16.0,
+                              width: 25.0,
                             ),
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -106,42 +106,28 @@ class _ItemsPageState extends State<ItemsPage> {
                                         .textTheme
                                         .headline4!
                                         .copyWith(
-                                            fontSize: 15.0,
+                                            fontSize: 12.0,
                                             fontWeight: FontWeight.bold)),
                                 Padding(
                                   padding: EdgeInsets.only(top: 8.0),
-                                  child: Row(
-                                    children: [
-                                      Image.asset(
-                                        'images/ic_veg.png',
-                                        height: 16.0,
-                                        width: 16.7,
-                                      ),
-                                      SizedBox(
-                                        width: 10.0,
-                                      ),
-                                      Text('\$ 3.50',
-                                          style: Theme.of(context)
-                                              .textTheme
-                                              .caption),
-                                    ],
-                                  ),
+                                  child: Text('\$ 3.50',
+                                      style:
+                                          Theme.of(context).textTheme.caption),
                                 ),
                               ],
                             ),
                           ],
                         ),
-                        Positioned.directional(
-                          end: 0.0,
-                          bottom: 0.0,
-                          textDirection: Directionality.of(context),
+                        Padding(
+                          padding: const EdgeInsets.only(top: 30.0),
                           child: Row(
+                            mainAxisAlignment: MainAxisAlignment.end,
                             children: [
                               Text(
                                 '$stock',
                                 style: TextStyle(
                                     color: kHintColor,
-                                    fontSize: 13.3,
+                                    fontSize: 10,
                                     fontWeight: FontWeight.bold),
                               ),
                               Switch(
@@ -182,7 +168,7 @@ class _ItemsPageState extends State<ItemsPage> {
                               scale: 5.6,
                             ),
                             SizedBox(
-                              width: 16.0,
+                              width: 25.0,
                             ),
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -192,42 +178,28 @@ class _ItemsPageState extends State<ItemsPage> {
                                         .textTheme
                                         .headline4!
                                         .copyWith(
-                                            fontSize: 15.0,
+                                            fontSize: 12.0,
                                             fontWeight: FontWeight.bold)),
                                 Padding(
                                   padding: EdgeInsets.only(top: 8.0),
-                                  child: Row(
-                                    children: [
-                                      Image.asset(
-                                        'images/ic_nonveg.png',
-                                        height: 16.0,
-                                        width: 16.7,
-                                      ),
-                                      SizedBox(
-                                        width: 10.0,
-                                      ),
-                                      Text('\$ 7.00',
-                                          style: Theme.of(context)
-                                              .textTheme
-                                              .caption),
-                                    ],
-                                  ),
+                                  child: Text('\$ 7.00',
+                                      style:
+                                          Theme.of(context).textTheme.caption),
                                 ),
                               ],
                             ),
                           ],
                         ),
-                        Positioned.directional(
-                          end: 0.0,
-                          bottom: 0.0,
-                          textDirection: Directionality.of(context),
+                        Padding(
+                          padding: const EdgeInsets.only(top: 30.0),
                           child: Row(
+                            mainAxisAlignment: MainAxisAlignment.end,
                             children: [
                               Text(
                                 '$stock',
                                 style: TextStyle(
                                     color: kHintColor,
-                                    fontSize: 13.3,
+                                    fontSize: 10,
                                     fontWeight: FontWeight.bold),
                               ),
                               Switch(
@@ -268,7 +240,7 @@ class _ItemsPageState extends State<ItemsPage> {
                               scale: 8.0,
                             ),
                             SizedBox(
-                              width: 16.0,
+                              width: 25.0,
                             ),
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -278,42 +250,28 @@ class _ItemsPageState extends State<ItemsPage> {
                                         .textTheme
                                         .headline4!
                                         .copyWith(
-                                            fontSize: 15.0,
+                                            fontSize: 12.0,
                                             fontWeight: FontWeight.bold)),
                                 Padding(
                                   padding: EdgeInsets.only(top: 8.0),
-                                  child: Row(
-                                    children: [
-                                      Image.asset(
-                                        'images/ic_veg.png',
-                                        height: 16.0,
-                                        width: 16.7,
-                                      ),
-                                      SizedBox(
-                                        width: 10.0,
-                                      ),
-                                      Text('\$ 5.00',
-                                          style: Theme.of(context)
-                                              .textTheme
-                                              .caption),
-                                    ],
-                                  ),
+                                  child: Text('\$ 5.00',
+                                      style:
+                                          Theme.of(context).textTheme.caption),
                                 ),
                               ],
                             ),
                           ],
                         ),
-                        Positioned.directional(
-                          end: 0.0,
-                          bottom: 0.0,
-                          textDirection: Directionality.of(context),
+                        Padding(
+                          padding: const EdgeInsets.only(top: 30.0),
                           child: Row(
+                            mainAxisAlignment: MainAxisAlignment.end,
                             children: [
                               Text(
                                 '$stock',
                                 style: TextStyle(
                                     color: kHintColor,
-                                    fontSize: 13.3,
+                                    fontSize: 10,
                                     fontWeight: FontWeight.bold),
                               ),
                               Switch(
@@ -354,7 +312,7 @@ class _ItemsPageState extends State<ItemsPage> {
                               scale: 8.4,
                             ),
                             SizedBox(
-                              width: 16.0,
+                              width: 25.0,
                             ),
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -364,42 +322,28 @@ class _ItemsPageState extends State<ItemsPage> {
                                         .textTheme
                                         .headline4!
                                         .copyWith(
-                                            fontSize: 15.0,
+                                            fontSize: 12.0,
                                             fontWeight: FontWeight.bold)),
                                 Padding(
                                   padding: EdgeInsets.only(top: 8.0),
-                                  child: Row(
-                                    children: [
-                                      Image.asset(
-                                        'images/ic_veg.png',
-                                        height: 16.0,
-                                        width: 16.7,
-                                      ),
-                                      SizedBox(
-                                        width: 10.0,
-                                      ),
-                                      Text('\$ 4.00',
-                                          style: Theme.of(context)
-                                              .textTheme
-                                              .caption),
-                                    ],
-                                  ),
+                                  child: Text('\$ 4.00',
+                                      style:
+                                          Theme.of(context).textTheme.caption),
                                 ),
                               ],
                             ),
                           ],
                         ),
-                        Positioned.directional(
-                          end: 0.0,
-                          bottom: 0.0,
-                          textDirection: Directionality.of(context),
+                        Padding(
+                          padding: const EdgeInsets.only(top: 30.0),
                           child: Row(
+                            mainAxisAlignment: MainAxisAlignment.end,
                             children: [
                               Text(
                                 '$stock',
                                 style: TextStyle(
                                     color: kHintColor,
-                                    fontSize: 13.3,
+                                    fontSize: 10,
                                     fontWeight: FontWeight.bold),
                               ),
                               Switch(
@@ -440,7 +384,7 @@ class _ItemsPageState extends State<ItemsPage> {
                               scale: 6.5,
                             ),
                             SizedBox(
-                              width: 16.0,
+                              width: 25.0,
                             ),
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -450,42 +394,28 @@ class _ItemsPageState extends State<ItemsPage> {
                                         .textTheme
                                         .headline4!
                                         .copyWith(
-                                            fontSize: 15.0,
+                                            fontSize: 12.0,
                                             fontWeight: FontWeight.bold)),
                                 Padding(
                                   padding: EdgeInsets.only(top: 8.0),
-                                  child: Row(
-                                    children: [
-                                      Image.asset(
-                                        'images/ic_veg.png',
-                                        height: 16.0,
-                                        width: 16.7,
-                                      ),
-                                      SizedBox(
-                                        width: 10.0,
-                                      ),
-                                      Text('\$ 6.00',
-                                          style: Theme.of(context)
-                                              .textTheme
-                                              .caption),
-                                    ],
-                                  ),
+                                  child: Text('\$ 6.00',
+                                      style:
+                                          Theme.of(context).textTheme.caption),
                                 ),
                               ],
                             ),
                           ],
                         ),
-                        Positioned.directional(
-                          end: 0.0,
-                          bottom: 0.0,
-                          textDirection: Directionality.of(context),
+                        Padding(
+                          padding: const EdgeInsets.only(top: 30.0),
                           child: Row(
+                            mainAxisAlignment: MainAxisAlignment.end,
                             children: [
                               Text(
                                 '$stock',
                                 style: TextStyle(
                                     color: kHintColor,
-                                    fontSize: 13.3,
+                                    fontSize: 10,
                                     fontWeight: FontWeight.bold),
                               ),
                               Switch(
@@ -526,7 +456,7 @@ class _ItemsPageState extends State<ItemsPage> {
                               scale: 5.2,
                             ),
                             SizedBox(
-                              width: 16.0,
+                              width: 25.0,
                             ),
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -536,42 +466,28 @@ class _ItemsPageState extends State<ItemsPage> {
                                         .textTheme
                                         .headline4!
                                         .copyWith(
-                                            fontSize: 15.0,
+                                            fontSize: 12.0,
                                             fontWeight: FontWeight.bold)),
                                 Padding(
                                   padding: EdgeInsets.only(top: 8.0),
-                                  child: Row(
-                                    children: [
-                                      Image.asset(
-                                        'images/ic_nonveg.png',
-                                        height: 16.0,
-                                        width: 16.7,
-                                      ),
-                                      SizedBox(
-                                        width: 10.0,
-                                      ),
-                                      Text('\$ 7.00',
-                                          style: Theme.of(context)
-                                              .textTheme
-                                              .caption),
-                                    ],
-                                  ),
+                                  child: Text('\$ 7.00',
+                                      style:
+                                          Theme.of(context).textTheme.caption),
                                 ),
                               ],
                             ),
                           ],
                         ),
-                        Positioned.directional(
-                          end: 0.0,
-                          bottom: 0.0,
-                          textDirection: Directionality.of(context),
+                        Padding(
+                          padding: const EdgeInsets.only(top: 30.0),
                           child: Row(
+                            mainAxisAlignment: MainAxisAlignment.end,
                             children: [
                               Text(
                                 '$stock',
                                 style: TextStyle(
                                     color: kHintColor,
-                                    fontSize: 13.3,
+                                    fontSize: 10,
                                     fontWeight: FontWeight.bold),
                               ),
                               Switch(
@@ -612,7 +528,7 @@ class _ItemsPageState extends State<ItemsPage> {
                               scale: 7.6,
                             ),
                             SizedBox(
-                              width: 16.0,
+                              width: 25.0,
                             ),
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -622,42 +538,28 @@ class _ItemsPageState extends State<ItemsPage> {
                                         .textTheme
                                         .headline4!
                                         .copyWith(
-                                            fontSize: 15.0,
+                                            fontSize: 12.0,
                                             fontWeight: FontWeight.bold)),
                                 Padding(
                                   padding: EdgeInsets.only(top: 8.0),
-                                  child: Row(
-                                    children: [
-                                      Image.asset(
-                                        'images/ic_veg.png',
-                                        height: 16.0,
-                                        width: 16.7,
-                                      ),
-                                      SizedBox(
-                                        width: 10.0,
-                                      ),
-                                      Text('\$ 5.00',
-                                          style: Theme.of(context)
-                                              .textTheme
-                                              .caption),
-                                    ],
-                                  ),
+                                  child: Text('\$ 5.00',
+                                      style:
+                                          Theme.of(context).textTheme.caption),
                                 ),
                               ],
                             ),
                           ],
                         ),
-                        Positioned.directional(
-                          end: 0.0,
-                          bottom: 0.0,
-                          textDirection: Directionality.of(context),
+                        Padding(
+                          padding: const EdgeInsets.only(top: 30.0),
                           child: Row(
+                            mainAxisAlignment: MainAxisAlignment.end,
                             children: [
                               Text(
                                 '$stock',
                                 style: TextStyle(
                                     color: kHintColor,
-                                    fontSize: 13.3,
+                                    fontSize: 10.3,
                                     fontWeight: FontWeight.bold),
                               ),
                               Switch(
@@ -698,7 +600,7 @@ class _ItemsPageState extends State<ItemsPage> {
                               scale: 6.3,
                             ),
                             SizedBox(
-                              width: 16.0,
+                              width: 25.0,
                             ),
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -708,42 +610,28 @@ class _ItemsPageState extends State<ItemsPage> {
                                         .textTheme
                                         .headline4!
                                         .copyWith(
-                                            fontSize: 15.0,
+                                            fontSize: 12.0,
                                             fontWeight: FontWeight.bold)),
                                 Padding(
                                   padding: EdgeInsets.only(top: 8.0),
-                                  child: Row(
-                                    children: [
-                                      Image.asset(
-                                        'images/ic_veg.png',
-                                        height: 16.0,
-                                        width: 16.7,
-                                      ),
-                                      SizedBox(
-                                        width: 10.0,
-                                      ),
-                                      Text('\$ 6.00',
-                                          style: Theme.of(context)
-                                              .textTheme
-                                              .caption),
-                                    ],
-                                  ),
+                                  child: Text('\$ 6.00',
+                                      style:
+                                          Theme.of(context).textTheme.caption),
                                 ),
                               ],
                             ),
                           ],
                         ),
-                        Positioned.directional(
-                          end: 0.0,
-                          bottom: 0.0,
-                          textDirection: Directionality.of(context),
+                        Padding(
+                          padding: const EdgeInsets.only(top: 30.0),
                           child: Row(
+                            mainAxisAlignment: MainAxisAlignment.end,
                             children: [
                               Text(
                                 '$stock',
                                 style: TextStyle(
                                     color: kHintColor,
-                                    fontSize: 13.3,
+                                    fontSize: 10,
                                     fontWeight: FontWeight.bold),
                               ),
                               Switch(

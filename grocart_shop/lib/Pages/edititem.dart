@@ -4,7 +4,6 @@ import 'package:flutter/widgets.dart';
 import 'package:grocart_shop/Components/bottom_bar.dart';
 import 'package:grocart_shop/Components/entry_field.dart';
 import 'package:grocart_shop/Components/textfield.dart';
-
 import 'package:grocart_shop/Locale/locales.dart';
 import 'package:grocart_shop/Themes/colors.dart';
 
@@ -25,8 +24,8 @@ class _EditItemState extends State<EditItem> {
         leading: IconButton(
           icon: Icon(
             Icons.chevron_left,
-            color: kMainTextColor,
             size: 30,
+            color: kMainTextColor,
           ),
           onPressed: () {
             Navigator.pop(context);
@@ -34,6 +33,31 @@ class _EditItemState extends State<EditItem> {
         ),
         title: Text(AppLocalizations.of(context)!.edit!,
             style: Theme.of(context).textTheme.bodyText1),
+        actions: [
+          Center(
+            child: Text(
+              '$stock',
+              style: Theme.of(context)
+                  .textTheme
+                  .caption!
+                  .copyWith(color: inStock ? kMainColor : kHintColor),
+            ),
+          ),
+          Switch(
+            activeColor: kMainColor,
+            activeTrackColor: Colors.grey[200],
+            value: inStock,
+            onChanged: (value) {
+              setState(() {
+                inStock = value;
+              });
+              if (inStock == true)
+                stock = AppLocalizations.of(context)!.stock;
+              else if (inStock == false)
+                stock = AppLocalizations.of(context)!.outStock;
+            },
+          )
+        ],
       ),
       body: Add(),
     );
@@ -123,7 +147,7 @@ class _AddState extends State<Add> {
                     textCapitalization: TextCapitalization.words,
                     // label: AppLocalizations.of(context).title,
                     hint: AppLocalizations.of(context)!.enterTitle,
-                    // initialValue: AppLocalizations.of(context)!.action,
+                    initialValue: AppLocalizations.of(context)!.action,
                   ),
                 ),
                 Padding(
@@ -136,7 +160,7 @@ class _AddState extends State<Add> {
                     textCapitalization: TextCapitalization.words,
                     // label: AppLocalizations.of(context).itemCategory,
                     hint: AppLocalizations.of(context)!.selectCategory,
-                    //initialValue: "Fast Food",
+                    initialValue: "Cameras",
                   ),
                 ),
                 Padding(
@@ -145,7 +169,7 @@ class _AddState extends State<Add> {
                     textCapitalization: TextCapitalization.words,
                     // label: "ITEM PRICE",
                     hint: "Enter Item Price",
-                    //initialValue: "\$5.00",
+                    initialValue: "\$15000.00",
                   ),
                 ),
               ],
@@ -154,6 +178,69 @@ class _AddState extends State<Add> {
               color: Theme.of(context).cardColor,
               thickness: 8.0,
             ),
+            // Column(
+            //   crossAxisAlignment: CrossAxisAlignment.start,
+            //   children: [
+            //     Padding(
+            //       padding:
+            //           EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
+            //       child: Text(
+            //         "FOOD TYPE",
+            //         style: Theme.of(context).textTheme.headline6!.copyWith(
+            //             fontWeight: FontWeight.bold,
+            //             letterSpacing: 0.67,
+            //             color: kHintColor),
+            //       ),
+            //     ),
+            //     Row(
+            //       children: [
+            //         Row(
+            //           children: [
+            //             Radio(
+            //               groupValue: foodType,
+            //               onChanged: (dynamic value) {
+            //                 setState(() {
+            //                   foodType = value;
+            //                 });
+            //               },
+            //               activeColor: kMainColor,
+            //               value: 0,
+            //             ),
+            //             Text(
+            //               "Veg",
+            //               style: Theme.of(context).textTheme.caption,
+            //             )
+            //           ],
+            //         ),
+            //         SizedBox(
+            //           width: 20,
+            //         ),
+            //         Row(
+            //           children: [
+            //             Radio(
+            //               groupValue: foodType,
+            //               onChanged: (dynamic value) {
+            //                 setState(() {
+            //                   foodType = value;
+            //                 });
+            //               },
+            //               activeColor: kMainColor,
+            //               value: 1,
+            //             ),
+            //             Text(
+            //               "Non Veg",
+            //               style: Theme.of(context).textTheme.caption,
+            //             )
+            //           ],
+            //         ),
+            //       ],
+            //     )
+            //   ],
+            // ),
+            // Divider(
+            //   color: Theme.of(context).cardColor,
+            //   thickness: 8.0,
+            // ),
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
@@ -175,17 +262,47 @@ class _AddState extends State<Add> {
                       Expanded(
                         child: SmallTextFormField(
                           "OPTION TITLE",
-                          'Add Option',
+                          AppLocalizations.of(context)!.enterPrice,
+                          null,
+                          'Lens Kit',
                         ),
                       ),
                       Expanded(
                         child: SmallTextFormFieldR(
                           "PRICE",
-                          'Price',
+                          AppLocalizations.of(context)!.enterQuantity,
+                          null,
+                          '\$ 25000.00',
                         ),
                       ),
                     ],
                   ),
+                ),
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 12.0),
+                  child: Row(
+                    children: [
+                      Expanded(
+                        child: EntryField(
+                          textCapitalization: TextCapitalization.words,
+                          // label: AppLocalizations.of(context).price,
+                          hint: AppLocalizations.of(context)!.enterPrice,
+                          initialValue: 'Camera Stand',
+                        ),
+                      ),
+                      Expanded(
+                        child: EntryFieldR(
+                          textCapitalization: TextCapitalization.words,
+                          // label: AppLocalizations.of(context).quantity,
+                          hint: AppLocalizations.of(context)!.enterQuantity,
+                          initialValue: '\$ 12000.00',
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                SizedBox(
+                  height: 10.0,
                 ),
                 Align(
                   alignment: Alignment.centerRight,
@@ -291,8 +408,8 @@ class _AddState extends State<Add> {
                     maxLength: 5,
                     maxLines: 5,
                     hint: "Add Description",
-                    // initialValue:
-                    //     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                    initialValue:
+                        "An action camera is a compact, rugged, handheld or mountable digital camera that is designed for capture what you see when you are immersing in a trip, sport or event. ... Nowadays, action cameras are quite powerful and able to help record high-quality videos & photos in all kinds of environments.",
                   ),
                 ),
                 SizedBox(
@@ -319,15 +436,88 @@ class _AddState extends State<Add> {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 12),
-                  child: EntryField(
-                    maxLength: 5,
-                    maxLines: 5,
-                    hint: "Add Ingredients",
-                    // initialValue:
-                    //     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                  ),
-                ),
+                    padding: const EdgeInsets.symmetric(horizontal: 20),
+                    child: Column(
+                      children: [
+                        Row(
+                          children: [
+                            Text(
+                              "Flour",
+                              style: Theme.of(context).textTheme.caption,
+                            ),
+                            SizedBox(
+                              width: 5,
+                            ),
+                            Container(
+                              height: 10,
+                              child: Image(
+                                image: AssetImage("images/ic_cancel.png"),
+                              ),
+                            )
+                          ],
+                        ),
+                        SizedBox(
+                          height: 5,
+                        ),
+                        Row(
+                          children: [
+                            Text(
+                              "Sugar",
+                              style: Theme.of(context).textTheme.caption,
+                            ),
+                            SizedBox(
+                              width: 5,
+                            ),
+                            Container(
+                              height: 10,
+                              child: Image(
+                                image: AssetImage("images/ic_cancel.png"),
+                              ),
+                            )
+                          ],
+                        ),
+                        SizedBox(
+                          height: 5,
+                        ),
+                        Row(
+                          children: [
+                            Text(
+                              "Baking Powder",
+                              style: Theme.of(context).textTheme.caption,
+                            ),
+                            SizedBox(
+                              width: 5,
+                            ),
+                            Container(
+                              height: 10,
+                              child: Image(
+                                image: AssetImage("images/ic_cancel.png"),
+                              ),
+                            )
+                          ],
+                        ),
+                        SizedBox(
+                          height: 5,
+                        ),
+                        Row(
+                          children: [
+                            Text(
+                              "Salt",
+                              style: Theme.of(context).textTheme.caption,
+                            ),
+                            SizedBox(
+                              width: 5,
+                            ),
+                            Container(
+                              height: 10,
+                              child: Image(
+                                image: AssetImage("images/ic_cancel.png"),
+                              ),
+                            )
+                          ],
+                        )
+                      ],
+                    )),
                 SizedBox(
                   height: 10.0,
                 ),
@@ -413,16 +603,28 @@ class _AddState extends State<Add> {
                   child: Column(
                     children: [
                       EntryField(
+                        suffixIcon: Icon(
+                          Icons.keyboard_arrow_down,
+                          color: Colors.black,
+                        ),
                         hint: "Servings for",
-                        //initialValue: "2 Pople Serving",
+                        initialValue: "2 Pople Serving",
                       ),
                       EntryField(
+                        suffixIcon: Icon(
+                          Icons.keyboard_arrow_down,
+                          color: Colors.black,
+                        ),
                         hint: "Cooking time",
-                        // initialValue: "12 min",
+                        initialValue: "12 min",
                       ),
                       EntryField(
+                        suffixIcon: Icon(
+                          Icons.keyboard_arrow_down,
+                          color: Colors.black,
+                        ),
                         hint: "Energy (in kcal)",
-                        //initialValue: "227 (kcal)",
+                        initialValue: "227 (kcal)",
                       )
                     ],
                   ),

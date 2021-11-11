@@ -21,43 +21,19 @@ class _AddItemState extends State<AddItem> {
     String? stock = AppLocalizations.of(context)!.outStock;
     return Scaffold(
       appBar: AppBar(
-        title: Text(AppLocalizations.of(context)!.add!,
-            style: Theme.of(context).textTheme.bodyText1),
         titleSpacing: 0,
         leading: IconButton(
           icon: Icon(
             Icons.chevron_left,
+            color: kMainTextColor,
             size: 30,
           ),
           onPressed: () {
             Navigator.pop(context);
           },
         ),
-        actions: [
-          Center(
-            child: Text(
-              '$stock',
-              style: Theme.of(context)
-                  .textTheme
-                  .caption!
-                  .copyWith(color: kHintColor),
-            ),
-          ),
-          Switch(
-            activeColor: kMainColor,
-            activeTrackColor: Colors.grey[200],
-            value: inStock,
-            onChanged: (value) {
-              setState(() {
-                inStock = value;
-              });
-              if (inStock == true)
-                stock = AppLocalizations.of(context)!.stock;
-              else if (inStock == false)
-                stock = AppLocalizations.of(context)!.outStock;
-            },
-          )
-        ],
+        title: Text(AppLocalizations.of(context)!.add!,
+            style: Theme.of(context).textTheme.bodyText1),
       ),
       body: Add(),
     );
@@ -104,7 +80,7 @@ class _AddState extends State<Add> {
                       Container(
                         height: 99.0,
                         width: 99.0,
-                        child: Image.asset('images/placeholder_dish.png'),
+                        color: kCardBackgroundColor,
                       ),
                       SizedBox(width: 24.0),
                       Icon(
@@ -147,7 +123,7 @@ class _AddState extends State<Add> {
                     textCapitalization: TextCapitalization.words,
                     // label: AppLocalizations.of(context).title,
                     hint: AppLocalizations.of(context)!.enterTitle,
-                    // initialValue: AppLocalizations.of(context).sandwich,
+                    // initialValue: AppLocalizations.of(context)!.action,
                   ),
                 ),
                 Padding(
@@ -160,7 +136,7 @@ class _AddState extends State<Add> {
                     textCapitalization: TextCapitalization.words,
                     // label: AppLocalizations.of(context).itemCategory,
                     hint: AppLocalizations.of(context)!.selectCategory,
-                    // initialValue: AppLocalizations.of(context).fast,
+                    //initialValue: "Fast Food",
                   ),
                 ),
                 Padding(
@@ -169,72 +145,9 @@ class _AddState extends State<Add> {
                     textCapitalization: TextCapitalization.words,
                     // label: "ITEM PRICE",
                     hint: "Enter Item Price",
-                    // initialValue: "\$5.00",
+                    //initialValue: "\$5.00",
                   ),
                 ),
-              ],
-            ),
-            Divider(
-              color: Theme.of(context).cardColor,
-              thickness: 8.0,
-            ),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Padding(
-                  padding:
-                      EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
-                  child: Text(
-                    "FOOD TYPE",
-                    style: Theme.of(context).textTheme.headline6!.copyWith(
-                        fontWeight: FontWeight.bold,
-                        letterSpacing: 0.67,
-                        color: kHintColor),
-                  ),
-                ),
-                Row(
-                  children: [
-                    Row(
-                      children: [
-                        Radio(
-                          groupValue: foodType,
-                          onChanged: (dynamic value) {
-                            setState(() {
-                              foodType = value;
-                            });
-                          },
-                          activeColor: kMainColor,
-                          value: 0,
-                        ),
-                        Text(
-                          "Veg",
-                          style: Theme.of(context).textTheme.caption,
-                        )
-                      ],
-                    ),
-                    SizedBox(
-                      width: 20,
-                    ),
-                    Row(
-                      children: [
-                        Radio(
-                          groupValue: foodType,
-                          onChanged: (dynamic value) {
-                            setState(() {
-                              foodType = value;
-                            });
-                          },
-                          activeColor: kMainColor,
-                          value: 1,
-                        ),
-                        Text(
-                          "Non Veg",
-                          style: Theme.of(context).textTheme.caption,
-                        )
-                      ],
-                    ),
-                  ],
-                )
               ],
             ),
             Divider(
@@ -260,43 +173,19 @@ class _AddState extends State<Add> {
                   child: Row(
                     children: [
                       Expanded(
-                        child: SmallTextFormField("OPTION TITLE", "Add Option"
-                            // initialValue: 'Extra Cheese',
-                            ),
+                        child: SmallTextFormField(
+                          "OPTION TITLE",
+                          'Add Option',
+                        ),
                       ),
                       Expanded(
-                        child: SmallTextFormFieldR("PRICE", "Price"
-                            // initialValue: 'Extra Cheese',
-                            ),
+                        child: SmallTextFormFieldR(
+                          "PRICE",
+                          'Price',
+                        ),
                       ),
                     ],
                   ),
-                ),
-                // Padding(
-                //   padding: EdgeInsets.symmetric(horizontal: 12.0),
-                //   child: Row(
-                //     children: [
-                //       Expanded(
-                //         child: EntryField(
-                //           textCapitalization: TextCapitalization.words,
-                //           // label: AppLocalizations.of(context).price,
-                //           hint: AppLocalizations.of(context).enterPrice,
-                //           initialValue: 'Extra Mayonnaise',
-                //         ),
-                //       ),
-                //       Expanded(
-                //         child: EntryField(
-                //           textCapitalization: TextCapitalization.words,
-                //           // label: AppLocalizations.of(context).quantity,
-                //           hint: AppLocalizations.of(context).enterQuantity,
-                //           initialValue: '\$ 2.00',
-                //         ),
-                //       ),
-                //     ],
-                //   ),
-                // ),
-                SizedBox(
-                  height: 10.0,
                 ),
                 Align(
                   alignment: Alignment.centerRight,
@@ -399,7 +288,11 @@ class _AddState extends State<Add> {
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 12),
                   child: EntryField(
+                    maxLength: 5,
+                    maxLines: 5,
                     hint: "Add Description",
+                    // initialValue:
+                    //     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
                   ),
                 ),
                 SizedBox(
@@ -428,7 +321,11 @@ class _AddState extends State<Add> {
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 12),
                   child: EntryField(
+                    maxLength: 5,
+                    maxLines: 5,
                     hint: "Add Ingredients",
+                    // initialValue:
+                    //     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
                   ),
                 ),
                 SizedBox(
@@ -516,25 +413,16 @@ class _AddState extends State<Add> {
                   child: Column(
                     children: [
                       EntryField(
-                        suffixIcon: Icon(
-                          Icons.keyboard_arrow_down,
-                          color: Colors.black,
-                        ),
                         hint: "Servings for",
+                        //initialValue: "2 Pople Serving",
                       ),
                       EntryField(
-                        suffixIcon: Icon(
-                          Icons.keyboard_arrow_down,
-                          color: Colors.black,
-                        ),
                         hint: "Cooking time",
+                        // initialValue: "12 min",
                       ),
                       EntryField(
-                        suffixIcon: Icon(
-                          Icons.keyboard_arrow_down,
-                          color: Colors.black,
-                        ),
                         hint: "Energy (in kcal)",
+                        //initialValue: "227 (kcal)",
                       )
                     ],
                   ),

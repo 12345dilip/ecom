@@ -13,7 +13,6 @@ import 'package:grocart_shop/OrderTableItemAccount/Account/UI/ListItems/wallet_p
 import 'package:grocart_shop/OrderTableItemAccount/Account/UI/account_page.dart';
 import 'package:grocart_shop/OrderTableItemAccount/Order/UI/order_page.dart';
 import 'package:grocart_shop/OrderTableItemAccount/Order/UI/orderinfo_page.dart';
-import 'package:grocart_shop/OrderTableItemAccount/Order/UI/track_order.dart';
 import 'package:grocart_shop/OrderTableItemAccount/StoreProfile/store_profile.dart';
 import 'package:grocart_shop/OrderTableItemAccount/order_table_item_account.dart';
 import 'package:grocart_shop/Pages/additem.dart';
@@ -41,12 +40,10 @@ class PageRoutes {
   static const String addToBank = 'addtobank_page';
   static const String review = 'reviews';
   static const String setting = 'settings_page';
-  static const String track = 'track_order';
   static const String authentication = 'authentication_list';
 
   Map<String, WidgetBuilder> routes() {
     return {
-      track: (context) => TrackOrderPage(),
       locationPage: (context) => LocationPage(),
       orderPage: (context) => OrderPage(),
       orderInfoPage: (context) => OrderInfo(),
