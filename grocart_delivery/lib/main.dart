@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_phoenix/flutter_phoenix.dart';
 import 'package:grocart_delivery/Languages/locals.dart';
 import 'package:grocart_delivery/Pages/language_cubit.dart';
@@ -36,6 +37,9 @@ class GrocartDelivery extends StatelessWidget {
               return MaterialApp(
                 localizationsDelegates: [
                   const GrocartLocalizationsDelegate(),
+                  GlobalMaterialLocalizations.delegate,
+                  GlobalWidgetsLocalizations.delegate,
+                  GlobalCupertinoLocalizations.delegate,
                 ],
                 supportedLocales: [
                   const Locale('en'),

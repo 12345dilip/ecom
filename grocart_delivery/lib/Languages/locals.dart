@@ -1,8 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart' show SynchronousFuture;
+import 'package:grocart_delivery/Languages/arabic.dart';
+import 'package:grocart_delivery/Languages/english.dart';
+import 'package:grocart_delivery/Languages/french.dart';
+import 'package:grocart_delivery/Languages/indonesian.dart';
+import 'package:grocart_delivery/Languages/italian.dart';
+import 'package:grocart_delivery/Languages/portuguese.dart';
+import 'package:grocart_delivery/Languages/spanish.dart';
 import 'dart:async';
-import 'english.dart';
+
+import 'package:grocart_delivery/Languages/swahili.dart';
+import 'package:grocart_delivery/Languages/turkish.dart';
 
 class GrocartLocalizations {
   final Locale locale;
@@ -15,10 +24,37 @@ class GrocartLocalizations {
 
   static Map<String, Map<String, String>> _GrocartLocalizedValues = {
     'en': english(),
+    'ar': arabic(),
+    'pt': portuguese(),
+    'fr': french(),
+    'id': indonesian(),
+    'es': spanish(),
+    'it': italian(),
+    'tr': turkish(),
+    'sw': swahili(),
   };
 
   String? get englishh {
     return _GrocartLocalizedValues[locale.languageCode]!['englishh'];
+  }
+String? get arabicc {
+    return _GrocartLocalizedValues[locale.languageCode]!['arabicc'];
+  }
+
+  String? get frenchh {
+    return _GrocartLocalizedValues[locale.languageCode]!['frenchh'];
+  }
+
+  String? get indonesiann {
+    return _GrocartLocalizedValues[locale.languageCode]!['indonesiann'];
+  }
+
+  String? get portuguesee {
+    return _GrocartLocalizedValues[locale.languageCode]!['portuguesee'];
+  }
+
+  String? get spanishh {
+    return _GrocartLocalizedValues[locale.languageCode]!['spanishh'];
   }
 
   String? get shift {
@@ -471,6 +507,8 @@ class GrocartLocalizations {
         'enterAmountToTransfer'];
   }
 }
+
+
 
 class GrocartLocalizationsDelegate
     extends LocalizationsDelegate<GrocartLocalizations> {
