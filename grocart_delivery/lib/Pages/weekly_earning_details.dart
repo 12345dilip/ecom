@@ -15,6 +15,7 @@ class _WeeklyEarningDetailsState extends State<WeeklyEarningDetails> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Theme.of(context).cardColor,
       appBar: AppBar(
         backgroundColor: whiteColor,
         leading: IconButton(
@@ -41,25 +42,27 @@ class _WeeklyEarningDetailsState extends State<WeeklyEarningDetails> {
                           SizedBox(
                             height: 10,
                           ),
-                          Icon(
-                            Icons.location_pin,
-                            color: mainColor,
+                          Image.asset(
+                            'images/location/Next Location.png',
+                            scale: 2,
                           ),
                           Container(
                               height: 85,
                               child: DashedLineConnector(
                                 color: iconColor,
                               )),
-                          Icon(
-                            Icons.location_pin,
-                            color: mainTextColor,
+                          Image.asset(
+                            'images/location/LOCATION ICON-3.png',
+                            scale: 1.8,
                           ),
                         ],
                       ),
                       Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
@@ -87,26 +90,26 @@ class _WeeklyEarningDetailsState extends State<WeeklyEarningDetails> {
                                   style: TextStyle(
                                       color: iconColor,
                                       fontWeight: FontWeight.bold,
-                                      fontSize: 11))
+                                      fontSize: 11)),
+                              SizedBox(
+                                height: 120,
+                              ),
                             ],
                           ),
-                          SizedBox(
-                            height: 50,
-                          ),
-                          Text(GrocartLocalizations.of(context)!.dropLocation!,
-                              style: TextStyle(
-                                  color: iconColor,
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 12)),
                         ],
                       ),
                     ],
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(top: 135, left: 24),
+                    padding: const EdgeInsets.only(top: 140, left: 50),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
+                        Text(GrocartLocalizations.of(context)!.dropLocation!,
+                            style: TextStyle(
+                                color: iconColor,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 12)),
                         Text(
                           GrocartLocalizations.of(context)!.customerName!,
                           style: Theme.of(context)

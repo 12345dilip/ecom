@@ -17,6 +17,7 @@ class _ReachedPickupState extends State<ReachedPickup> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Theme.of(context).cardColor,
       appBar: AppBar(
         leading: IconButton(
             onPressed: () {

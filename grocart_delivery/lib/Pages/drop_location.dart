@@ -15,6 +15,7 @@ class _DropLocationState extends State<DropLocation> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Theme.of(context).cardColor,
       appBar: AppBar(
         backgroundColor: cardBackgroundColor,
         leading: IconButton(
@@ -77,15 +78,11 @@ class _DropLocationState extends State<DropLocation> {
                               Row(
                                 children: [
                                   Container(
-                                    height: 110,
-                                    width: 50,
-                                    color: iconColor,
-                                    child: Icon(
-                                      Icons.location_pin,
-                                      color: whiteColor,
-                                      size: 50,
-                                    ),
-                                  ),
+                                      height: 110,
+                                      width: 50,
+                                      color: iconColor,
+                                      child: Image.asset(
+                                          'images/location/LOCATION ICON-2.png')),
                                   Flexible(
                                     child: Container(
                                       padding: const EdgeInsets.only(

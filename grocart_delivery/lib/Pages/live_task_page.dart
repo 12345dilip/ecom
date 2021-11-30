@@ -22,6 +22,7 @@ class _LiveTaskPageState extends State<LiveTaskPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Theme.of(context).cardColor,
       appBar: AppBar(
         backgroundColor: cardBackgroundColor,
         leading: IconButton(
@@ -84,15 +85,11 @@ class _LiveTaskPageState extends State<LiveTaskPage> {
                               Row(
                                 children: [
                                   Container(
-                                    height: 110,
-                                    width: 50,
-                                    color: mainColor,
-                                    child: Icon(
-                                      Icons.location_pin,
-                                      color: whiteColor,
-                                      size: 50,
-                                    ),
-                                  ),
+                                      height: 110,
+                                      width: 50,
+                                      color: mainColor,
+                                      child: Image.asset(
+                                          'images/location/LOCATION ICON-1.png')),
                                   Flexible(
                                     child: Container(
                                       padding: const EdgeInsets.only(
@@ -185,15 +182,11 @@ class _LiveTaskPageState extends State<LiveTaskPage> {
                         child: Row(
                           children: [
                             Container(
-                              height: 110,
-                              width: 50,
-                              color: iconColor,
-                              child: Icon(
-                                Icons.location_pin,
-                                color: whiteColor,
-                                size: 50,
-                              ),
-                            ),
+                                height: 110,
+                                width: 50,
+                                color: iconColor,
+                                child: Image.asset(
+                                    'images/location/LOCATION ICON-2.png')),
                             Flexible(
                               child: Container(
                                 padding: const EdgeInsets.only(

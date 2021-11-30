@@ -29,7 +29,7 @@ class _ItemsEditState extends State<ItemsEdit> {
   ];
   var rating = 3.0;
   int _current = 0;
-
+  var hhh;
   bool selectRed = false;
   bool selectGreen = false;
   bool selectPink = false;

@@ -29,6 +29,7 @@ class _PickupLocationPageState extends State<PickupLocationPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Theme.of(context).cardColor,
       appBar: AppBar(
         backgroundColor: cardBackgroundColor,
         leading: IconButton(
@@ -101,21 +102,17 @@ class _PickupLocationPageState extends State<PickupLocationPage> {
                             alignment: Alignment.topRight,
                             child: IconButton(
                                 onPressed: _openMap,
-                                icon: Icon(
-                                  Icons.directions,
-                                  size: 35,
-                                  color: mainColor,
+                                icon: Image.asset(
+                                  'images/location/arrow.png',
                                 ))),
                       ),
                       Row(
                         children: [
                           Flexible(
-                            child: Icon(
-                              Icons.location_on_outlined,
-                              color: iconColor,
-                              size: 70,
-                            ),
-                          ),
+                              child: Image.asset(
+                            'images/location/Next Location.png',
+                            scale: 1.5,
+                          )),
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [

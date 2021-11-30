@@ -17,36 +17,34 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Theme.of(context).cardColor,
       appBar: AppBar(
         backgroundColor: whiteColor,
-        leading: IconButton(
-            onPressed: () {},
-            icon: Icon(
-              Icons.grid_on,
-              color: mainTextColor,
-            )),
+        leading: Image.asset(
+          'images/icons/Menu bar.png',
+          scale: 3.3,
+        ),
         actions: [
-          Row(
-            children: [
-              IconButton(
-                  onPressed: () {},
-                  icon: Icon(
-                    Icons.menu_book_outlined,
-                    color: mainTextColor,
-                  )),
-              IconButton(
-                  onPressed: () {},
-                  icon: Icon(
-                    Icons.notifications,
-                    color: mainTextColor,
-                  ))
-            ],
+          Padding(
+            padding: const EdgeInsets.only(right: 10.0),
+            child: Row(
+              children: [
+                Image.asset(
+                  'images/icons/map.png',
+                  scale: 3.3,
+                ),
+                Image.asset(
+                  'images/icons/bells.png',
+                  scale: 3.3,
+                ),
+              ],
+            ),
           )
         ],
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.only(left: 15.0, right: 15.0, bottom: 20.0),
+          padding: const EdgeInsets.all(15),
           child: Column(
             children: [
               Container(
@@ -59,9 +57,12 @@ class _HomePageState extends State<HomePage> {
                 ),
                 child: Row(
                   children: [
-                    Icon(
-                      Icons.watch,
-                      color: mainColor,
+                    SizedBox(
+                      width: 15,
+                    ),
+                    Image.asset(
+                      'images/icons/alarm.png',
+                      scale: 3.5,
                     ),
                     SizedBox(
                       width: 30,
@@ -73,6 +74,7 @@ class _HomePageState extends State<HomePage> {
                         icon: Icon(
                           Icons.chevron_right,
                           color: mainColor,
+                          size: 35,
                         ))
                   ],
                 ),
@@ -168,58 +170,62 @@ class _HomePageState extends State<HomePage> {
                             child: ClipRRect(
                               borderRadius: BorderRadius.circular(5.0),
                               child: Container(
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Padding(
-                                      padding: const EdgeInsets.only(
-                                          left: 15.0, top: 5.0),
-                                      child: Image.asset(
+                                child: Padding(
+                                  padding: const EdgeInsets.all(15),
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Image.asset(
                                         "images/Wallet.png",
-                                        scale: 1.5,
+                                        scale: 2.8,
                                       ),
-                                    ),
-                                    SizedBox(
-                                      height: 3,
-                                    ),
-                                    Row(
-                                      children: [
-                                        SizedBox(
-                                          width: 15,
-                                        ),
-                                        Text(
-                                          '₹ ',
-                                          style: TextStyle(fontSize: 20),
-                                        ),
-                                        Text(
-                                          '980',
-                                          style: TextStyle(
-                                              color: whiteColor, fontSize: 20),
-                                        )
-                                      ],
-                                    ),
-                                    FlatButton(
-                                        onPressed: () {
-                                          Navigator.pushNamed(
-                                              context, PageRoutes.orderPage);
-                                        },
-                                        child: Row(
-                                          children: [
-                                            Text(
-                                              GrocartLocalizations.of(context)!
-                                                  .earnToday!,
-                                              style: TextStyle(
-                                                  color: whiteColor,
-                                                  fontSize: 12),
-                                            ),
-                                            Icon(
-                                              Icons.chevron_right,
-                                              color: whiteColor,
-                                              size: 17,
-                                            )
-                                          ],
-                                        ))
-                                  ],
+                                      SizedBox(
+                                        height: 8,
+                                      ),
+                                      Row(
+                                        children: [
+                                          Text(
+                                            '₹ ',
+                                            style: TextStyle(
+                                                fontSize: 20,
+                                                color: whiteColor),
+                                          ),
+                                          Text(
+                                            '980',
+                                            style: TextStyle(
+                                                color: whiteColor,
+                                                fontSize: 20),
+                                          )
+                                        ],
+                                      ),
+                                      SizedBox(
+                                        height: 8,
+                                      ),
+                                      GestureDetector(
+                                          onTap: () {
+                                            Navigator.pushNamed(
+                                                context, PageRoutes.orderPage);
+                                          },
+                                          child: Row(
+                                            children: [
+                                              Text(
+                                                GrocartLocalizations.of(
+                                                        context)!
+                                                    .earnToday!,
+                                                style: TextStyle(
+                                                    color: whiteColor,
+                                                    fontSize: 12),
+                                              ),
+                                              Icon(
+                                                Icons.chevron_right,
+                                                color: whiteColor,
+                                                size: 17,
+                                              )
+                                            ],
+                                          ))
+                                    ],
+                                  ),
                                 ),
                                 color: mainColor,
                                 height: 130,
@@ -234,58 +240,62 @@ class _HomePageState extends State<HomePage> {
                             child: ClipRRect(
                               borderRadius: BorderRadius.circular(5.0),
                               child: Container(
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Padding(
-                                      padding: const EdgeInsets.only(
-                                          left: 15.0, top: 5.0),
-                                      child: Image.asset(
+                                child: Padding(
+                                  padding: const EdgeInsets.all(15),
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Image.asset(
                                         "images/Wallet.png",
-                                        scale: 1.5,
+                                        scale: 2.8,
                                       ),
-                                    ),
-                                    SizedBox(
-                                      height: 3,
-                                    ),
-                                    Row(
-                                      children: [
-                                        SizedBox(
-                                          width: 15,
-                                        ),
-                                        Text(
-                                          '₹ ',
-                                          style: TextStyle(fontSize: 20),
-                                        ),
-                                        Text(
-                                          '8850',
-                                          style: TextStyle(
-                                              color: whiteColor, fontSize: 20),
-                                        )
-                                      ],
-                                    ),
-                                    FlatButton(
-                                        onPressed: () {
-                                          Navigator.pushNamed(
-                                              context, PageRoutes.orderPage);
-                                        },
-                                        child: Row(
-                                          children: [
-                                            Text(
-                                              GrocartLocalizations.of(context)!
-                                                  .earnWeekly!,
-                                              style: TextStyle(
-                                                  color: whiteColor,
-                                                  fontSize: 12),
-                                            ),
-                                            Icon(
-                                              Icons.chevron_right,
-                                              color: whiteColor,
-                                              size: 17,
-                                            )
-                                          ],
-                                        ))
-                                  ],
+                                      SizedBox(
+                                        height: 8,
+                                      ),
+                                      Row(
+                                        children: [
+                                          Text(
+                                            '₹ ',
+                                            style: TextStyle(
+                                                fontSize: 20,
+                                                color: whiteColor),
+                                          ),
+                                          Text(
+                                            '8850',
+                                            style: TextStyle(
+                                                color: whiteColor,
+                                                fontSize: 20),
+                                          )
+                                        ],
+                                      ),
+                                      SizedBox(
+                                        height: 8,
+                                      ),
+                                      GestureDetector(
+                                          onTap: () {
+                                            Navigator.pushNamed(
+                                                context, PageRoutes.orderPage);
+                                          },
+                                          child: Row(
+                                            children: [
+                                              Text(
+                                                GrocartLocalizations.of(
+                                                        context)!
+                                                    .earnWeekly!,
+                                                style: TextStyle(
+                                                    color: whiteColor,
+                                                    fontSize: 12),
+                                              ),
+                                              Icon(
+                                                Icons.chevron_right,
+                                                color: whiteColor,
+                                                size: 17,
+                                              )
+                                            ],
+                                          ))
+                                    ],
+                                  ),
                                 ),
                                 color: mainColor,
                                 width: MediaQuery.of(context).size.width,
@@ -313,10 +323,11 @@ class _HomePageState extends State<HomePage> {
                                           left: 15.0, top: 10),
                                       child: Image.asset(
                                         "images/Money Bag Krona.png",
+                                        scale: 2,
                                       ),
                                     ),
                                     SizedBox(
-                                      height: 10.0,
+                                      height: 15.0,
                                     ),
                                     Row(
                                       children: [
@@ -325,7 +336,8 @@ class _HomePageState extends State<HomePage> {
                                         ),
                                         Text(
                                           '₹ ',
-                                          style: TextStyle(fontSize: 20),
+                                          style: TextStyle(
+                                              fontSize: 20, color: whiteColor),
                                         ),
                                         Text(
                                           '980',
@@ -356,10 +368,7 @@ class _HomePageState extends State<HomePage> {
                                     crossAxisAlignment:
                                         CrossAxisAlignment.start,
                                     children: [
-                                      Image.asset(
-                                        "images/Clock.png",
-                                        scale: 1.2,
-                                      ),
+                                      Image.asset("images/Clock.png", scale: 2),
                                       SizedBox(
                                         height: 15,
                                       ),

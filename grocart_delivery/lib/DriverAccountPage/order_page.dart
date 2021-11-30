@@ -24,6 +24,7 @@ class _OrderPageState extends State<OrderPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        backgroundColor: Theme.of(context).cardColor,
         appBar: AppBar(
           backgroundColor: Theme.of(context).cardColor,
           title: Text('Orders', style: Theme.of(context).textTheme.bodyText1),
@@ -163,7 +164,7 @@ class _OrderPageState extends State<OrderPage> {
                     child: Card(
                         color: openTab
                             ? Colors.grey.shade300
-                            : cardBackgroundColor,
+                            : Theme.of(context).cardColor,
                         elevation: 1,
                         child: Padding(
                           padding:
@@ -174,7 +175,8 @@ class _OrderPageState extends State<OrderPage> {
                                 'Sun',
                                 style: TextStyle(
                                     color: mainColor,
-                                    fontWeight: FontWeight.bold),
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 15),
                               ),
                               SizedBox(
                                 width: 10,
@@ -183,14 +185,16 @@ class _OrderPageState extends State<OrderPage> {
                                 '25 Apr',
                                 style: TextStyle(
                                     color: iconColor,
-                                    fontWeight: FontWeight.bold),
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 15),
                               ),
                               Spacer(),
                               Text(
                                 '₹ 9998',
                                 style: TextStyle(
                                     color: mainColor,
-                                    fontWeight: FontWeight.bold),
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 15),
                               ),
                               Icon(
                                 openTab
@@ -227,7 +231,8 @@ class _OrderPageState extends State<OrderPage> {
                                           'Sat',
                                           style: TextStyle(
                                               color: mainColor,
-                                              fontWeight: FontWeight.bold),
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 15),
                                         ),
                                         SizedBox(
                                           width: 10,
@@ -236,14 +241,16 @@ class _OrderPageState extends State<OrderPage> {
                                           '24 Apr',
                                           style: TextStyle(
                                               color: iconColor,
-                                              fontWeight: FontWeight.bold),
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 15),
                                         ),
                                         Spacer(),
                                         Text(
                                           '₹ 1689',
                                           style: TextStyle(
                                               color: mainColor,
-                                              fontWeight: FontWeight.bold),
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 15),
                                         ),
                                         Icon(
                                           Icons.keyboard_arrow_down,
@@ -271,7 +278,8 @@ class _OrderPageState extends State<OrderPage> {
                                           'Fri',
                                           style: TextStyle(
                                               color: mainColor,
-                                              fontWeight: FontWeight.bold),
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 15),
                                         ),
                                         SizedBox(
                                           width: 10,
@@ -280,14 +288,16 @@ class _OrderPageState extends State<OrderPage> {
                                           '23 Apr',
                                           style: TextStyle(
                                               color: iconColor,
-                                              fontWeight: FontWeight.bold),
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 15),
                                         ),
                                         Spacer(),
                                         Text(
                                           '₹ 1580',
                                           style: TextStyle(
                                               color: mainColor,
-                                              fontWeight: FontWeight.bold),
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 15),
                                         ),
                                         Icon(
                                           Icons.keyboard_arrow_down,
@@ -315,7 +325,8 @@ class _OrderPageState extends State<OrderPage> {
                                           'Wed',
                                           style: TextStyle(
                                               color: mainColor,
-                                              fontWeight: FontWeight.bold),
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 15),
                                         ),
                                         SizedBox(
                                           width: 10,
@@ -324,14 +335,16 @@ class _OrderPageState extends State<OrderPage> {
                                           '21 Apr',
                                           style: TextStyle(
                                               color: iconColor,
-                                              fontWeight: FontWeight.bold),
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 15),
                                         ),
                                         Spacer(),
                                         Text(
                                           '₹ 1480',
                                           style: TextStyle(
                                               color: mainColor,
-                                              fontWeight: FontWeight.bold),
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 15),
                                         ),
                                         Icon(
                                           Icons.keyboard_arrow_down,
@@ -359,7 +372,8 @@ class _OrderPageState extends State<OrderPage> {
                                           'Tue',
                                           style: TextStyle(
                                               color: mainColor,
-                                              fontWeight: FontWeight.bold),
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 15),
                                         ),
                                         SizedBox(
                                           width: 10,
@@ -368,14 +382,16 @@ class _OrderPageState extends State<OrderPage> {
                                           '20 Apr',
                                           style: TextStyle(
                                               color: iconColor,
-                                              fontWeight: FontWeight.bold),
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 15),
                                         ),
                                         Spacer(),
                                         Text(
                                           '₹ 1458',
                                           style: TextStyle(
                                               color: mainColor,
-                                              fontWeight: FontWeight.bold),
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 15),
                                         ),
                                         Icon(
                                           Icons.keyboard_arrow_down,
@@ -403,7 +419,8 @@ class _OrderPageState extends State<OrderPage> {
                                           'Mon',
                                           style: TextStyle(
                                               color: mainColor,
-                                              fontWeight: FontWeight.bold),
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 15),
                                         ),
                                         SizedBox(
                                           width: 10,
@@ -412,14 +429,308 @@ class _OrderPageState extends State<OrderPage> {
                                           '19 Apr',
                                           style: TextStyle(
                                               color: iconColor,
-                                              fontWeight: FontWeight.bold),
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 15),
                                         ),
                                         Spacer(),
                                         Text(
                                           '₹ 1280',
                                           style: TextStyle(
                                               color: mainColor,
-                                              fontWeight: FontWeight.bold),
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 15),
+                                        ),
+                                        Icon(
+                                          Icons.keyboard_arrow_down,
+                                          color: mainColor,
+                                        )
+                                      ],
+                                    ),
+                                  )),
+                            ),
+                          ),
+                          SizedBox(
+                            height: 5,
+                          ),
+                          GestureDetector(
+                            onTap: () {
+                              setState(() {
+                                openTab = !openTab;
+                              });
+                            },
+                            child: Container(
+                              height: 80,
+                              child: Card(
+                                  color: openTab
+                                      ? Colors.grey.shade300
+                                      : cardBackgroundColor,
+                                  elevation: 1,
+                                  child: Padding(
+                                    padding: const EdgeInsets.only(
+                                        left: 15.0, right: 15.0),
+                                    child: Row(
+                                      children: [
+                                        Text(
+                                          'Sun',
+                                          style: TextStyle(
+                                              color: mainColor,
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 15),
+                                        ),
+                                        SizedBox(
+                                          width: 10,
+                                        ),
+                                        Text(
+                                          '25 Apr',
+                                          style: TextStyle(
+                                              color: iconColor,
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 15),
+                                        ),
+                                        Spacer(),
+                                        Text(
+                                          '₹ 9998',
+                                          style: TextStyle(
+                                              color: mainColor,
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 15),
+                                        ),
+                                        Icon(
+                                          openTab
+                                              ? Icons.keyboard_arrow_up
+                                              : Icons.keyboard_arrow_down,
+                                          color: mainColor,
+                                        )
+                                      ],
+                                    ),
+                                  )),
+                            ),
+                          ),
+                          SizedBox(
+                            height: 5,
+                          ),
+                          GestureDetector(
+                            child: Container(
+                              height: 80,
+                              child: Card(
+                                  elevation: 1,
+                                  child: Padding(
+                                    padding: const EdgeInsets.only(
+                                        left: 15.0, right: 15.0),
+                                    child: Row(
+                                      children: [
+                                        Text(
+                                          'Sat',
+                                          style: TextStyle(
+                                              color: mainColor,
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 15),
+                                        ),
+                                        SizedBox(
+                                          width: 10,
+                                        ),
+                                        Text(
+                                          '24 Apr',
+                                          style: TextStyle(
+                                              color: iconColor,
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 15),
+                                        ),
+                                        Spacer(),
+                                        Text(
+                                          '₹ 1689',
+                                          style: TextStyle(
+                                              color: mainColor,
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 15),
+                                        ),
+                                        Icon(
+                                          Icons.keyboard_arrow_down,
+                                          color: mainColor,
+                                        )
+                                      ],
+                                    ),
+                                  )),
+                            ),
+                          ),
+                          SizedBox(
+                            height: 5,
+                          ),
+                          GestureDetector(
+                            child: Container(
+                              height: 80,
+                              child: Card(
+                                  elevation: 1,
+                                  child: Padding(
+                                    padding: const EdgeInsets.only(
+                                        left: 15.0, right: 15.0),
+                                    child: Row(
+                                      children: [
+                                        Text(
+                                          'Fri',
+                                          style: TextStyle(
+                                              color: mainColor,
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 15),
+                                        ),
+                                        SizedBox(
+                                          width: 10,
+                                        ),
+                                        Text(
+                                          '23 Apr',
+                                          style: TextStyle(
+                                              color: iconColor,
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 15),
+                                        ),
+                                        Spacer(),
+                                        Text(
+                                          '₹ 1580',
+                                          style: TextStyle(
+                                              color: mainColor,
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 15),
+                                        ),
+                                        Icon(
+                                          Icons.keyboard_arrow_down,
+                                          color: mainColor,
+                                        )
+                                      ],
+                                    ),
+                                  )),
+                            ),
+                          ),
+                          SizedBox(
+                            height: 5,
+                          ),
+                          GestureDetector(
+                            child: Container(
+                              height: 80,
+                              child: Card(
+                                  elevation: 1,
+                                  child: Padding(
+                                    padding: const EdgeInsets.only(
+                                        left: 15.0, right: 15.0),
+                                    child: Row(
+                                      children: [
+                                        Text(
+                                          'Wed',
+                                          style: TextStyle(
+                                              color: mainColor,
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 15),
+                                        ),
+                                        SizedBox(
+                                          width: 10,
+                                        ),
+                                        Text(
+                                          '21 Apr',
+                                          style: TextStyle(
+                                              color: iconColor,
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 15),
+                                        ),
+                                        Spacer(),
+                                        Text(
+                                          '₹ 1480',
+                                          style: TextStyle(
+                                              color: mainColor,
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 15),
+                                        ),
+                                        Icon(
+                                          Icons.keyboard_arrow_down,
+                                          color: mainColor,
+                                        )
+                                      ],
+                                    ),
+                                  )),
+                            ),
+                          ),
+                          SizedBox(
+                            height: 5,
+                          ),
+                          GestureDetector(
+                            child: Container(
+                              height: 80,
+                              child: Card(
+                                  elevation: 1,
+                                  child: Padding(
+                                    padding: const EdgeInsets.only(
+                                        left: 15.0, right: 15.0),
+                                    child: Row(
+                                      children: [
+                                        Text(
+                                          'Tue',
+                                          style: TextStyle(
+                                              color: mainColor,
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 15),
+                                        ),
+                                        SizedBox(
+                                          width: 10,
+                                        ),
+                                        Text(
+                                          '20 Apr',
+                                          style: TextStyle(
+                                              color: iconColor,
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 15),
+                                        ),
+                                        Spacer(),
+                                        Text(
+                                          '₹ 1458',
+                                          style: TextStyle(
+                                              color: mainColor,
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 15),
+                                        ),
+                                        Icon(
+                                          Icons.keyboard_arrow_down,
+                                          color: mainColor,
+                                        )
+                                      ],
+                                    ),
+                                  )),
+                            ),
+                          ),
+                          SizedBox(
+                            height: 5,
+                          ),
+                          GestureDetector(
+                            child: Container(
+                              height: 80,
+                              child: Card(
+                                  elevation: 1,
+                                  child: Padding(
+                                    padding: const EdgeInsets.only(
+                                        left: 15.0, right: 15.0),
+                                    child: Row(
+                                      children: [
+                                        Text(
+                                          'Mon',
+                                          style: TextStyle(
+                                              color: mainColor,
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 15),
+                                        ),
+                                        SizedBox(
+                                          width: 10,
+                                        ),
+                                        Text(
+                                          '19 Apr',
+                                          style: TextStyle(
+                                              color: iconColor,
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 15),
+                                        ),
+                                        Spacer(),
+                                        Text(
+                                          '₹ 1280',
+                                          style: TextStyle(
+                                              color: mainColor,
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 15),
                                         ),
                                         Icon(
                                           Icons.keyboard_arrow_down,
